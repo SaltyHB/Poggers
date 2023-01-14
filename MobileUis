@@ -3539,9 +3539,6 @@ return setmetatable(Library, {
 	end
 })
 wait(1)
-if game.Players.LocalPlayer.PlayerGui.VisibleGui then
-game.Players.LocalPlayer.PlayerGui.VisibleGui:Destroy()
-else
 -- Gui to Lua
 -- Version: 3.2
 
