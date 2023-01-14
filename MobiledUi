@@ -3538,3 +3538,79 @@ return setmetatable(Library, {
 		return rawget(Library, i:lower())
 	end
 })
+wait(1)
+if game.Players.LocalPlayer.PlayerGui.VisibleGui then
+game.Players.LocalPlayer.PlayerGui.VisibleGui:Destroy()
+else
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local VisibleGui = Instance.new("ScreenGui")
+local HideButton = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+
+--Properties:
+
+VisibleGui.Name = "VisibleGui"
+VisibleGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+VisibleGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+HideButton.Name = "HideButton"
+HideButton.Parent = VisibleGui
+HideButton.BackgroundColor3 = Color3.fromRGB(13, 13, 13)
+HideButton.Position = UDim2.new(0.0400, 0, 0.320, 0)
+HideButton.Size = UDim2.new(0, 34, 0, 36)
+HideButton.Font = Enum.Font.SciFi
+HideButton.Text = "R"
+HideButton.TextColor3 = Color3.fromRGB(52, 123, 255)
+HideButton.TextSize = 38.000
+
+UICorner.Parent = HideButton
+HideButton.MouseButton1Down:Connect(function()
+	game.CoreGui.ScreenGui.Enabled = not game.CoreGui.ScreenGui.Enabled
+end)
+
+-- Scripts:
+
+local function DQPDJ_fake_script() -- HideButton.LocalScript 
+	local script = Instance.new('LocalScript', HideButton)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(DQPDJ_fake_script)()
+end
