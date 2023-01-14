@@ -455,7 +455,7 @@ function Library:create(options)
 
 	self.CurrentTheme = options.Theme
 
-	local gui = self:object("MainGui", {
+	local gui = self:object("ScreenGui", {
 		Parent = (RunService:IsStudio() and LocalPlayer.PlayerGui) or game:GetService("CoreGui"),
 		ZIndexBehavior = Enum.ZIndexBehavior.Global
 	})
@@ -594,7 +594,6 @@ function Library:create(options)
 
 	closeButton.MouseButton1Click:connect(function()
 		closeUI()
-                game.CoreGui.Mobile:Destroy()
 	end)
 
 	local urlBar = core:object("Frame", {
