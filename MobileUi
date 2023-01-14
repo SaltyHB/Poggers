@@ -1,7 +1,6 @@
 if game.Players.LocalPlayer.PlayerGui.VisibleGui then
 game.Players.LocalPlayer.PlayerGui.VisibleGui:Destroy()
-end
-wait(1)
+else
 -- Gui to Lua
 -- Version: 3.2
 
@@ -73,6 +72,7 @@ local function DQPDJ_fake_script() -- HideButton.LocalScript
 	end)
 end
 coroutine.wrap(DQPDJ_fake_script)()
+end
 --[[
 
 ██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████
