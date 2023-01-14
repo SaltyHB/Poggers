@@ -594,6 +594,7 @@ function Library:create(options)
 
 	closeButton.MouseButton1Click:connect(function()
 		closeUI()
+                game.CoreGui.Mobile:Destroy()
 	end)
 
 	local urlBar = core:object("Frame", {
