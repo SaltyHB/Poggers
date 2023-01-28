@@ -1,5 +1,0 @@
-if Validate("https://pandatechnology.xyz", "voidhub", _G.Key) then 
-    print("Whitelisted")
-    else
-    print("Not Whitelisted")
-end	
