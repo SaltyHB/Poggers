@@ -435,7 +435,7 @@ function Library:create(options)
 		Name = "Sin Hub",
 		Size = UDim2.fromOffset(600, 400),
 		Theme = self.Themes[settings.Theme],
-		Link = "Made by 𝐒𝐢𝐧#6969"
+		Link = "Made By Sin#6969"
 	}, options)
 
 	if getgenv and getgenv().MercuryUI then
