@@ -93,6 +93,7 @@ function thisCode()
     task.spawn(function()
         while true do
             if AllowRunService == _G.FarmChest then
+       if not game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") and not game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") then
                 local hasChar = game.Players.LocalPlayer:FindFirstChild("Character")
                 if not game.Players.LocalPlayer.Character then
         
@@ -112,7 +113,8 @@ function thisCode()
                             break
                             end
                         end
-                    end 
+                    end
+end 
                 end
             end
             task.wait()
