@@ -94,6 +94,7 @@ function thisCode()
         while true do
             if AllowRunService == _G.FarmChest then
        if not game.Players.LocalPlayer.Backpack:FindFirstChild("God's Chalice") and not game.Players.LocalPlayer.Character:FindFirstChild("God's Chalice") then
+ if not game.Players.LocalPlayer.Backpack:FindFirstChild("Fist of Darkness") and not game.Players.LocalPlayer.Character:FindFirstChild("Fist of Darkness") then
                 local hasChar = game.Players.LocalPlayer:FindFirstChild("Character")
                 if not game.Players.LocalPlayer.Character then
         
@@ -114,6 +115,7 @@ function thisCode()
                             end
                         end
                     end
+end
 end 
                 end
             end
