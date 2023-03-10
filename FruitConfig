@@ -1,0 +1,5 @@
+ServerHopTimer = 2 -- Wait Before Hopping
+TeleportSafe = true -- Teleport Safe
+Team = "Marine" -- Select Team Pirate/Marine
+Webhook = "URL" -- Discord Webhook URL
+_G.Version="Fruit Farm"loadstring(game:HttpGet("https://raw.githubusercontent.com/Efe0626/VoidHub/main/Script"))()
