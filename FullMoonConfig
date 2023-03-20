@@ -1,0 +1,2 @@
+_G.Version = "Full Moon Hop"
+loadstring(game:HttpGet("https://raw.githubusercontent.com/Efe0626/VoidHub/main/Script"))()
