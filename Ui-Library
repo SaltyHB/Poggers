@@ -1021,3 +1021,4 @@ function library:AddWindow(text,keybind)
     end
     return uitab
 end
+return library
