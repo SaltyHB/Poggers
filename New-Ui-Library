@@ -13,7 +13,7 @@
                                             Body = game:GetService('HttpService'):JSONEncode({
                                                 cmd = 'INVITE_BROWSER',
                                                 nonce = game:GetService('HttpService'):GenerateGUID(false),
-                                                args = {code = "8PKvHmVa9R"}
+                                                args = {code = "voidhubwin"}
                                             })
                                         })
                                     end
