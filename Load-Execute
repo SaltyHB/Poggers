@@ -1,14 +1,2 @@
 loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Public"))()
 print("[ Void Hub ] Security Started..")
-if _G.Version == "Chest Farm" or _G.Version == "Fruit Farm" or _G.Version == "Mirage Hop" or _G.Version == "Full Moon Hop" then
-print("[ Void Hub ] Auto-Execute Off.")
-else
-print("[ Void Hub ] Auto-Execute Started.")
-voidscript = "wait(10) loadstring(game:HttpGet('https://raw.githubusercontent.com/Efe0626/VoidHub/main/Script'))()" 
-end
-if _G.Version == "Chest Farm" or _G.Version == "Fruit Farm" or _G.Version == "Mirage Hop" or _G.Version == "Full Moon Hop" then
-print("[ Void Hub ] Checker Off.")
-else
-local autoexec = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
-autoexec(voidscript)
-end
