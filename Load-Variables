@@ -4,7 +4,7 @@ if _G.Version == "Chest Farm" or _G.Version == "Fruit Farm" or _G.Version == "Mi
 print("[ Raito Hub ] Auto-Execute Off.")
 else
 print("[ Raito Hub ] Auto-Execute Started.")
-voidscript = "wait(10) loadstring(game:HttpGet("https://raw.githubusercontent.com/Efe0626/RaitoHub/main/Script"))()" 
+voidscript = "wait(10) loadstring(game:HttpGet('https://raw.githubusercontent.com/Efe0626/RaitoHub/main/Script'))()" 
 end
 if _G.Version == "Chest Farm" or _G.Version == "Fruit Farm" or _G.Version == "Mirage Hop" or _G.Version == "Full Moon Hop" then
 print("[ Raito Hub ] Checker Off.")
