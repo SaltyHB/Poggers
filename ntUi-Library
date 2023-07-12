@@ -69,6 +69,10 @@ end
 
 local library = {}
 
+function library:ChangePresetColor(toch)
+    PresetColor = toch
+end
+
 function library:AddWindow(text,keybind)
     local bind = keybind or Enum.KeyCode.RightControl
     local ff = false
@@ -628,10 +632,6 @@ function library:AddWindow(text,keybind)
             TextboxCorner.Name = "TextboxCorner"
             TextboxCorner.CornerRadius = UDim.new(0, 5)
             TextboxCorner.Parent = Textbox
-        end
-
-        function main:ChangePresetColor(toch)
-            PresetColor = toch
         end
 
         function main:AddDropdown(text,current,table,callback)
