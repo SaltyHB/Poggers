@@ -6,6 +6,7 @@ do
     end
 end
 
+local PresetColor = Color3.fromRGB(225, 225, 225)
 local UserInputService = game:GetService("UserInputService")
 local TweenService = game:GetService("TweenService")
 
