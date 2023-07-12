@@ -113,7 +113,7 @@ function library:AddWindow(text,keybind)
     DropdownStroke.Name = "UIStroke"
     DropdownStroke.Parent = Frame_2
     DropdownStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    DropdownStroke.Color = Color3.fromRGB(225,225,225)
+    DropdownStroke.Color = AccentColor
     DropdownStroke.LineJoinMode = Enum.LineJoinMode.Round
     DropdownStroke.Thickness = 0.6
     DropdownStroke.Transparency = 0.8
@@ -169,7 +169,7 @@ function library:AddWindow(text,keybind)
     DropdownStroke.Name = "UIStroke"
     DropdownStroke.Parent = Main
     DropdownStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    DropdownStroke.Color = Color3.fromRGB(225,225,225)
+    DropdownStroke.Color = AccentColor
     DropdownStroke.LineJoinMode = Enum.LineJoinMode.Round
     DropdownStroke.Thickness = 0.6
     DropdownStroke.Transparency = 0.8
@@ -296,7 +296,7 @@ function library:AddWindow(text,keybind)
         PageButton.AutoButtonColor = false
         PageButton.Font = Enum.Font.GothamSemibold
         PageButton.Text = text
-        PageButton.TextColor3 = AccentColor
+        PageButton.TextColor3 = Color3.fromRGB(225, 225, 225)
         PageButton.TextSize = 12.000
         PageButton.TextXAlignment = Enum.TextXAlignment.Left
         
@@ -360,7 +360,7 @@ function library:AddWindow(text,keybind)
                     TweenService:Create(
                         v,
                         TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-                        {TextColor3 = AccentColor}
+                        {TextColor3 = Color3.fromRGB(225, 225, 225)}
                     ):Play()
                 end
                 TweenService:Create(
@@ -407,7 +407,7 @@ function library:AddWindow(text,keybind)
             Button.AutoButtonColor = false
             Button.Font = Enum.Font.Gotham
             Button.Text = text
-            Button.TextColor3 = AccentColor
+            Button.TextColor3 = Color3.fromRGB(225, 225, 225)
             Button.TextSize = 11.000
             Button.TextWrapped = true
             
@@ -421,7 +421,7 @@ function library:AddWindow(text,keybind)
             ButtonStroke.Name = "UIStroke"
             ButtonStroke.Parent = Button
             ButtonStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-            ButtonStroke.Color = Color3.fromRGB(225,225,225)
+            ButtonStroke.Color = AccentColor
             ButtonStroke.LineJoinMode = Enum.LineJoinMode.Round
             ButtonStroke.Thickness = 0.6
             ButtonStroke.Transparency = 0.8
@@ -440,7 +440,7 @@ function library:AddWindow(text,keybind)
                 TweenService:Create(
                     Button,
                     TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-                    {TextColor3 = AccentColor}
+                    {TextColor3 = Color3.fromRGB(225, 225, 225)}
                 ):Play()
             end)
             
@@ -481,7 +481,7 @@ function library:AddWindow(text,keybind)
             ToggleStroke.Name = "UIStroke"
             ToggleStroke.Parent = Toggle
             ToggleStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-            ToggleStroke.Color = Color3.fromRGB(225,225,225)
+            ToggleStroke.Color = AccentColor
             ToggleStroke.LineJoinMode = Enum.LineJoinMode.Round
             ToggleStroke.Thickness = 0.6
             ToggleStroke.Transparency = 0.8
@@ -497,7 +497,7 @@ function library:AddWindow(text,keybind)
             ToggleLabel.Size = UDim2.new(0, 410, 0, 30)
             ToggleLabel.Font = Enum.Font.Gotham
             ToggleLabel.Text = text
-            ToggleLabel.TextColor3 = AccentColor
+            ToggleLabel.TextColor3 = Color3.fromRGB(225, 225, 225)
             ToggleLabel.TextSize = 11.000
             ToggleLabel.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -540,7 +540,7 @@ function library:AddWindow(text,keybind)
                 TweenService:Create(
                     ToggleLabel,
                     TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-                    {TextColor3 = AccentColor}
+                    {TextColor3 = Color3.fromRGB(225, 225, 225)}
                 ):Play()
             end)
             if config == nil then config = false end
@@ -588,7 +588,7 @@ function library:AddWindow(text,keybind)
             DropdownStroke.Name = "UIStroke"
             DropdownStroke.Parent = Textboxx
             DropdownStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-            DropdownStroke.Color = Color3.fromRGB(225,225,225)
+            DropdownStroke.Color = AccentColor
             DropdownStroke.LineJoinMode = Enum.LineJoinMode.Round
             DropdownStroke.Thickness = 0.6
             DropdownStroke.Transparency = 0.8
@@ -603,7 +603,7 @@ function library:AddWindow(text,keybind)
             TextboxTitle.Size = UDim2.new(0, 300, 0, 30)
             TextboxTitle.Font = Enum.Font.Gotham
             TextboxTitle.Text = text
-            TextboxTitle.TextColor3 = AccentColor
+            TextboxTitle.TextColor3 = Color3.fromRGB(225, 225, 225)
             TextboxTitle.TextSize = 11.000
             TextboxTitle.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -654,7 +654,7 @@ function library:AddWindow(text,keybind)
             DropdownStroke.Name = "UIStroke"
             DropdownStroke.Parent = Dropdown
             DropdownStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-            DropdownStroke.Color = Color3.fromRGB(225,225,225)
+            DropdownStroke.Color = AccentColor
             DropdownStroke.LineJoinMode = Enum.LineJoinMode.Round
             DropdownStroke.Thickness = 0.6
             DropdownStroke.Transparency = 0.8
@@ -679,7 +679,7 @@ function library:AddWindow(text,keybind)
             Droptitle.Size = UDim2.new(0, 410, 0, 30)
             Droptitle.Font = Enum.Font.Gotham
             Droptitle.Text = text.." : "..current
-            Droptitle.TextColor3 = AccentColor
+            Droptitle.TextColor3 = Color3.fromRGB(225, 225, 225)
             Droptitle.TextSize = 11.000
             Droptitle.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -724,7 +724,7 @@ function library:AddWindow(text,keybind)
                 DropButton2.Size = UDim2.new(0, 455, 0, 30)
                 DropButton2.AutoButtonColor = false
                 DropButton2.Font = Enum.Font.Gotham
-                DropButton2.TextColor3 = AccentColor
+                DropButton2.TextColor3 = Color3.fromRGB(225, 225, 225)
                 DropButton2.TextSize = 11.000
                 DropButton2.Text = tostring(v)
 
@@ -739,7 +739,7 @@ function library:AddWindow(text,keybind)
                     TweenService:Create(
                         DropButton2,
                         TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                        {TextColor3 = AccentColor}
+                        {TextColor3 = Color3.fromRGB(225, 225, 225)}
                     ):Play()
                 end)
 
@@ -811,7 +811,7 @@ function library:AddWindow(text,keybind)
                 DropButton2.Size = UDim2.new(0, 455, 0, 30)
                 DropButton2.AutoButtonColor = false
                 DropButton2.Font = Enum.Font.Gotham
-                DropButton2.TextColor3 = AccentColor
+                DropButton2.TextColor3 = Color3.fromRGB(225, 225, 225)
                 DropButton2.TextSize = 11.000
                 DropButton2.Text = tostring(t)
                 DropButton2.MouseEnter:Connect(function()
@@ -825,7 +825,7 @@ function library:AddWindow(text,keybind)
                     TweenService:Create(
                         DropButton2,
                         TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                        {TextColor3 = AccentColor}
+                        {TextColor3 = Color3.fromRGB(225, 225, 225)}
                     ):Play()
                 end)
                 DropButton2.MouseButton1Click:Connect(function()
@@ -877,7 +877,7 @@ function library:AddWindow(text,keybind)
             DropdownStroke.Name = "UIStroke"
             DropdownStroke.Parent = Slider
             DropdownStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-            DropdownStroke.Color = Color3.fromRGB(225,225,225)
+            DropdownStroke.Color = AccentColor
             DropdownStroke.LineJoinMode = Enum.LineJoinMode.Round
             DropdownStroke.Thickness = 0.6
             DropdownStroke.Transparency = 0.8
@@ -892,7 +892,7 @@ function library:AddWindow(text,keybind)
             SliderTitle.Size = UDim2.new(0, 290, 0, 20)
             SliderTitle.Font = Enum.Font.Gotham
             SliderTitle.Text = text
-            SliderTitle.TextColor3 = AccentColor
+            SliderTitle.TextColor3 = Color3.fromRGB(225, 225, 225)
             SliderTitle.TextSize = 11.000
             SliderTitle.TextXAlignment = Enum.TextXAlignment.Left
 
@@ -904,7 +904,7 @@ function library:AddWindow(text,keybind)
             SliderValue.Size = UDim2.new(0, 40, 0, 20)
             SliderValue.Font = Enum.Font.Gotham
             SliderValue.Text =  tostring(set and math.floor( (set / max) * (max - min) + min) or 0)
-            SliderValue.TextColor3 = AccentColor
+            SliderValue.TextColor3 = Color3.fromRGB(225, 225, 225)
             SliderValue.TextSize = 11.000
 
             SliderButton.Name = "SliderButton"
@@ -1056,7 +1056,7 @@ function library:AddWindow(text,keybind)
             Label2.BackgroundTransparency = 1.000
             Label2.Size = UDim2.new(0, 455, 0, 57)
             Label2.Font = Enum.Font.GothamSemibold
-            Label2.TextColor3 = AccentColor
+            Label2.TextColor3 = Color3.fromRGB(225, 225, 225)
             Label2.TextSize = 11.000
             Label2.Text = text
             Label2.TextXAlignment = Enum.TextXAlignment.Left
@@ -1075,7 +1075,7 @@ function library:AddWindow(text,keybind)
             DropdownStroke.Name = "UIStroke"
             DropdownStroke.Parent = Label2
             DropdownStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-            DropdownStroke.Color = Color3.fromRGB(225,225,225)
+            DropdownStroke.Color = AccentColor
             DropdownStroke.LineJoinMode = Enum.LineJoinMode.Round
             DropdownStroke.Thickness = 0.6
             DropdownStroke.Transparency = 0.8
@@ -1109,7 +1109,7 @@ function library:AddWindow(text,keybind)
             Label.BackgroundTransparency = 1.000
             Label.Size = UDim2.new(0, 455, 0, 20)
             Label.Font = Enum.Font.Gotham
-            Label.TextColor3 = AccentColor
+            Label.TextColor3 = Color3.fromRGB(225, 225, 225)
             Label.TextSize = 11.000
             Label.Text = text
             Label.TextXAlignment = Enum.TextXAlignment.Left
@@ -1128,7 +1128,7 @@ function library:AddWindow(text,keybind)
             DropdownStroke.Name = "UIStroke"
             DropdownStroke.Parent = Label
             DropdownStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-            DropdownStroke.Color = Color3.fromRGB(225,225,225)
+            DropdownStroke.Color = AccentColor
             DropdownStroke.LineJoinMode = Enum.LineJoinMode.Round
             DropdownStroke.Thickness = 0.6
             DropdownStroke.Transparency = 0.8
