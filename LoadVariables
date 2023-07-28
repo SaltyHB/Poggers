@@ -4,7 +4,7 @@ if _G.Version == "Chest Farm" or _G.Version == "Fruit Farm" or _G.Version == "Mi
 print("[ Raito Hub ] Auto-Execute Off.")
 elseif _G.Version == "Fruit Farm 2" then
 print("[ Raito Hub ] Auto-Execute Started.")
-raitohub = "wait(3) loadstring(game:HttpGet('https://raw.githubusercontent.com/Efe0626/RaitoHub/main/FruitFarm'))()" 
+raitohub = "wait(10) loadstring(game:HttpGet('https://raw.githubusercontent.com/Efe0626/RaitoHub/main/FruitFarm'))()" 
 else
 print("[ Raito Hub ] Auto-Execute Started.")
 raitohub = "wait(10) loadstring(game:HttpGet('https://raw.githubusercontent.com/Efe0626/RaitoHub/main/Script'))()" 
