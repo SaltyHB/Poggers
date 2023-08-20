@@ -135,15 +135,10 @@ end;
 function Library:ApplyTextStroke(Inst)
     Inst.TextStrokeTransparency = 1;
 
-    Library:Create('UICorner', {
+    Library:Create('UIStroke', {
         Color = Color3.new(0, 0, 0);
         Thickness = 1;
         LineJoinMode = Enum.LineJoinMode.Miter;
-        Parent = Inst;
-    });
-
-    Library:Create('UIStroke', {
-        CornerRadius = UDim.new(0, 8)
         Parent = Inst;
     });
 end;
