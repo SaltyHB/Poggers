@@ -2,9 +2,8 @@ spawn(function()
     pcall(function()
         while wait(1) do
             if not game:GetService("UserInputService").TouchEnabled and not game:GetService("UserInputService").KeyboardEnabled == false then
-            print("[ Raito Hub ] Fast Attack Set To PC")
+            Comp = false
             else
-            print("[ Raito Hub ] Fast Attack Set To Mobile")
             AttackDelay = "0"
             end
         end
