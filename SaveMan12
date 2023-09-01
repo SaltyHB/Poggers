@@ -295,12 +295,25 @@ local SaveManager = {} do
         local Toggle = section:AddToggle("Auto Save Settings", {Title = "Auto Save Settings", Default = true })
         Toggle:OnChanged(function(value)
             _G.AutoSave = value
+            writefile(self.Folder .. "/settings/autoload.txt", "Auto Save Config")
+            AutoloadButton:SetDesc("Current autoload config: " .. "Auto Save Config")
+            local success, err = self:Save("Auto Save Config")
+            if not success then
+                return self.Library:Notify({
+                    Title = "Interface",
+                    Content = "Config loader",
+                    SubContent = "Failed to overwrite config: " .. err,
+                    Duration = 7
+                })
+            end
         end)
 
         spawn(function()
             pcall(function()
                 while wait(1) do
                     if _G.AutoSave then
+                        writefile(self.Folder .. "/settings/autoload.txt", "Auto Save Config")
+                        AutoloadButton:SetDesc("Current autoload config: " .. "Auto Save Config")
                         local success, err = self:Save("Auto Save Config")
                         if not success then
                             return self.Library:Notify({
@@ -310,8 +323,6 @@ local SaveManager = {} do
                                 Duration = 7
                             })
                         end
-                        writefile(self.Folder .. "/settings/autoload.txt", "Auto Save Config")
-                        AutoloadButton:SetDesc("Current autoload config: " .. "Auto Save Config")
                     end 
                 end
             end)
