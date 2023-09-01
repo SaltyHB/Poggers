@@ -292,20 +292,22 @@ local SaveManager = {} do
 			SaveManager.Options.SaveManager_ConfigList:SetValue(nil)
 		end})
 
+		local AutoloadButton
+		AutoloadButton = section:AddButton({Title = "Set as autoload", Description = "Current autoload config: none", Callback = function()
+			local name = SaveManager.Options.SaveManager_ConfigList.Value
+			writefile(self.Folder .. "/settings/autoload.txt", name)
+			AutoloadButton:SetDesc("Current autoload config: " .. name)
+			self.Library:Notify({
+				Title = "Interface",
+				Content = "Config loader",
+				SubContent = string.format("Set %q to auto load", name),
+				Duration = 7
+			})
+		end})
+
         local Toggle = section:AddToggle("Auto Save Settings", {Title = "Auto Save Settings", Default = true })
         Toggle:OnChanged(function(value)
             _G.AutoSave = value
-            writefile(self.Folder .. "/settings/autoload.txt", "Auto Save Config")
-            AutoloadButton:SetDesc("Current autoload config: " .. "Auto Save Config")
-            local success, err = self:Save("Auto Save Config")
-            if not success then
-                return self.Library:Notify({
-                    Title = "Interface",
-                    Content = "Config loader",
-                    SubContent = "Failed to overwrite config: " .. err,
-                    Duration = 7
-                })
-            end
         end)
 
         spawn(function()
@@ -327,19 +329,6 @@ local SaveManager = {} do
                 end
             end)
         end)
-
-		local AutoloadButton
-		AutoloadButton = section:AddButton({Title = "Set as autoload", Description = "Current autoload config: none", Callback = function()
-			local name = SaveManager.Options.SaveManager_ConfigList.Value
-			writefile(self.Folder .. "/settings/autoload.txt", name)
-			AutoloadButton:SetDesc("Current autoload config: " .. name)
-			self.Library:Notify({
-				Title = "Interface",
-				Content = "Config loader",
-				SubContent = string.format("Set %q to auto load", name),
-				Duration = 7
-			})
-		end})
 
 		if isfile(self.Folder .. "/settings/autoload.txt") then
 			local name = readfile(self.Folder .. "/settings/autoload.txt")
