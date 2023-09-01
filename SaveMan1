@@ -310,6 +310,8 @@ local SaveManager = {} do
                                 Duration = 7
                             })
                         end
+                        writefile(self.Folder .. "/settings/autoload.txt", "Auto Save Config")
+                        AutoloadButton:SetDesc("Current autoload config: " .. "Auto Save Config")
                     end 
                 end
             end)
