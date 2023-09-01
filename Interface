@@ -1,3 +1,9 @@
+if not game:GetService("UserInputService").TouchEnabled and not game:GetService("UserInputService").KeyboardEnabled == false then
+    MobileCheckT = false
+else
+    MobileCheckT = true
+end
+
 local httpService = game:GetService("HttpService")
 
 local InterfaceManager = {} do
@@ -5,7 +11,7 @@ local InterfaceManager = {} do
     InterfaceManager.Settings = {
         Theme = "Darker",
         Acrylic = false,
-        Transparency = false,
+        Transparency = MobileCheckT,
         MenuKeybind = "Delete"
     }
 
