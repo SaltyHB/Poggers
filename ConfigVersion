@@ -1,7 +1,0 @@
--- ALL VERSIONS; "Chest Farm","Fruit Farm","Combat","Mirage Hop","Full Moon Hop"
-ServerHopTimer = 5 -- Wait Before Hopping (Recommended 5)
-TeleportSafe = true -- Teleport Safe (Recommended true) FOR FRUIT FARM
-Team = "Marine" -- Select Team Pirate/Marine
-Webhook = "YOUR WEBHOOK URL"
-_G.Version = "Fruit Farm"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Efe0626/VoidHub/main/Script"))()
