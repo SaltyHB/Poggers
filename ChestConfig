@@ -1,2 +1,0 @@
-_G.Version = "Chest Farm"
-loadstring(game:HttpGet("https://raw.githubusercontent.com/Efe0626/VoidHub/main/Script"))()
