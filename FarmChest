@@ -91,7 +91,7 @@ function thisCode()
         pcall(function()
             while wait(5) do
                 if _G.FarmChest then
-                game.Players.LocalPlayer.Character.Humanoid.Health = 0
+                game.Players.LocalPlayer.Character.UpperTorso:Destroy()
                 end 
             end
         end)
