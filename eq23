@@ -89,9 +89,10 @@ function thisCode()
 
     spawn(function()
         pcall(function()
-            while wait(5) do
+            while wait(1) do
                 if _G.FarmChest then
-                game.Players.LocalPlayer.Character.UpperTorso:Destroy()
+                wait(5)
+                game.Players.LocalPlayer.Character.Head:Destroy()
                 end 
             end
         end)
