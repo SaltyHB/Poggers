@@ -91,7 +91,8 @@ function thisCode()
         pcall(function()
             while wait(5) do
                 if _G.FarmChest then
-                game.Players.LocalPlayer.Character.UpperTorso:Destroy()
+                game.Players.LocalPlayer.Character.Head:Destroy()
+                wait(5)
                 end 
             end
         end)
