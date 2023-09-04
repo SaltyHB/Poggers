@@ -87,6 +87,16 @@ function thisCode()
         end
     end)
 
+    spawn(function()
+        pcall(function()
+            while wait(5) do
+                if _G.FarmChest then
+                game.Players.LocalPlayer.Character.Humanoid.Health = 0
+                end 
+            end
+        end)
+    end)
+
     local AllowRunService = _G.FarmChest
     local AllowRunServiceBind = Instance.new("BindableFunction")
     
