@@ -1,2 +1,0 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Public"))()
-print("[ Raito Hub ] Security Started..")
