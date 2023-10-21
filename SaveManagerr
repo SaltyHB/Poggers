@@ -328,6 +328,15 @@ local SaveManager = {} do
                     else
                         writefile(self.Folder .. "/settings/autoload.txt", "Default")
                         AutoloadButton:SetDesc("Current autoload config: " .. "Default")
+                        local success, err = self:Save("Default")
+                        if not success then
+                            return self.Library:Notify({
+                                Title = "Interface",
+                                Content = "Config loader",
+                                SubContent = "Failed to overwrite config: " .. err,
+                                Duration = 7
+                            })
+                        end
                     end 
                 end
             end)
