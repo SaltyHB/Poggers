@@ -1,5 +1,5 @@
-        wait(0.1)
-        local PandaAuth = loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/SaltyHB/Poggers/main/NewAuth3'))()
+        local PandaAuth = loadstring(game:HttpGet('https://pandadevelopment.net/service_api/PandaLibV3/Main.lua'))()
+        local Service = "raitohub"
         local service_name = "raitohub"
         local KeyLibrary = loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/setup_obf.lua'))()
         local KeySystem = KeyLibrary.new('RaitoHub')
