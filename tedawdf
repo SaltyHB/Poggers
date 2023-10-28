@@ -34,32 +34,13 @@ local KeyTab = KeyWindow:MakeTab({
     Icon = "rbxassetid://5179834402",
 })
 
---- We use this to decrypt the PandaAuth:ValidateKey output
---- @param  Key           string   The decryption key (Service)
---- @param  EncryptedData string   The encrypted data (returned from ValidateKey function)
---- @return string        result   The result which will be checked.
-local function decrypt(Key, EncryptedData)
-    local keyBytes = {string.byte(Key, 1, -1)}
-    local encryptedBytes = {string.byte(EncryptedData, 1, -1)}
-
-    local resultBytes = {}
-
-    for i = 1, #encryptedBytes do
-        resultBytes[i] = string.char(bit32.bxor(encryptedBytes[i], keyBytes[i % #keyBytes + 1]))
-    end
-
-    return table.concat(resultBytes)
-end
-
 KeyTab:AddTextbox({
     Name = "Key",
     Default = "",
     Callback = function(Key)
         print("Input Key: " .. Key)
-        local Data = PandaAuth:ValidateKey(Service, Key)
-        local decData = decrypt(Data, Key)
 
-        if decData == "Mr. Lolegic" then
+        if PandaAuth:ValidateKey(Service, Key) then
             KeyLib:MakeNotification({
                 Name = "Panda Script Hub",
                 Content = "Key Successfully Validated",
