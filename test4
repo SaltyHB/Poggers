@@ -1,0 +1,389 @@
+        wait(0.1)
+        local PandaAuth = loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/SaltyHB/Poggers/main/Auth'))()
+        local service_name = "raitohub"
+        local KeyLibrary = loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/setup_obf.lua'))()
+        local KeySystem = KeyLibrary.new('RaitoHub')
+        do
+            local keyui = game.CoreGui:FindFirstChild("ScreenGui")
+             if keyui then
+                keyui:Destroy()
+             end
+         end
+
+         local UserInputService = game:GetService("UserInputService")
+         local TweenService = game:GetService("TweenService")
+         
+         local function MakeDraggable(topbarobject, object)
+             local Dragging = nil
+             local DragInput = nil
+             local DragStart = nil
+             local StartPosition = nil
+         
+             local function Update(input)
+                 local Delta = input.Position - DragStart
+                 local pos =
+                     UDim2.new(
+                         StartPosition.X.Scale,
+                         StartPosition.X.Offset + Delta.X,
+                         StartPosition.Y.Scale,
+                         StartPosition.Y.Offset + Delta.Y
+                     )
+                 local Tween = TweenService:Create(object, TweenInfo.new(0.2), {Position = pos})
+                 Tween:Play()
+             end
+         
+             topbarobject.InputBegan:Connect(
+                 function(input)
+                     if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                         Dragging = true
+                         DragStart = input.Position
+                         StartPosition = object.Position
+         
+                         input.Changed:Connect(
+                             function()
+                                 if input.UserInputState == Enum.UserInputState.End then
+                                     Dragging = false
+                                 end
+                             end
+                         )
+                     end
+                 end
+             )
+         
+             topbarobject.InputChanged:Connect(
+                 function(input)
+                     if
+                         input.UserInputType == Enum.UserInputType.MouseMovement or
+                         input.UserInputType == Enum.UserInputType.Touch
+                     then
+                         DragInput = input
+                     end
+                 end
+             )
+         
+             UserInputService.InputChanged:Connect(
+                 function(input)
+                     if input == DragInput and Dragging then
+                         Update(input)
+                     end
+                 end
+             )
+         end
+        
+        local ScreenGui = Instance.new("ScreenGui")
+        local Frame = Instance.new("Frame")
+        local Frame_2 = Instance.new("Frame")
+        local Frame_3 = Instance.new("Frame")
+        local Name = Instance.new("TextLabel")
+        local Name_2 = Instance.new("TextLabel")
+        local KeyInput = Instance.new("TextBox")
+        local Submit = Instance.new("TextButton")
+        local Discord = Instance.new("TextButton")
+        local GetKey = Instance.new("TextButton")
+         
+        ScreenGui.Parent = game.CoreGui
+        ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+        local Frame = Instance.new("CanvasGroup")
+        Frame.AnchorPoint = Vector2.new(0.5, 0.5)
+        Frame.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+        Frame.BorderColor3 = Color3.new(0, 0, 0)
+        Frame.BorderSizePixel = 0
+        Frame.Position = UDim2.new(0.5, 0, 0.5, 0)
+        Frame.Size = UDim2.new(0, 350, 0, 265)
+        Frame.Visible = true
+        Frame.Parent = ScreenGui
+
+        local FrameCorner = Instance.new("UICorner")
+        FrameCorner.CornerRadius = UDim.new(0, 4)
+        FrameCorner.Name = "FrameCorner"
+        FrameCorner.Parent = Frame
+
+        local top_frame = Instance.new("Frame")
+        top_frame.BackgroundColor3 = Color3.new(0.105882, 0.105882, 0.105882)
+        top_frame.BorderColor3 = Color3.new(0.113725, 0.113725, 0.113725)
+        top_frame.Size = UDim2.new(1, 0, 0, 40)
+        top_frame.Visible = true
+        top_frame.Name = "TopFrame"
+        top_frame.Parent = Frame
+        local FrameCorner = Instance.new("UICorner")
+        FrameCorner.CornerRadius = UDim.new(0, 4)
+        FrameCorner.Name = "FrameCorner"
+        FrameCorner.Parent = top_frame
+    
+        local top_frameStroke = Instance.new("UIStroke")
+        top_frameStroke.Name = "UIStroke"
+        top_frameStroke.Parent = top_frame
+        top_frameStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+        top_frameStroke.Color = Color3.fromRGB(150,150,150)
+        top_frameStroke.LineJoinMode = Enum.LineJoinMode.Round
+        top_frameStroke.Thickness = 0.6
+        top_frameStroke.Transparency = 0.8
+        top_frameStroke.Enabled = true
+        top_frameStroke.Archivable = true
+        
+        local text_label = Instance.new("TextLabel")
+        text_label.Font = Enum.Font.Gotham
+        text_label.RichText = true
+        text_label.Text = "Raito Hub".." - <b>Key System</b>"
+        text_label.TextColor3 = Color3.new(1, 1, 1)
+        text_label.TextSize = 14
+        text_label.BackgroundColor3 = Color3.new(1, 1, 1)
+        text_label.BackgroundTransparency = 1
+        text_label.BorderColor3 = Color3.new(0, 0, 0)
+        text_label.BorderSizePixel = 0
+        text_label.Size = UDim2.new(0, 350, 0, 40)
+        text_label.Visible = true
+        text_label.Parent = top_frame
+        
+        local text_label_2 = Instance.new("TextLabel")
+        text_label_2.Font = Enum.Font.Gotham
+        text_label_2.Text = "To use the free version of Raito Hub you need a key. Click 'Get Key' button to get your key!"
+        text_label_2.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+        text_label_2.TextSize = 14
+        text_label_2.TextWrapped = true
+        text_label_2.BackgroundColor3 = Color3.new(1, 1, 1)
+        text_label_2.BackgroundTransparency = 1
+        text_label_2.BorderColor3 = Color3.new(0, 0, 0)
+        text_label_2.BorderSizePixel = 0
+        text_label_2.Position = UDim2.new(0.034285713, 0, 0.143999994, 14)
+        text_label_2.Size = UDim2.new(0, 325, 0, 49)
+        text_label_2.Visible = true
+        text_label_2.Parent = Frame
+        
+        MakeDraggable(top_frame,Frame)
+   
+        if isfile("Raito Key.txt") then
+        KeyInput.Name = "KeyInput" 
+        KeyInput.Parent = Frame
+        KeyInput.CursorPosition = -1
+        KeyInput.BackgroundColor3 = Color3.new(0.109804, 0.109804, 0.109804)
+        KeyInput.Position = UDim2.new(0.034285713, 0, 0.416000009, 5)
+        KeyInput.Size = UDim2.new(0, 325, 0, 50)
+        KeyInput.ClearTextOnFocus = false
+        KeyInput.Font = Enum.Font.Gotham
+        KeyInput.PlaceholderColor3 = Color3.new(0.698039, 0.698039, 0.698039)
+        KeyInput.PlaceholderText = "Enter Key..."
+        KeyInput.Text = readfile("Raito Key.txt")
+        KeyInput.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+        KeyInput.TextSize = 16
+        KeyInput.TextTruncate = Enum.TextTruncate.AtEnd
+        KeyInput.TextXAlignment = Enum.TextXAlignment.Left
+        else
+        KeyInput.Name = "KeyInput" 
+        KeyInput.Parent = Frame
+        KeyInput.CursorPosition = -1
+        KeyInput.BackgroundColor3 = Color3.new(0.109804, 0.109804, 0.109804)
+        KeyInput.Position = UDim2.new(0.034285713, 0, 0.416000009, 5)
+        KeyInput.Size = UDim2.new(0, 325, 0, 50)
+        KeyInput.ClearTextOnFocus = false
+        KeyInput.Font = Enum.Font.Gotham
+        KeyInput.PlaceholderColor3 = Color3.new(0.698039, 0.698039, 0.698039)
+        KeyInput.PlaceholderText = "Enter Key..."
+        KeyInput.Text = ""
+        KeyInput.TextColor3 = Color3.new(0.784314, 0.784314, 0.784314)
+        KeyInput.TextSize = 16
+        KeyInput.TextTruncate = Enum.TextTruncate.AtEnd
+        KeyInput.TextXAlignment = Enum.TextXAlignment.Left
+        end
+        local KeyInputCorner = Instance.new("UICorner")
+        KeyInputCorner.CornerRadius = UDim.new(0, 4)
+        KeyInputCorner.Name = "KeyInputCorner"
+        KeyInputCorner.Parent = KeyInput
+        local KeyInputStroke = Instance.new("UIStroke")
+        KeyInputStroke.Name = "UIStroke"
+        KeyInputStroke.Parent = KeyInput
+        KeyInputStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+        KeyInputStroke.Color = Color3.fromRGB(150,150,150)
+        KeyInputStroke.LineJoinMode = Enum.LineJoinMode.Round
+        KeyInputStroke.Thickness = 0.6
+        KeyInputStroke.Transparency = 0.9
+        KeyInputStroke.Enabled = true
+        KeyInputStroke.Archivable = true
+        local uipadding = Instance.new("UIPadding")
+        uipadding.PaddingLeft = UDim.new(0, 15)
+        uipadding.Parent = KeyInput
+        function LoadKey()
+            if isfile("Raito Key.txt") then
+                KeyInput.Text = readfile("Raito Key.txt")
+            end
+        end
+
+        local Submit = Instance.new("TextButton")
+        Submit.Font = Enum.Font.Gotham
+        Submit.Text = "Check Key"
+        Submit.TextColor3 = Color3.new(1, 1, 1)
+        Submit.TextSize = 13
+        Submit.BackgroundColor3 = Color3.new(0.109804, 0.109804, 0.109804)
+        Submit.BorderColor3 = Color3.new(0, 0, 0)
+        Submit.BorderSizePixel = 0
+        Submit.Position = UDim2.new(0.034285713, 0, 0.656000018, 2)
+        Submit.Size = UDim2.new(0, 150, 0, 35)
+        Submit.Visible = true
+        Submit.Name = "CheckKey"
+        Submit.Parent = Frame
+        Submit.MouseButton1Click:Connect(function()
+            Check()
+        end)
+    
+        local check_keyStroke = Instance.new("UIStroke")
+        check_keyStroke.Name = "UIStroke"
+        check_keyStroke.Parent = Submit
+        check_keyStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+        check_keyStroke.Color = Color3.fromRGB(225,225,225)
+        check_keyStroke.LineJoinMode = Enum.LineJoinMode.Round
+        check_keyStroke.Thickness = 0.6
+        check_keyStroke.Transparency = 0.9
+        check_keyStroke.Enabled = true
+        check_keyStroke.Archivable = true
+        
+        local uicorner_4 = Instance.new("UICorner")
+        uicorner_4.CornerRadius = UDim.new(0, 4)
+        uicorner_4.Parent = Submit
+    
+        function Check()
+                pcall(function()
+                Submit.TextColor3 = Color3.fromRGB(244, 164, 96)
+                Submit.Text = "Checking Key.. ⌛"
+                if (KeySystem:verifyKey(KeyInput.Text)) or (PandaAuth:ValidateKey(service_name, KeyInput.Text)) then
+                    Submit.TextColor3 = Color3.fromRGB(61, 237, 151)
+                    Submit.Text = "Valid Key ✔️"
+                    writefile("Raito Key.txt", ""..KeyInput.Text)
+                    wait(0.5)
+                    do
+                        local keyui = game.CoreGui:FindFirstChild("ScreenGui")
+                         if keyui then
+                            keyui:Destroy()
+                         end
+                    end
+                    _G.Authenicated = string.reverse(game.Players.LocalPlayer.UserId)
+                    Script()
+                    else
+                    _G.Authenicated = false
+                    Submit.TextColor3 = Color3.fromRGB(235, 64, 59)
+                    Submit.Text = "Wrong Key ❌"
+                    wait(1)
+                    Submit.TextColor3 = Color3.new(1, 1, 1)
+                    Submit.Text = "Submit"
+                end
+            end)
+        end
+        
+        local Discord = Instance.new("TextButton")
+        Discord.Font = Enum.Font.Gotham
+        Discord.Text = "Join the Discord Server"
+        Discord.TextColor3 = Color3.new(1, 1, 1)
+        Discord.TextSize = 13
+        Discord.BackgroundColor3 = Color3.fromRGB(105,105,105)
+        Discord.BorderColor3 = Color3.new(0, 0, 0)
+        Discord.BorderSizePixel = 0
+        Discord.Position = UDim2.new(0.034285713, 0, 0.819999993, 5)
+        Discord.Size = UDim2.new(0, 325, 0, 35)
+        Discord.Visible = true
+        Discord.Name = "Discord"
+        Discord.Parent = Frame
+        Discord.MouseButton1Click:Connect(function()
+            Discord.TextColor3 = Color3.fromRGB(61, 237, 151)
+            Discord.Text = "Copied ✔️"
+            setclipboard("discord.gg/raitohub")
+            wait(1)
+            Discord.TextColor3 = Color3.new(1, 1, 1)
+            Discord.Text = "Join the Discord Server"
+        end)
+
+        local discordStroke = Instance.new("UIStroke")
+        discordStroke.Name = "UIStroke"
+        discordStroke.Parent = Discord
+        discordStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+        discordStroke.Color = Color3.fromRGB(200,200,200)
+        discordStroke.LineJoinMode = Enum.LineJoinMode.Round
+        discordStroke.Thickness = 0.6
+        discordStroke.Transparency = 0.8
+        discordStroke.Enabled = true
+        discordStroke.Archivable = true
+        
+        local uicorner_6 = Instance.new("UICorner")
+        uicorner_6.CornerRadius = UDim.new(0, 4)
+        uicorner_6.Parent = Discord
+
+        local GetKey2 = Instance.new("TextButton")
+        GetKey2.Font = Enum.Font.Gotham
+        GetKey2.Text = "Get 12H Key"
+        GetKey2.TextColor3 = Color3.new(1, 1, 1)
+        GetKey2.TextSize = 13
+        GetKey2.BackgroundColor3 = Color3.new(0.109804, 0.109804, 0.109804)
+        GetKey2.BorderColor3 = Color3.new(0, 0, 0)
+        GetKey2.BorderSizePixel = 0
+        GetKey2.Position = UDim2.new(0.726, 0, 0.656000018, 2)
+        GetKey2.Size = UDim2.new(0, 85, 0, 35)
+        GetKey2.Visible = true
+        GetKey2.Name = "GetKey"
+        GetKey2.Parent = Frame
+        GetKey2.MouseButton1Click:Connect(function()
+            GetKey2.TextColor3 = Color3.fromRGB(61, 237, 151)
+            GetKey2.Text = "Copied ✔️"
+            KeySystem:copyGetKeyURL()
+            KeyInput.Text = KeySystem:getKeyURL()
+            wait(1)
+            GetKey2.TextColor3 = Color3.new(1, 1, 1)
+            GetKey2.Text = "Get 12H Key"
+        end)
+
+        local GetKey = Instance.new("TextButton")
+        GetKey.Font = Enum.Font.Gotham
+        GetKey.Text = "Get 24H Key"
+        GetKey.TextColor3 = Color3.new(1, 1, 1)
+        GetKey.TextSize = 13
+        GetKey.BackgroundColor3 = Color3.new(0.109804, 0.109804, 0.109804)
+        GetKey.BorderColor3 = Color3.new(0, 0, 0)
+        GetKey.BorderSizePixel = 0
+        GetKey.Position = UDim2.new(0.4728542, 0, 0.656000018, 2)
+        GetKey.Size = UDim2.new(0, 85, 0, 35)
+        GetKey.Visible = true
+        GetKey.Name = "GetKey"
+        GetKey.Parent = Frame
+        GetKey.MouseButton1Click:Connect(function()
+            GetKey.TextColor3 = Color3.fromRGB(61, 237, 151)
+            GetKey.Text = "Copied ✔️"
+            setclipboard(PandaAuth:GetLink(service_name))
+            KeyInput.Text = PandaAuth:GetLink(service_name)
+            wait(1)
+            GetKey.TextColor3 = Color3.new(1, 1, 1)
+            GetKey.Text = "Get 24H Key"
+        end)
+    
+        local get_keyStroke = Instance.new("UIStroke")
+        get_keyStroke.Name = "UIStroke"
+        get_keyStroke.Parent = GetKey
+        get_keyStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+        get_keyStroke.Color = Color3.fromRGB(225,225,225)
+        get_keyStroke.LineJoinMode = Enum.LineJoinMode.Round
+        get_keyStroke.Thickness = 0.6
+        get_keyStroke.Transparency = 0.9
+        get_keyStroke.Enabled = true
+        get_keyStroke.Archivable = true
+        
+        local uicorner_5 = Instance.new("UICorner")
+        uicorner_5.CornerRadius = UDim.new(0, 4)
+        uicorner_5.Parent = GetKey
+
+        local get_keyStroke = Instance.new("UIStroke")
+        get_keyStroke.Name = "UIStroke"
+        get_keyStroke.Parent = GetKey2
+        get_keyStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+        get_keyStroke.Color = Color3.fromRGB(225,225,225)
+        get_keyStroke.LineJoinMode = Enum.LineJoinMode.Round
+        get_keyStroke.Thickness = 0.6
+        get_keyStroke.Transparency = 0.9
+        get_keyStroke.Enabled = true
+        get_keyStroke.Archivable = true
+        
+        local uicorner_5 = Instance.new("UICorner")
+        uicorner_5.CornerRadius = UDim.new(0, 4)
+        uicorner_5.Parent = GetKey2
+
+if isfile("Raito Key.txt") then
+LoadKey()
+wait(.1)
+Check()
+end
