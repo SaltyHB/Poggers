@@ -1,5 +1,5 @@
 -- Panda Related
-local PandaAuth = loadstring(game:HttpGet('https://raw.githubusercontent.com/SaltyHB/Poggers/main/NewAuth2'))()
+local PandaAuth = loadstring(game:HttpGet('https://raw.githubusercontent.com/SaltyHB/Poggers/main/NewAuth3'))()
 local Service = "pandadevkit"
 
 -- Other
