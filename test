@@ -1,0 +1,48 @@
+-- Panda Related
+local PandaAuth = loadstring(game:HttpGet('https://raw.githubusercontent.com/SaltyHB/Poggers/main/NewAuth'))()
+local Service = "pandadevkit"
+
+-- Other
+local KeyLib = loadstring(game:HttpGet('https://pandadevelopment.net/scripts/UILib/OrionHub.lua'))()
+local KeyWindow = KeyLib:MakeWindow({Name = "Test Key", HidePremium = false, SaveConfig = false, ConfigFolder = "PandaSH"})
+local KeyTab = KeyWindow:MakeTab({
+    Name = "Key System",
+    Icon = "rbxassetid://5179834402",
+})
+
+KeyTab:AddTextbox({
+    Name = "Key",
+    Default = "",
+    Callback = function(Key)
+        print("Input Key: " .. Key)
+
+        if PandaAuth:ValidateKey(Service, Key) then
+            KeyLib:MakeNotification({
+                Name = "Panda Script Hub",
+                Content = "Key Successfully Validated",
+                Image = "rbxassetid://5179834402",
+                Time = 5
+            })
+        else
+            KeyLib:MakeNotification({
+                Name = "Panda Script Hub",
+                Content = "Invalid Key..Please Try again",
+                Image = "rbxassetid://5179834402",
+                Time = 5
+            })
+        end
+    end
+})
+
+KeyTab:AddButton({
+    Name = "Get Key",
+    Callback = function()
+        setclipboard(PandaAuth:GetLink(Service))
+        KeyLib:MakeNotification({
+            Name = "Panda Script Hub",
+            Content = "Copied to your clipboard, Paste it on your browser to begin getting the key",
+            Image = "rbxassetid://5179834402",
+            Time = 5
+        })
+    end
+})
