@@ -3624,6 +3624,85 @@ do
         end)
     end
 
+    if not World1 then
+    Tabs.Main:AddSection("Sea Events [Beta]")
+
+    local Toggle9223233 = Tabs.Main:AddToggle("Auto Leviathan", {Title = "Auto Leviathan/Sea Beast", Default = false })
+    Toggle9223233:OnChanged(function(value)
+        _G.AutoLeviathan = value
+    end)
+
+    spawn(function()
+      while wait() do
+          if _G.AutoLeviathan then
+                 pcall(function()
+                  for i, v in pairs(game.Workspace.SeaBeasts:GetChildren()) do
+                    if v:FindFirstChild("HumanoidRootPart") or v.Name == "SeaBeast1" or v.Name == "Leviathan" then
+                          AutoHaki()
+                          EquipWeapon(_G.SelectWeapon)
+                          TP(v.HumanoidRootPart.CFrame * CFrame.new(0,500,0))
+                          if _G.SkillZ and _G.AutoLeviathan == true then 
+                          game:service('VirtualInputManager'):SendKeyEvent(true, "Z", false, game)
+                          wait(0.1)
+                          game:service('VirtualInputManager'):SendKeyEvent(false, "Z", false, game)
+                          end
+                          if _G.SkillX and _G.AutoLeviathan == true then 
+                          game:service('VirtualInputManager'):SendKeyEvent(true, "X", false, game)
+                          wait(0.1)
+                          game:service('VirtualInputManager'):SendKeyEvent(false, "X", false, game)
+                          end
+                          if _G.SkillC and _G.AutoLeviathan == true then 
+                          game:service('VirtualInputManager'):SendKeyEvent(true, "C", false, game)
+                          wait(0.1)
+                          game:service('VirtualInputManager'):SendKeyEvent(false, "C", false, game)
+                          end
+                          if _G.SkillV and _G.AutoLeviathan == true then 
+                          game:service('VirtualInputManager'):SendKeyEvent(true, "V", false, game)
+                          wait(0.1)
+                          game:service('VirtualInputManager'):SendKeyEvent(false, "V", false, game)
+                          end
+                          end
+                       end
+                  end)
+              end
+          end
+      end)
+
+      local Slide232r = Tabs.Main:AddSlider("Select Boat Speed", {
+        Title = "Select Boat Speed",
+        Description = "",
+        Default = 150,
+        Min = 50,
+        Max = 400,
+        Rounding = 1,
+        Callback = function(value)
+            _G.SelectBoatSpeed = value
+        end
+        })
+
+      local Toggle9223233 = Tabs.Main:AddToggle("IncreaseBoatSpeed", {Title = "Set Boat Speed", Default = false })
+      Toggle9223233:OnChanged(function(value)
+        _G.IncreaseBoatSpeed  = value
+        while task.wait() do
+          if _G.IncreaseBoatSpeed then
+          for i, v in pairs(game.Workspace.Boats:GetDescendants()) do
+              if v:IsA("VehicleSeat")  then
+                  v.MaxSpeed = _G.SelectBoatSpeed
+                  sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+              end
+              end
+          elseif not _G.IncreaseBoatSpeed then
+              for i, v in pairs(game.Workspace.Boats:GetDescendants()) do
+                if v:IsA("VehicleSeat")  then
+                    v.MaxSpeed = 150
+                    sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+                end
+                end
+            end
+         end
+      end)
+    end
+
     Tabs.Main:AddSection("Finder")
 
     local FrozenStats = Tabs.Main:AddParagraph({
