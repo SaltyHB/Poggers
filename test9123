@@ -1,5 +1,7 @@
-        local KeyLibrary = loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/setup_obf.lua'))()
-        local KeySystem = KeyLibrary.new('RaitoHub')
+        local PandaAuth = loadstring(game:HttpGet('https://pandadevelopment.net/service_api/PandaLibV3/Main.lua'))()
+        local Service = "raitohub"
+        local service_name = "raitohub"
+        getgenv().Debugging = true
         do
             local keyui = game.CoreGui:FindFirstChild("ScreenGui")
              if keyui then
@@ -237,12 +239,27 @@
         local uicorner_4 = Instance.new("UICorner")
         uicorner_4.CornerRadius = UDim.new(0, 4)
         uicorner_4.Parent = Submit
+    
+        local function decrypt(Key, EncryptedData)
+            local keyBytes = {string.byte(Key, 1, -1)}
+            local encryptedBytes = {string.byte(EncryptedData, 1, -1)}
+        
+            local resultBytes = {}
+        
+            for i = 1, #encryptedBytes do
+                resultBytes[i] = string.char(bit32.bxor(encryptedBytes[i], keyBytes[i % #keyBytes + 1]))
+            end
+        
+            return table.concat(resultBytes)
+        end
 
         function Check()
                 pcall(function()
                 Submit.TextColor3 = Color3.fromRGB(244, 164, 96)
                 Submit.Text = "Checking Key.. ⌛"
-                if KeySystem:verifyKey(KeyInput.Text) then
+                local Data = PandaAuth:ValidateKey(Service, KeyInput.Text)
+                local decData = decrypt(Data, KeyInput.Text)
+                if decData == "Mr. Lolegic" then
                     Submit.TextColor3 = Color3.fromRGB(61, 237, 151)
                     Submit.Text = "Valid Key ✔️"
                     writefile("Raito Key.txt", ""..KeyInput.Text)
