@@ -3702,7 +3702,6 @@ do
                               sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
                           end
                         end
-                    end
                 end 
             end
         end)
