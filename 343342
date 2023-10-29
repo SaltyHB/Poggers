@@ -3707,6 +3707,7 @@ do
             end
         end)
     end)
+    end
 
     Tabs.Main:AddSection("Finder")
 
