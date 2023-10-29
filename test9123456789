@@ -3686,29 +3686,27 @@ do
       end)
 
       spawn(function()
-        while wait() do
-            if _G.AutoLeviathan then
-                   pcall(function()
-                    if _G.IncreaseBoatSpeed then
+        pcall(function()
+            while wait(.1) do
+                if _G.IncreaseBoatSpeed then
+                    for i, v in pairs(game.Workspace.Boats:GetDescendants()) do
+                        if v:IsA("VehicleSeat")  then
+                            v.MaxSpeed = _G.SelectBoatSpeed
+                            sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
+                        end
+                    end
+                    elseif not _G.IncreaseBoatSpeed then
                         for i, v in pairs(game.Workspace.Boats:GetDescendants()) do
-                            if v:IsA("VehicleSeat")  then
-                                v.MaxSpeed = _G.SelectBoatSpeed
-                                sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
-                            end
-                            end
-                        elseif not _G.IncreaseBoatSpeed then
-                            for i, v in pairs(game.Workspace.Boats:GetDescendants()) do
-                              if v:IsA("VehicleSeat")  then
-                                  v.MaxSpeed = 150
-                                  sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
-                              end
-                              end
+                          if v:IsA("VehicleSeat")  then
+                              v.MaxSpeed = 150
+                              sethiddenproperty(game.Players.LocalPlayer, "SimulationRadius", math.huge)
                           end
-                       end
-                   end)
-                end
+                        end
+                    end
+                end 
             end
         end)
+    end)
 
     Tabs.Main:AddSection("Finder")
 
