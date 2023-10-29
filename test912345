@@ -1,3 +1,5 @@
+       local PandaAuth = loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/SaltyHB/Poggers/main/Auth'))()
+        local service_name = "raitohub"
         local KeyLibrary = loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/setup_obf.lua'))()
         local KeySystem = KeyLibrary.new('RaitoHub')
         do
@@ -237,12 +239,12 @@
         local uicorner_4 = Instance.new("UICorner")
         uicorner_4.CornerRadius = UDim.new(0, 4)
         uicorner_4.Parent = Submit
-
+    
         function Check()
                 pcall(function()
                 Submit.TextColor3 = Color3.fromRGB(244, 164, 96)
                 Submit.Text = "Checking Key.. ⌛"
-                if KeySystem:verifyKey(KeyInput.Text) then
+                if (KeySystem:verifyKey(KeyInput.Text)) or (PandaAuth:ValidateKey(service_name, KeyInput.Text)) then
                     Submit.TextColor3 = Color3.fromRGB(61, 237, 151)
                     Submit.Text = "Valid Key ✔️"
                     writefile("Raito Key.txt", ""..KeyInput.Text)
