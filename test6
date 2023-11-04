@@ -3745,11 +3745,19 @@ do
     Toggle922323332232323:OnChanged(function(value)
         _G.AutoSailBoat = value
         while _G.AutoSailBoat do task.wait(0)
-        game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.W,false,game)
+        for i, v in pairs(game.Workspace.Boats:GetDescendants()) do
+            if v:IsA("VehicleSeat") then 
+                if v.Owner.Value == game.Players.LocalPlayer.Name then
+                Options.RemoveRocks:SetValue(true)
+                game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.W,false,game)
+                else
+                Options.RemoveRocks:SetValue(false)
+                end
+            end
         end
     end)
 
-    local Toggle92232333223232321 = Tabs.Main:AddToggle("Remove Rocks", {Title = "Remove Rocks", Default = false })
+    local Toggle92232333223232321 = Tabs.Main:AddToggle("RemoveRocks", {Title = "Remove Rocks", Default = false })
     Toggle92232333223232321:OnChanged(function(value)
         _G.RemoveRocks = value
         function IsRock(v)
