@@ -3672,7 +3672,7 @@ do
           StopTween(_G.AutoEvent)
       end)
 
-      function oneboat(gotoCFrame)
+      function oneboat(gotoCFrame) --- Tween
         pcall(function()
         game.Players.LocalPlayer.Character.Humanoid.Sit = false
         game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
@@ -3680,7 +3680,24 @@ do
         if (game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position - gotoCFrame.Position).Magnitude <= 10 then
         pcall(function()
             tweenz:Cancel()
-    end)
+        end)
+        
+        else
+        local tween_s = game:service "TweenService"
+        local info = TweenInfo.new(
+            (game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart.Position - gotoCFrame.Position)
+            .Magnitude /
+            325, Enum.EasingStyle.Linear)
+        tween, err = pcall(function()
+            tweenz = tween_s:Create(game.Players.LocalPlayer.Character["HumanoidRootPart"], info, { CFrame = gotoCFrame })
+            tweenz:Play()
+        end)
+        if not tween then return err end
+        end
+        function _TweenCanCle()
+        tweenz:Cancel()
+        end
+        end
 
       task.spawn(function()
         while task.wait() do
