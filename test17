@@ -3704,6 +3704,7 @@ do
                 wait(8)
                 game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.A,false,game)
                 wait(1.1)
+                game:service('VirtualInputManager'):SendKeyEvent(false, "A", false, game)
                 repeat wait()
                     if SailNow == true then
                         game:service('VirtualInputManager'):SendKeyEvent(false, "A", false, game)
