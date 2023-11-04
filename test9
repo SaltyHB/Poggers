@@ -3745,12 +3745,7 @@ do
     Toggle922323332232323:OnChanged(function(value)
         _G.AutoSailBoat = value
         while _G.AutoSailBoat do task.wait(0)
-        for i, v in pairs(game.Workspace.Boats:GetDescendants()) do
-            if v:IsA("VehicleSeat") then 
-                if v.Owner.Value == game.Players.LocalPlayer.Name then
-                game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.W,false,game)
-                end
-            end
+            game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.W,false,game)
         end
     end)
 
