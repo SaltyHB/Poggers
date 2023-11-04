@@ -3701,9 +3701,9 @@ do
                 SpawnedBoat = true
                 wait(1)
                 game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.W,false,game)
-                wait(6)
+                wait(8)
                 game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.A,false,game)
-                wait(2)
+                wait(0.7)
                 repeat wait()
                     if SailNow == true then
                         game:service('VirtualInputManager'):SendKeyEvent(false, "A", false, game)
