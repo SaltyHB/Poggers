@@ -3754,6 +3754,7 @@ do
                             if string.find(v.Name, "Fish Crew Member") or string.find(v.Name, "Piranha") or string.find(v.Name,"Shark") or string.find(v.Name , "Terror") then 
                                 if v.Humanoid.Health > 0 then
                                 repeat task.wait()
+                                    SailNow = false
                                     if not game.Players.LocalPlayer.Character:FindFirstChild("HasBuso") then
                                         game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("Buso")
                                     end
