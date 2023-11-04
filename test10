@@ -1906,7 +1906,7 @@ end
         spawn(function()
             pcall(function()
                 while wait() do
-                    if _G.AutoAdvanceDungeon or _G.Frozen or AutoSecondSea or _G.AutoLeviathan or _G.AutoFarmLevelReal or _G.AutoPrince or _G.AutoPrince or _G.Auto_DungeonMobAura or _G.Auto_Farm_Chest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.KillSelectedPlayer or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or AutoSoulGuitar or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or FarmBoss or _G.AutoElitehunter or _G.AutoThirdSea or _G.MaterialFarmm or _G.AutoKing or _G.AutoDarkBeard or _G.AutoFarmBoss or getgenv().Chest or Auto_Dark_Coat or _G.AutoChalice or AutoMobAura or _G.AutoNevaSoulGuitar or _G.AutoCdk or _G.AutoFactory or _G.Mirage or _G.Next or _G.TeleportNPC or _G.Auto_Bone or _G.AutoPlayerHunter or _G.Auto_Farm_Heart or _G.FarmPirateRaid or _G.AutoTrain or _G.SeaBeast or _G.AutoFarmDungeon or AutoFarmChest or _G.Auto_Farm_Bone == true then
+                    if _G.AutoAdvanceDungeon or _G.Frozen or _G.AutoEvent or AutoSecondSea or _G.AutoLeviathan or _G.AutoFarmLevelReal or _G.AutoPrince or _G.AutoPrince or _G.Auto_DungeonMobAura or _G.Auto_Farm_Chest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.KillSelectedPlayer or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or AutoSoulGuitar or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or FarmBoss or _G.AutoElitehunter or _G.AutoThirdSea or _G.MaterialFarmm or _G.AutoKing or _G.AutoDarkBeard or _G.AutoFarmBoss or getgenv().Chest or Auto_Dark_Coat or _G.AutoChalice or AutoMobAura or _G.AutoNevaSoulGuitar or _G.AutoCdk or _G.AutoFactory or _G.Mirage or _G.Next or _G.TeleportNPC or _G.Auto_Bone or _G.AutoPlayerHunter or _G.Auto_Farm_Heart or _G.FarmPirateRaid or _G.AutoTrain or _G.SeaBeast or _G.AutoFarmDungeon or AutoFarmChest or _G.Auto_Farm_Bone == true then
                         if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("BodyClip") then
                             local Noclip = Instance.new("BodyVelocity")
                             Noclip.Name = "BodyClip"
@@ -1922,7 +1922,7 @@ end
         spawn(function()
             pcall(function()
                 game:GetService("RunService").Stepped:Connect(function()
-                    if _G.AutoAdvanceDungeon or _G.Frozen or AutoSecondSea or _G.AutoLeviathan or _G.AutoFarmLevelReal or _G.AutoPrince or _G.AutoPrince or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.KillSelectedPlayer or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or AutoSoulGuitar or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.MaterialFarmm or _G.AutoKing or _G.AutoDarkBeard or _G.AutoFarmBoss or getgenv().Chest or Auto_Dark_Coat or _G.AutoChalice or AutoMobAura or _G.AutoNevaSoulGuitar or _G.AutoCdk or _G.AutoFactory or _G.Mirage or _G.Next or _G.TeleportNPC or _G.Auto_Bone or _G.AutoPlayerHunter or _G.Auto_Farm_Heart or _G.FarmPirateRaid or _G.AutoTrain or _G.SeaBeast or _G.AutoFarmDungeon or AutoFarmChest or _G.Auto_Farm_Bone == true then
+                    if _G.AutoAdvanceDungeon or _G.Frozen or _G.AutoEvent or AutoSecondSea or _G.AutoLeviathan or _G.AutoFarmLevelReal or _G.AutoPrince or _G.AutoPrince or _G.Auto_DungeonMobAura or _G.AutoFarmChest or _G.AutoFarmBossHallow or _G.AutoFarmSwanGlasses or _G.AutoLongSword or _G.AutoBlackSpikeycoat or _G.AutoElectricClaw or _G.AutoFarmGunMastery or _G.AutoHolyTorch or _G.AutoLawRaid or _G.AutoFarmBoss or _G.AutoTwinHooks or _G.AutoOpenSwanDoor or _G.AutoDragon_Trident or _G.AutoSaber or _G.NOCLIP or _G.AutoFarmFruitMastery or _G.AutoFarmGunMastery or _G.TeleportIsland or _G.Auto_EvoRace or _G.AutoFarmAllMsBypassType or _G.AutoObservationv2 or _G.AutoMusketeerHat or _G.AutoEctoplasm or _G.AutoRengoku or _G.Auto_Rainbow_Haki or _G.AutoObservation or _G.AutoDarkDagger or _G.Safe_Mode or _G.MasteryFruit or _G.AutoBudySword or _G.AutoBounty or _G.AutoAllBoss or _G.Auto_Bounty or _G.AutoSharkman or _G.Auto_Mastery_Fruit or _G.Auto_Mastery_Gun or _G.Auto_Dungeon or _G.Auto_Cavender or _G.Auto_Pole or _G.KillSelectedPlayer or _G.Auto_Factory or _G.AutoSecondSea or _G.TeleportPly or AutoSoulGuitar or _G.AutoBartilo or _G.Auto_DarkBoss or _G.GrabChest or _G.AutoFarmBounty or _G.Holy_Torch or _G.AutoFarm or _G.Clip or _G.AutoElitehunter or _G.AutoThirdSea or _G.MaterialFarmm or _G.AutoKing or _G.AutoDarkBeard or _G.AutoFarmBoss or getgenv().Chest or Auto_Dark_Coat or _G.AutoChalice or AutoMobAura or _G.AutoNevaSoulGuitar or _G.AutoCdk or _G.AutoFactory or _G.Mirage or _G.Next or _G.TeleportNPC or _G.Auto_Bone or _G.AutoPlayerHunter or _G.Auto_Farm_Heart or _G.FarmPirateRaid or _G.AutoTrain or _G.SeaBeast or _G.AutoFarmDungeon or AutoFarmChest or _G.Auto_Farm_Bone == true then
                         for _, v in pairs(game:GetService("Players").LocalPlayer.Character:GetDescendants()) do
                             if v:IsA("BasePart") then
                                 v.CanCollide = false    
@@ -3665,13 +3665,54 @@ do
           end
       end)
 
+      local Dropdown623232 = Tabs.Main:AddDropdown("Select Boat", {
+        Title = "Select Boat",
+        Values = {"Miracle","The Sentinel","Guardian","Lantern"},
+        Multi = false,
+        Default = 1,
+    })
+    Dropdown623232:OnChanged(function(value)
+        _G.SelectBoatDrive = value
+    end)
+
       local Toggle92232333223 = Tabs.Main:AddToggle("Auto Sea Event", {Title = "Auto Sea Event", Default = false })
       Toggle92232333223:OnChanged(function(value)
           _G.AutoEvent = value
           StopTween(_G.AutoEvent)
-      end)
+          if _G.AutoEvent == true then
+                game.Players.LocalPlayer.Character.Humanoid.Sit = false
+                game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
+                TP(CFrame.new(-16236.959, 9.08636189, 440.422028, -0.0127099464, -1.08287228e-08, -0.999919236, 2.43805172e-08, 1, -1.11394973e-08, 0.999919236, -2.45201299e-08, -0.0127099464))
+                wait(2)
+                local args = {
+                [1] = "BuyBoat",
+                [2] = _G.SelectBoatDrive
+                }
+                game:GetService("ReplicatedStorage"):WaitForChild("Remotes"):WaitForChild("CommF_"):InvokeServer(unpack(args))
+                wait(1)
+                Distance = (game:GetService("Workspace").Boats[_G.SelectBoatDrive].VehicleSeat.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+                Speed = 220
+                tweenService, tweenInfo = game:GetService("TweenService"), TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear)
+                tween = tweenService:Create(game:GetService("Players")["LocalPlayer"].Character.HumanoidRootPart, tweenInfo, {CFrame = game:GetService("Workspace").Boats[_G.SelectBoatDrive].VehicleSeat.CFrame})
+                tween:Play()
+                _G.Clip = true
+                wait(Distance/Speed)
+                SailNow = true
+                SpawnedBoat = true
+                wait(1)
+                repeat wait()
+                    if SailNow == true then
+                        game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.W,false,game)
+                    end
+                until _G.AutoEvent == false
+            else
+                SpawnedBoat = false
+                SailNow = false
+                AttackDelay = "0.050"
+            end
+        end)
 
-      function oneboat(gotoCFrame) --- Tween
+    function oneboat(gotoCFrame) --- Tween
         pcall(function()
         game.Players.LocalPlayer.Character.Humanoid.Sit = false
         game.Players.LocalPlayer.Character.HumanoidRootPart.Anchored = false
@@ -3696,12 +3737,13 @@ do
         function _TweenCanCle()
         tweenz:Cancel()
         end
-        end
+    end
 
       task.spawn(function()
         while task.wait() do
             pcall(function()
                 if _G.AutoEvent then
+                    if SpawnedBoat then
                         for i,v in pairs(game:GetService("Workspace").Enemies:GetChildren()) do
                             if string.find(v.Name, "Fish Crew Member") or string.find(v.Name, "Piranha") or string.find(v.Name,"Shark") or string.find(v.Name , "Terror") then 
                                 if v.Humanoid.Health > 0 then
@@ -3714,6 +3756,7 @@ do
                                         EquipWeapon(_G.SelectWeapon)
                                     end
                                     PosMon = v.HumanoidRootPart.CFrame
+                                    AttackDelay = "0"
                                     Click()
                                     v.HumanoidRootPart.Size = Vector3.new(100,100,100)
                                     TP(v.HumanoidRootPart.CFrame * _G.Position)
@@ -3723,8 +3766,7 @@ do
                                         for i, v in pairs(game.Workspace.Boats:GetDescendants()) do
                                             if v:IsA("VehicleSeat") then 
                                                 if (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude > 1 and v.Owner.Value == game.Players.LocalPlayer.Name then
-                                                    repeat
-                                                        task.wait()
+                                                    repeat task.wait()
                                                         local CFrame = v.CFrame
                                                         oneboat(CFrame)
                                                     until (v.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).magnitude <= 20 or not _G.AutoEvent
@@ -3736,16 +3778,9 @@ do
                                 end
                             end
                         end
+                    end
                 end
             end)
-        end
-    end)
-
-    local Toggle922323332232323 = Tabs.Main:AddToggle("Auto Sail", {Title = "Auto Sail", Default = false })
-    Toggle922323332232323:OnChanged(function(value)
-        _G.AutoSailBoat = value
-        while _G.AutoSailBoat do task.wait(0)
-            game:GetService("VirtualInputManager"):SendKeyEvent(true,Enum.KeyCode.W,false,game)
         end
     end)
 
