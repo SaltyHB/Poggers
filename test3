@@ -1,4 +1,3 @@
-loadstring(game:HttpGet('https://raw.githubusercontent.com/DevTravDYT/Blade-ball/main/stuff/autoparry/antigui/antilogger/visual/BladeBall/God/Visual.gg/VisualONTOP/.lua'))();
 loadstring(game:HttpGet('https://raw.githubusercontent.com/SaltyHB/Poggers/main/new'))();
 local G2L = {};
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
