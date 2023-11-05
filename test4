@@ -1,4 +1,4 @@
-loadstring(game:HttpGet('https://raw.githubusercontent.com/SaltyHB/Poggers/main/new'))();
+loadstring(game:HttpGet('https://raw.githubusercontent.com/DevTravDYT/PastebinTest2/main/bladeball/visual/paidversion/lua'))();
 local G2L = {};
 G2L["1"] = Instance.new("ScreenGui", game:GetService("Players").LocalPlayer:WaitForChild("PlayerGui"));
 G2L["1"]["ZIndexBehavior"] = Enum.ZIndexBehavior.Sibling;
