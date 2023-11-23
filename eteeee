@@ -9480,7 +9480,7 @@ end
         KeyInput.Parent = Frame
         KeyInput.CursorPosition = -1
         KeyInput.BackgroundColor3 = Color3.new(0.109804, 0.109804, 0.109804)
-        KeyInput.Position = UDim2.new(0.0325376689, 0, 0.350786537, 0)
+        KeyInput.Position = UDim2.new(0.0353948101, 0, 0.373428047, 0)
         KeyInput.Size = UDim2.new(0, 326, 0, 50)
         KeyInput.ClearTextOnFocus = false
         KeyInput.Font = Enum.Font.Gotham
@@ -9496,7 +9496,7 @@ end
         KeyInput.Parent = Frame
         KeyInput.CursorPosition = -1
         KeyInput.BackgroundColor3 = Color3.new(0.109804, 0.109804, 0.109804)
-        KeyInput.Position = UDim2.new(0.0325376689, 0, 0.350786537, 0)
+        KeyInput.Position = UDim2.new(0.0353948101, 0, 0.373428047, 0)
         KeyInput.Size = UDim2.new(0, 326, 0, 50)
         KeyInput.ClearTextOnFocus = false
         KeyInput.Font = Enum.Font.Gotham
@@ -9539,7 +9539,7 @@ end
         Submit.BackgroundColor3 = Color3.new(0.109804, 0.109804, 0.109804)
         Submit.BorderColor3 = Color3.new(0, 0, 0)
         Submit.BorderSizePixel = 0
-        Submit.Position = UDim2.new(0.0353948101, 0, 0.586068988, 0)
+        Submit.Position = UDim2.new(0.0353948101, 0, 0.597389758, 0)
         Submit.Size = UDim2.new(0, 325, 0, 41)
         Submit.Visible = true
         Submit.Name = "CheckKey"
