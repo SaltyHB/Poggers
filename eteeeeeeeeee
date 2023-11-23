@@ -9468,7 +9468,7 @@ end
         text_label_2.BackgroundTransparency = 1
         text_label_2.BorderColor3 = Color3.new(0, 0, 0)
         text_label_2.BorderSizePixel = 0
-        text_label_2.Position = UDim2.new(0.034285713, 0, 0.170, 14)
+        text_label_2.Position = UDim2.new(0.034285713, 0, 0.130, 14)
         text_label_2.Size = UDim2.new(0, 325, 0, 49)
         text_label_2.Visible = true
         text_label_2.Parent = Frame
