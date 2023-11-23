@@ -9480,8 +9480,8 @@ end
         KeyInput.Parent = Frame
         KeyInput.CursorPosition = -1
         KeyInput.BackgroundColor3 = Color3.new(0.109804, 0.109804, 0.109804)
-        KeyInput.Position = UDim2.new(0.034285713, 0, 0.416000009, 5)
-        KeyInput.Size = UDim2.new(0, 325, 0, 50)
+        KeyInput.Position = UDim2.new(0.0325376689, 0, 0.350786537, 0)
+        KeyInput.Size = UDim2.new(0, 326, 0, 50)
         KeyInput.ClearTextOnFocus = false
         KeyInput.Font = Enum.Font.Gotham
         KeyInput.PlaceholderColor3 = Color3.new(0.698039, 0.698039, 0.698039)
@@ -9496,8 +9496,8 @@ end
         KeyInput.Parent = Frame
         KeyInput.CursorPosition = -1
         KeyInput.BackgroundColor3 = Color3.new(0.109804, 0.109804, 0.109804)
-        KeyInput.Position = UDim2.new(0.034285713, 0, 0.416000009, 5)
-        KeyInput.Size = UDim2.new(0, 325, 0, 50)
+        KeyInput.Position = UDim2.new(0.0325376689, 0, 0.350786537, 0)
+        KeyInput.Size = UDim2.new(0, 326, 0, 50)
         KeyInput.ClearTextOnFocus = false
         KeyInput.Font = Enum.Font.Gotham
         KeyInput.PlaceholderColor3 = Color3.new(0.698039, 0.698039, 0.698039)
@@ -9539,8 +9539,8 @@ end
         Submit.BackgroundColor3 = Color3.new(0.109804, 0.109804, 0.109804)
         Submit.BorderColor3 = Color3.new(0, 0, 0)
         Submit.BorderSizePixel = 0
-        Submit.Position = UDim2.new(0.034285713, 0, 0.656000018, 2)
-        Submit.Size = UDim2.new(0, 150, 0, 35)
+        Submit.Position = UDim2.new(0.0353948101, 0, 0.586068988, 0)
+        Submit.Size = UDim2.new(0, 325, 0, 41)
         Submit.Visible = true
         Submit.Name = "CheckKey"
         Submit.Parent = Frame
@@ -9590,98 +9590,61 @@ end
                 end
             end)
         end
-        
-        local Discord = Instance.new("TextButton")
-        Discord.Font = Enum.Font.Gotham
-        Discord.Text = "Join the Discord Server"
-        Discord.TextColor3 = Color3.new(1, 1, 1)
-        Discord.TextSize = 13
-        Discord.BackgroundColor3 = Color3.fromRGB(105,105,105)
-        Discord.BorderColor3 = Color3.new(0, 0, 0)
-        Discord.BorderSizePixel = 0
-        Discord.Position = UDim2.new(0.034285713, 0, 0.819999993, 5)
-        Discord.Size = UDim2.new(0, 325, 0, 35)
-        Discord.Visible = true
-        Discord.Name = "Discord"
-        Discord.Parent = Frame
-        Discord.MouseButton1Click:Connect(function()
-            Discord.TextColor3 = Color3.fromRGB(61, 237, 151)
-            Discord.Text = "Copied ✔️"
-            setclipboard("discord.gg/raitohub")
-            wait(1)
-            Discord.TextColor3 = Color3.new(1, 1, 1)
-            Discord.Text = "Join the Discord Server"
-        end)
-
-        local discordStroke = Instance.new("UIStroke")
-        discordStroke.Name = "UIStroke"
-        discordStroke.Parent = Discord
-        discordStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-        discordStroke.Color = Color3.fromRGB(200,200,200)
-        discordStroke.LineJoinMode = Enum.LineJoinMode.Round
-        discordStroke.Thickness = 0.6
-        discordStroke.Transparency = 0.8
-        discordStroke.Enabled = true
-        discordStroke.Archivable = true
-        
-        local uicorner_6 = Instance.new("UICorner")
-        uicorner_6.CornerRadius = UDim.new(0, 4)
-        uicorner_6.Parent = Discord
 
         local GetKey2 = Instance.new("TextButton")
         GetKey2.Font = Enum.Font.Gotham
-        GetKey2.Text = "Get 12H Key"
+        GetKey2.Text = "Get 12 Hours Key"
         GetKey2.TextColor3 = Color3.new(1, 1, 1)
         GetKey2.TextSize = 13
         GetKey2.BackgroundColor3 = Color3.new(0.109804, 0.109804, 0.109804)
         GetKey2.BorderColor3 = Color3.new(0, 0, 0)
         GetKey2.BorderSizePixel = 0
-        GetKey2.Position = UDim2.new(0.726, 0, 0.656000018, 2)
-        GetKey2.Size = UDim2.new(0, 85, 0, 35)
+        GetKey2.Position = UDim2.new(0.589268088, 0, 0.792251289, 0)
+        GetKey2.Size = UDim2.new(0, 131, 0, 39)
         GetKey2.Visible = true
         GetKey2.Name = "GetKey"
         GetKey2.Parent = Frame
         GetKey2.MouseButton1Click:Connect(function()
             GetKey2.TextColor3 = Color3.fromRGB(61, 237, 151)
             GetKey2.Text = "Copied ✔️"
-            KeySystem:copyGetKeyURL()
-            KeyInput.Text = KeySystem:getKeyURL()
+            setclipboard(PandaAuth:GetLink(service_name))
+            KeyInput.Text = PandaAuth:GetLink(service_name)
             wait(1)
             GetKey2.TextColor3 = Color3.new(1, 1, 1)
-            GetKey2.Text = "Get 12H Key"
+            GetKey2.Text = "Get 12 Hours Key"
         end)
 
         local GetKey = Instance.new("TextButton")
         GetKey.Font = Enum.Font.Gotham
-        GetKey.Text = "Get 24H Key"
+        GetKey.Text = "Get Key"
         GetKey.TextColor3 = Color3.new(1, 1, 1)
         GetKey.TextSize = 13
-        GetKey.BackgroundColor3 = Color3.new(0.109804, 0.109804, 0.109804)
+        GetKey.BackgroundColor3 = Color3.fromRGB(105, 105, 105)
         GetKey.BorderColor3 = Color3.new(0, 0, 0)
         GetKey.BorderSizePixel = 0
-        GetKey.Position = UDim2.new(0.4728542, 0, 0.656000018, 2)
-        GetKey.Size = UDim2.new(0, 85, 0, 35)
+        GetKey.Position = UDim2.new(0.0325376689, 0, 0.792251289, 0)
+        GetKey.Size = UDim2.new(0, 187, 0, 39)
         GetKey.Visible = true
         GetKey.Name = "GetKey"
         GetKey.Parent = Frame
         GetKey.MouseButton1Click:Connect(function()
             GetKey.TextColor3 = Color3.fromRGB(61, 237, 151)
             GetKey.Text = "Copied ✔️"
-            setclipboard(PandaAuth:GetLink(service_name))
-            KeyInput.Text = PandaAuth:GetLink(service_name)
+            KeySystem:copyGetKeyURL()
+            KeyInput.Text = KeySystem:getKeyURL()
             wait(1)
             GetKey.TextColor3 = Color3.new(1, 1, 1)
-            GetKey.Text = "Get 24H Key"
+            GetKey.Text = "Get Key"
         end)
     
         local get_keyStroke = Instance.new("UIStroke")
         get_keyStroke.Name = "UIStroke"
         get_keyStroke.Parent = GetKey
         get_keyStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-        get_keyStroke.Color = Color3.fromRGB(225,225,225)
+        get_keyStroke.Color = Color3.fromRGB(51, 61, 77)
         get_keyStroke.LineJoinMode = Enum.LineJoinMode.Round
         get_keyStroke.Thickness = 0.6
-        get_keyStroke.Transparency = 0.9
+        get_keyStroke.Transparency = 0.8
         get_keyStroke.Enabled = true
         get_keyStroke.Archivable = true
         
