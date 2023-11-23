@@ -3813,29 +3813,6 @@ do
         end
     end)
 
-    local Toggle92232333223232321 = Tabs.Main:AddToggle("RemoveRocks", {Title = "Remove Rocks", Default = false })
-    Toggle92232333223232321:OnChanged(function(value)
-        _G.RemoveRocks = value
-        function IsRock(v)
-          return v:IsA("BasePart") and string.find(v.Name, "rock") or string.find(v.Name, "Rock") and not string.find(v.Name, "Rocks")
-        end
-        function SetNoclip(v, noclip)
-          v.CanCollide = not noclip
-        end
-        function UpdateNocliprock()
-          local rocks = {}
-          for _,v in pairs(workspace:GetDescendants()) do
-            if IsRock(v) then
-              table.insert(rocks, v)
-            end
-          end
-          for _,v in pairs(rocks) do
-            SetNoclip(v, _G.RemoveRocks)
-          end
-        end
-        UpdateNocliprock()
-    end)
-
       _G.SelectBoatSpeed = 150
       local Slide232r = Tabs.Main:AddSlider("Select Boat Speed", {
         Title = "Select Boat Speed",
