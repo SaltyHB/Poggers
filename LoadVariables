@@ -1,4 +1,3 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Public"))()
 print("[ Raito Hub ] Security Started..")
 if _G.Version == "Chest Farm" or _G.Version == "Fruit Farm" or _G.Version == "Mirage Hop" or _G.Version == "Full Moon Hop" then
 print("[ Raito Hub ] Auto-Execute Off.")
