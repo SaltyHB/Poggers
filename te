@@ -1,3 +1,4 @@
+_G.AutoFarmChest = true
 spawn(function()
         while wait() do
         if _G.Settings.AutoFarmChest or _G.AutoFarmChest then
