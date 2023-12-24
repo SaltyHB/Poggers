@@ -9283,16 +9283,6 @@ SaveManager:LoadAutoloadConfig()
 end
 end
 end
-        if _G.Version == "Chest Farm" or _G.Version == "Fruit Farm" then
-            do
-                local keyui = game.CoreGui:FindFirstChild("ScreenGui")
-                 if keyui then
-                    keyui:Destroy()
-                 end
-            end
-            _G.Authenicated = string.reverse(game.Players.LocalPlayer.UserId)
-            Script()
-        else
         local KeyLibrary = loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/MaGiXxScripter0/keysystemv2api/master/setup_obf.lua'))()
         local KeySystem = KeyLibrary.new('RaitoHub')
         do
@@ -9635,5 +9625,4 @@ if isfile("Raito Key.txt") then
 LoadKey()
 wait(.1)
 Check()
-end
 end
