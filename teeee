@@ -7,7 +7,7 @@ spawn(function()
               if string.find(v.Name, "Chest") then
                   print(v.Name)
                   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-                  wait(.50)
+                  wait(.25)
               end
           end
           game.Players.LocalPlayer.Character.Head:Destroy()
@@ -34,7 +34,7 @@ spawn(function()
         end)
 
         spawn(function()
-            while wait(5) do
+            while wait(8) do
             if _G.AutoFarmChest then
                 game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
             end
