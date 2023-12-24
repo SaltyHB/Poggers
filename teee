@@ -1,7 +1,7 @@
 _G.AutoFarmChest = true
 spawn(function()
         while wait() do
-        if _G.Settings.AutoFarmChest or _G.AutoFarmChest then
+        if _G.AutoFarmChest then
         pcall(function()
         for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
               if string.find(v.Name, "Chest") then
@@ -25,7 +25,7 @@ spawn(function()
         
         spawn(function()
         while task.wait() do
-        if _G.Settings.AutoFarmChest or _G.AutoFarmChest then
+        if _G.AutoFarmChest then
                 local ohString1 = "SetTeam"
                 local ohString2 = "Pirates"
                 game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer(ohString1, ohString2)
@@ -35,7 +35,7 @@ spawn(function()
 
         spawn(function()
             while wait(5) do
-            if _G.Settings.AutoFarmChest or _G.AutoFarmChest then
+            if _G.AutoFarmChest then
                 game:GetService("Players").LocalPlayer.Character.Humanoid.Health = 0
             end
         end
