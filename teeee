@@ -7,7 +7,7 @@ spawn(function()
               if string.find(v.Name, "Chest") then
                   print(v.Name)
                   game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = v.CFrame
-                  wait(.15)
+                  wait(.50)
               end
           end
           game.Players.LocalPlayer.Character.Head:Destroy()
