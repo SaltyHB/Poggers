@@ -164,28 +164,22 @@ function Use(hold, use)
         game.Players.LocalPlayer.Character.HumanoidRootPart
     )
 end
-function Tween(Pos)
-    Distance = (Pos.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
-    if Distance < 25 then
-        Speed = 5000
-    elseif Distance < 50 then
-        Speed = 2000
-    elseif Distance < 150 then
-        Speed = 800
-    elseif Distance < 250 then
-        Speed = 600
-    elseif Distance < 500 then
-        Speed = 300
-    elseif Distance < 750 then
-        Speed = 250
-    elseif Distance >= 1000 then
-        Speed = 200
-    end
-    game:GetService("TweenService"):Create(
-        game:GetService("Players").LocalPlayer.Character.HumanoidRootPart,
-        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
-        {CFrame = Pos}
-    ):Play()
+function Tween(P1)
+            Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+            if Distance < 250 then
+                Speed = 500
+            elseif Distance < 500 then
+                Speed = 400
+            elseif Distance < 1000 then
+                Speed = 350
+            elseif Distance >= 1000 then
+                Speed = 300
+            end
+            game:GetService("TweenService"):Create(
+                game.Players.LocalPlayer.Character.HumanoidRootPart,
+                TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+                {CFrame = P1}
+            ):Play()
 end
 spawn(function()
     game:GetService("RunService").Heartbeat:Connect(function()
