@@ -142,16 +142,14 @@ Log("Http Get Request from: "..url)
  
 return HttpGet(self, url, ...)
 end)
+
+local http_request
  
-request = http_request or request or HttpPost or syn.request
-local request
+http_request = hookfunction(game.http_request, function(self, url, ...)
+Log("Http Request from: "..url)
  
-request = hookfunction(game.request, function(self, url, ...)
-Log("Http Post Request from: "..url)
- 
-return request(self, url, ...)
+return http_request(self, url, ...)
 end)
- 
  
 local RequestLog
  
