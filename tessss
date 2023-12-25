@@ -29,7 +29,7 @@ getgenv().Setting = {
         ["LockCamera"] = false,
         ["FPSBoost"] = false,
         ["WhiteScreen"] = false,
-        ["BypassTP"] = true,
+        ["BypassTP"] = false,
         ["TweenSpeed"] = 350,
         ["HopRegion"] = "Singapore"
     },
@@ -623,81 +623,22 @@ function check11()
         (string.find(string.lower(game:GetService("Players").LocalPlayer.PlayerGui.Main.InCombat.Text), "risk"))
 end
 
-function to(vg1)
-    if sexroblox then
-        sexroblox:Cancel()
+function to(P1)
+    Distance = (P1.Position - game.Players.LocalPlayer.Character.HumanoidRootPart.Position).Magnitude
+    if Distance < 250 then
+        Speed = 500
+    elseif Distance < 500 then
+        Speed = 400
+    elseif Distance < 1000 then
+        Speed = 350
+    elseif Distance >= 1000 then
+        Speed = 300
     end
-    --print("ncall")
-    if olfdvg and q1(olfdvg, vg1) > 1000 then
-      
-        return
-    end
-    if not vg1 then
-        return
-    end
-    --  print("continue ")
-    vg2 = CFrame.new(vg1.X, vg1.Y, vg1.Z)
-    game.Players.LocalPlayer.Character:WaitForChild("HumanoidRootPart", 9)
-    game.Players.LocalPlayer.Character:WaitForChild("Head", 9)
-
-    for a, b in pairs(game.Players.LocalPlayer.Character:GetDescendants()) do
-        if b:IsA "BasePart" then
-            b.CanCollide = false
-        end
-    end
-    if not game.Players.LocalPlayer.Character.Head:FindFirstChild "eltrul" then
-        local ngu = Instance.new("BodyVelocity", game.Players.LocalPlayer.Character.Head)
-        ngu.Name = "eltrul"
-        ngu.MaxForce = Vector3.new(0, math.huge, 0)
-        ngu.Velocity = Vector3.new(0, 0, 0)
-    end
-    vg3 = getPortal(vg2)
-    vg9 = getSpawn(vg2)
-    for mm = 0, 3, 1 do
-        if getSpawn(vg2) ~= vg9 then
-            return
-        end
-    end
-
-    vg5 = game.Players.LocalPlayer.Character.HumanoidRootPart
-    vg4 = vg5.CFrame
-    vg7 = q1(vg4, vg2)
-    if vg9 then
-        vg10 = q1(vg9, vg2)
-        if
-            Setting.Misc.BypassTP and not check11() and vg10 < vg7 and vg7 > 3600 and q1(vg4, vg9) > 500 and
-                vg10 < (q1(vg3, vg2) + 800)
-         then
-            return grgrgrgrg(vg9)
-        end
-    end
-
-    if vg7 > q1(vg3, vg2) and vg7 > 300 then
-        --print("request")
-        return request(vg3)
-    end
-    if vg7 < 220 then
-        vg5.CFrame = vg2
-        --    print("set")
-        return
-    end
-    if q1(vg2) > 250 and Setting.Misc["Silent Mode"] then
-        vg2 = vg2 + Vector3.new(0, 350, 0)
-    end
-
-    
-    safe_cp(lp).CFrame = CFrame.new(vg4.X, vg2.Y, vg4.Z)
-
-    vg6 = vg7 / 350
-    sexroblox =
-        game:GetService("TweenService"):Create(
+    game:GetService("TweenService"):Create(
         game.Players.LocalPlayer.Character.HumanoidRootPart,
-        TweenInfo.new(vg6, Enum.EasingStyle.Linear),
-        {CFrame = vg2}
-    )
-
-    sexroblox:Play()
-    -- print("tween")
+        TweenInfo.new(Distance/Speed, Enum.EasingStyle.Linear),
+        {CFrame = P1}
+    ):Play()
 end
 
 function q1(I, II)
