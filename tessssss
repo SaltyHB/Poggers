@@ -10,7 +10,6 @@ getgenv().Cf = {
     ["Auto Ken"] = true,
     ["Low Health"] = "3500",
     ["Max Health"] = "7000",
-    ["Fps Counter"] = true,
     ["Chat When Hunt"] = "",
     ["Melee"] = {
         ["Time"] = 1,
@@ -420,7 +419,7 @@ spawn(function()
 spawn(function()
     pcall(function()
         while wait() do
-            if getgenv().Main["StartHunt"] then
+            if getgenv().Cf["StartHunt"] then
                 if TargetSelectHunt ~= nil then
                     if StartCheckTarget then
                         wait(7)
@@ -445,16 +444,6 @@ spawn(function()
             end
         end)
     end)
-end)
-spawn(function()
-    if getgenv().Cf["Fps Counter"] then
-    game:GetService("RunService").RenderStepped:Connect(function(frame)
-game:GetService("Players")["LocalPlayer"].PlayerGui.Main.Version.TextSize = 17
-game:GetService("Players")["LocalPlayer"].PlayerGui.Main.Version.TextColor3 = Color3.fromRGB(255, 255, 255)
-game:GetService("Players")["LocalPlayer"].PlayerGui.Main.Version.Font = Enum.Font.GothamBold
-game:GetService("Players").LocalPlayer.PlayerGui.Main.Version.Text = "Your ".."| FPS : "..math.round(1/frame)
-        end)
-    end
 end)
 spawn(function()
 while wait() do
