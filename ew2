@@ -7,8 +7,6 @@ local GamePlayerGITHUB = "https://raw.githubusercontent.com/"
 local GameGETHUBFUNCTION = "bot21333/C-/main/GetGenv(function().lua"
 local URLGITHUB = GamePlayerGITHUB..GameGETHUBFUNCTION
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/ahmadsgamer2/main/Hook"))()
-
 local Update = loadstring(game:HttpGet(URLGITHUB))()
 
 local Library = Update:Window("Blox Fruit")
