@@ -87,6 +87,7 @@ task.spawn(function()
 end)
 
 AllowRunService = true
+highChestOnly = false
 
 task.spawn(function()
     while true and task.wait(.5) do
