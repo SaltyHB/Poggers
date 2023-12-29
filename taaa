@@ -3504,6 +3504,7 @@ do
         local Part = string.sub(String, 10, Length)
         local LeftPart = string.match(String, 'RaitoHub_(.*)')
         local Final = LeftPart
+        print(Final)
         return Final
     end
 
@@ -3527,8 +3528,8 @@ do
         Title = "Join Server",
         Description = "",
         Callback = function()
-            print(SelectedServer)
-            game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport',''..removetext("RaitoHub_"..SelectedServer))
+            JoinTo = removetext("RaitoHub_"..SelectedServer)
+            game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport',''..JoinTo)
         end
     })
 
