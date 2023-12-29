@@ -3509,7 +3509,7 @@ do
         Default = "",
         Placeholder = "Paste your serverid here.",
         Numeric = false,
-        Finished = true,
+        Finished = false,
     })
     Inpu2341jo:OnChanged(function(value)
         SelectedServer = value
