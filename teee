@@ -3523,7 +3523,7 @@ do
         SelectedServer = value
     end)
 
-    Tabs.Main:AddButton({
+    Tabs.Settings:AddButton({
         Title = "Join Server",
         Description = "",
         Callback = function()
