@@ -3499,15 +3499,6 @@ do
         end
     end)
 
-    function removetext(String)
-        local Length = 9
-        local Part = string.sub(String, 10, Length)
-        local LeftPart = string.match(String, 'RaitoHub_(.*)')
-        local Final = LeftPart
-        print(Final)
-        return Final
-    end
-
     local Information = Tabs.Settings:AddParagraph({
         Title = "Information",
         Content = "You can join the Webhook servers on Discord here!"
@@ -3518,7 +3509,7 @@ do
         Default = "",
         Placeholder = "Paste your serverid here.",
         Numeric = false,
-        Finished = false,
+        Finished = true,
     })
     Inpu2341jo:OnChanged(function(value)
         SelectedServer = value
@@ -3528,7 +3519,7 @@ do
         Title = "Join Server",
         Description = "",
         Callback = function()
-            JoinTo = removetext("RaitoHub_"..SelectedServer)
+            JoinTo = string.match(SelectedServer, 'RaitoHub_(.*)')
             game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport',''..JoinTo)
         end
     })
