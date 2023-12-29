@@ -3515,7 +3515,7 @@ do
     local Inpu2341jo = Tabs.Settings:AddInput("SetServer", {
         Title = "Set Server",
         Default = "",
-        Placeholder = "Paste your serverid (starting with RaitoHub) into this box to teleport to the server!",
+        Placeholder = "Paste your serverid here.",
         Numeric = false,
         Finished = false,
     })
@@ -3527,6 +3527,7 @@ do
         Title = "Join Server",
         Description = "",
         Callback = function()
+            print(SelectedServer)
             game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport',''..removetext("RaitoHub_"..SelectedServer))
         end
     })
