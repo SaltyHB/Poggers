@@ -3502,7 +3502,7 @@ do
     function removetext(String)
         local Length = 12
         local Part = string.sub(String, 13, Length)
-        local LeftPart = string.match(String, 'RaitoHub_'..Random..'(.*)')
+        local LeftPart = string.match(String, 'RaitoHub_(.*)')
         local Final = LeftPart
         return Final
     end
@@ -3514,7 +3514,7 @@ do
 
     local Inpu2341jo = Tabs.Settings:AddInput("SetServer", {
         Title = "Set Server",
-        Default = "Paste your serverid (starting with RaitoHub) into this box to teleport to the server!",
+        Default = "",
         Placeholder = "Paste your serverid (starting with RaitoHub) into this box to teleport to the server!",
         Numeric = false,
         Finished = false,
@@ -3527,7 +3527,7 @@ do
         Title = "Join Server",
         Description = "",
         Callback = function()
-            game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport',''..removetext("RaitoHub_"..Random..SelectedServer))
+            game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport',''..removetext("RaitoHub_"..SelectedServer))
         end
     })
 
