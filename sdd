@@ -10,7 +10,6 @@ _G.Authenicated = false
         if _G.Authenicated ~= string.reverse(game.Players.LocalPlayer.UserId)then while true do end end
         print("1")
         loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SaltyHB/Poggers/main/LoadVariables"))()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/ahmadsgamer2/main/Hook"))()
         print("2")
     if _G.Version == "Chest Farm" then
 -- SELECT TEAM
