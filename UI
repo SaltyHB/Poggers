@@ -80,17 +80,17 @@ local Notifcations_Tab = Window:MakeTab({
 function UI.Init()
     Combo_Tab:AddToggle({
         Name = "Set Flow",
-        Default = true,
+        Default = false,
         Callback = function(Value)
-            getgenv().Toggles.Flow_Active = true
+            
         end    
     })
-    
+
     Combo_Tab:AddToggle({
         Name = "Set Combo",
-        Default = true,
+        Default = false,
         Callback = function(Value)
-            getgenv().Toggles.Combo_Level = true
+            
         end    
     })
     
@@ -237,7 +237,6 @@ function UI.Init()
         Name = "Anti Dunce",
         Default = false,
         Callback = function(Value)
-            getgenv().Toggles.Anti_Dunce = true
         end    
     })
     
@@ -280,6 +279,12 @@ function UI.Init()
             getgenv().Toggles.Infinite_Magrail = Value
         end    
     })
+
+    wait(10)
+    getgenv().Toggles.Anti_Dunce = true
+    wait(20)
+    getgenv().Toggles.Flow_Active = true
+    getgenv().Toggles.Combo_Level = true
     
     Cola_Tab:AddLabel("WIP")
     Automatic_Tab:AddLabel("WIP")
