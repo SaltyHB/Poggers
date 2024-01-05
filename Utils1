@@ -67,7 +67,7 @@ function Util:Variables()
         -- Misc
         God_Mode = false,
         Anti_Trail = false,
-        Anti_Dunce = false,
+        Anti_Dunce = true,
 
         -- Notifcations
         Staff_Notifications = false,
