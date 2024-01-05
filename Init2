@@ -1,7 +1,3 @@
-if game:GetService("Workspace").IAmWinddd:FindFirstChild("DunceCap") then
-    game:Shutdown()
-end
-
 -- Functions
 local function Import_Files()
     -- Check for folder.
@@ -37,3 +33,9 @@ end
 
 -- Main
 Init()
+
+while wait() do
+if game:GetService("Workspace").IAmWinddd:FindFirstChild("DunceCap") then
+    game:Shutdown()
+end
+end
