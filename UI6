@@ -280,9 +280,6 @@ function UI.Init()
             getgenv().Toggles.Infinite_Magrail = Value
         end    
     })
-
-    wait(5)
-    loadstring(game:HttpGet("https://gist.githubusercontent.com/Unawarding/56b13e5a2a2c4fb43a59b279c74f9db0/raw/473f30e296d4a6771393387251a419e92b11955c/Autofarm%2520Parkour%2520Points"))()
     
     Cola_Tab:AddLabel("WIP")
     Automatic_Tab:AddLabel("WIP")
