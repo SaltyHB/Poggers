@@ -868,15 +868,6 @@ if not game:GetService("UserInputService").TouchEnabled and not game:GetService(
     UICorner.Parent = Frame
 end
 print("7")
--- LIBRARY
-local Fluent = loadstring(game:HttpGetAsync("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
-Fluent:Notify({
-    Title = "Raito Hub",
-    Content = "The script is loading.",
-    Duration = 7
-})
 -- SELECT TEAM
 if _G.Team == nil then
 	_G.Team = "Pirates"
@@ -3457,6 +3448,9 @@ end
 print("23")
 -- LIBRARY
 print("24")
+local Fluent = loadstring(game:HttpGetAsync("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SaltyHB/Poggers/main/SaveManagerr"))()
+local InterfaceManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Interface"))()
 local Window = Fluent:CreateWindow({
     Title = "Raito Hub 1.5.0 ",
     SubTitle = "| discord.gg/raitohub",
