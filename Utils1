@@ -52,8 +52,8 @@ function Util:Variables()
         Infinite_Adrenaline = false,
 
         -- Combo
-        Flow_Active = false,
-        Combo_Level = false,
+        Flow_Active = true,
+        Combo_Level = true,
 
         -- Gearless
         Infinite_Wallrun = false,
@@ -77,7 +77,7 @@ function Util:Variables()
     getgenv().Sliders = {
         Walk_Speed = 1,
         Slide_Speed = 1,
-        Combo_Level = 1,
+        Combo_Level = 3,
     }
     getgenv().ACB = {
         BanRemotes = {
