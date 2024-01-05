@@ -5,7 +5,7 @@ if game:GetService("Workspace").IAmWinddd:FindFirstChild("DunceCap") then
 end
 end
 end)
-            teleport = "wait(5) loadstring(game:HttpGet('https://raw.githubusercontent.com/SaltyHB/Poggers/main/Init5'))()"
+            teleport = "wait(5) loadstring(game:HttpGet('https://raw.githubusercontent.com/SaltyHB/Poggers/main/Init7'))()"
             local autoexec = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
             autoexec(teleport)
         function Hop()
