@@ -1,0 +1,110 @@
+        function Hop()
+            local PlaceID = game.PlaceId
+            local AllIDs = {}
+            local foundAnything = ""
+            local actualHour = os.date("!*t").hour
+            local Deleted = false
+            function TPReturner()
+                local Site;
+                if foundAnything == "" then
+                    Site = game.HttpService:JSONDecode(game:HttpGetAsync('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100'))
+                else
+                    Site = game.HttpService:JSONDecode(game:HttpGetAsync('https://games.roblox.com/v1/games/' .. PlaceID .. '/servers/Public?sortOrder=Asc&limit=100&cursor=' .. foundAnything))
+                end
+                local ID = ""
+                if Site.nextPageCursor and Site.nextPageCursor ~= "null" and Site.nextPageCursor ~= nil then
+                    foundAnything = Site.nextPageCursor
+                end
+                local num = 0;
+                for i,v in pairs(Site.data) do
+                    local Possible = true
+                    ID = tostring(v.id)
+                    if tonumber(v.maxPlayers) > tonumber(v.playing) then
+                        for _,Existing in pairs(AllIDs) do
+                            if num ~= 0 then
+                                if ID == tostring(Existing) then
+                                    Possible = false
+                                end
+                            else
+                                if tonumber(actualHour) ~= tonumber(Existing) then
+                                    local delFile = pcall(function()
+                                        AllIDs = {}
+                                        table.insert(AllIDs, actualHour)
+                                    end)
+                                end
+                            end
+                            num = num + 1
+                        end
+                        if Possible == true then
+                            table.insert(AllIDs, ID)
+                            wait()
+                            pcall(function()
+                                wait()
+                                game:GetService("TeleportService"):TeleportToPlaceInstance(PlaceID, ID, game.Players.LocalPlayer)
+                            end)
+                            wait(4)
+                        end
+                    end
+                end
+            end
+            function Teleport() 
+                while wait() do
+                    pcall(function()
+                        TPReturner()
+                        if foundAnything ~= "" then
+                            TPReturner()
+                        end
+                    end)
+                end
+            end
+            Teleport()
+        end                   
+        
+        function isnil(thing)
+            return (thing == nil)
+        end
+        local function round(n)
+            return math.floor(tonumber(n) + 0.5)
+        end
+
+-- Functions
+local function Import_Files()
+    -- Check for folder.
+    if isfolder("xGamer626Parkour") then
+        -- If there is a folder then remove it to update it to current version.
+        delfolder("xGamer626Parkour")
+        Import_Files()
+        return
+    end
+
+    -- Make the folders.
+    makefolder("xGamer626Parkour")
+    makefolder("xGamer626Parkour/Modules")
+    makefolder("xGamer626Parkour/Source")
+
+    -- Make the files.
+    writefile("xGamer626Parkour/Modules/Util.lua", game:HttpGetAsync("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Utils1"))
+    writefile("xGamer626Parkour/Modules/UI.lua", game:HttpGetAsync("https://raw.githubusercontent.com/SaltyHB/Poggers/main/UI"))
+    writefile("xGamer626Parkour/Modules/ACB.lua", game:HttpGetAsync("https://raw.githubusercontent.com/xgamerman626/Hub/main/Modules/ACB.lua"))
+    writefile("xGamer626Parkour/Source/Runtime.lua", game:HttpGetAsync("https://raw.githubusercontent.com/xgamerman626/Hub/main/Source/Runtime.lua"))
+end
+
+local function Init()
+    Import_Files()
+
+    repeat
+        task.wait()
+    until isfile("xGamer626Parkour/Source/Runtime.lua")
+
+    local Runtime = loadstring(readfile("xGamer626Parkour/Source/Runtime.lua"))()
+    Runtime.Init()
+end
+
+-- Main
+Init()
+
+while wait() do
+if game:GetService("Workspace").IAmWinddd:FindFirstChild("DunceCap") then
+    Hop()
+end
+end
