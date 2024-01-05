@@ -3456,13 +3456,12 @@ else
 end
 print("23")
 -- LIBRARY
-UiSize = UDim2.fromOffset(600, 350)
 print("24")
 local Window = Fluent:CreateWindow({
-    Title = "Raito Hub " .. Fluent.Version,
+    Title = "Raito Hub 1.5.0 ",
     SubTitle = "| discord.gg/raitohub",
     TabWidth = 160,
-    Size = UiSize,
+    Size = UDim2.fromOffset(600, 350),
     Acrylic = false,
     Theme = "Darker",
     MinimizeKey = Enum.KeyCode.Delete
