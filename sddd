@@ -1610,7 +1610,7 @@ function CheckQuest()
         end
     end
 end
-
+print("10")
 function CheckBossQuest()
     if _G.SelectBoss == "Saber Expert [Lv. 200] [Boss]" then
         MsBoss = "Saber Expert [Lv. 200] [Boss]"
@@ -1828,7 +1828,7 @@ function CheckBossQuest()
         CFrameBoss = CFrame.new(-9515.62109, 315.925537, 6691.12012)
     end
 end
-
+print("11")
 function CheckNotifyComplete()
 for i, v in pairs(game:GetService("Players")["LocalPlayer"].PlayerGui:FindFirstChild("Notifications"):GetChildren()) do
 if v.Name == "NotificationTemplate" then
@@ -1842,7 +1842,7 @@ end
 end
 return false
 end
-        
+print("12")
         function Hop()
             local PlaceID = game.PlaceId
             local AllIDs = {}
@@ -1911,7 +1911,7 @@ end
         local function round(n)
             return math.floor(tonumber(n) + 0.5)
         end
-        
+        print("13")
         function InfAb()
             if InfAbility then
                 if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility") then
@@ -1988,7 +1988,7 @@ end
                 end
             end
         end
-
+        print("14")
         local CombatFramework = require(game:GetService("Players").LocalPlayer.PlayerScripts:WaitForChild("CombatFramework"))
         local CombatFrameworkR = getupvalues(CombatFramework)[2]
         local RigController = require(game:GetService("Players")["LocalPlayer"].PlayerScripts.CombatFramework.RigController)
@@ -2065,7 +2065,7 @@ end
                 end
             end
         end
-
+        print("15")
         function AttackFunction()
             local ac = CombatFrameworkR.activeController
             if ac and ac.equipped then
@@ -2121,7 +2121,7 @@ end
                 _G.NotAutoEquip = false
             end
         end
-        
+        print("16")
         function EquipWeapon(ToolSe)
             if not _G.NotAutoEquip then
                 if game.Players.LocalPlayer.Backpack:FindFirstChild(ToolSe) then
@@ -2250,7 +2250,7 @@ end
             wait(Distance/Speed)
             Clip = false
         end
-        
+        print("17")
 local lp = game:GetService('Players').LocalPlayer
 local mouse = lp:GetMouse()
 spawn(function()
@@ -2441,7 +2441,7 @@ end
 end)
 
         -- [Bring Mob]
-        
+        print("18")
         task.spawn(function()
             while true do wait()
                 if setscriptable then
@@ -2479,7 +2479,7 @@ end)
                 end)
             end
         end)
-                
+        print("19")
                 spawn(function()
                     while task.wait() do
                         pcall(function()
@@ -2863,7 +2863,7 @@ end)
                         end)
                     end
                 end)
-
+                print("20")
 spawn(function()
     game:GetService('RunService').Stepped:Connect(function()
         if _G.Remove_EffectDeath1 then
@@ -2968,7 +2968,7 @@ spawn(function()
         end)
     end)
 end)
-   
+print("21")
    spawn(function()
     while task.wait() do
         if _G.AutoFarm then
@@ -3389,7 +3389,7 @@ end
 end
 end
 end)
-
+print("22")
 local SuperFastMode = true
 local plr = game.Players.LocalPlayer
 local CbFw = debug.getupvalues(require(plr.PlayerScripts.CombatFramework))
