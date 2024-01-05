@@ -3454,9 +3454,10 @@ if SuperFastMode then
 else
     cac=wait
 end
+print("23")
 -- LIBRARY
 UiSize = UDim2.fromOffset(600, 350)
-
+print("24")
 local Window = Fluent:CreateWindow({
     Title = "Raito Hub " .. Fluent.Version,
     SubTitle = "| discord.gg/raitohub",
@@ -3466,7 +3467,7 @@ local Window = Fluent:CreateWindow({
     Theme = "Darker",
     MinimizeKey = Enum.KeyCode.Delete
 })
-
+print("25")
 local Tabs = {
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
     Main = Window:AddTab({ Title = "Home", Icon = "home" }),
@@ -3479,7 +3480,7 @@ local Tabs = {
     Misc = Window:AddTab({ Title = "Others", Icon = "library" }),
     UiSettings = Window:AddTab({ Title = "Ui Settings", Icon = "paintbrush" })
 }
-
+print("26")
 local Options = Fluent.Options
 
 do
@@ -3500,7 +3501,7 @@ do
         Status:SetTitle("Status "..timestamp.." | Blox Fruits [🎁 GIFT]")
         Status:SetDesc("Hours : "..Hour.." Minutes : "..Minute.." Seconds : "..Second.." | Fps : "..Fps.." | Ping : "..Ping)
     end
-    
+    print("27")
     spawn(function()
         while task.wait(1) do
             pcall(function()
@@ -3508,7 +3509,7 @@ do
             end)
         end
     end)
-
+    print("28")
     local Information = Tabs.Settings:AddParagraph({
         Title = "Information",
         Content = "You can join the Webhook servers on Discord here!"
@@ -3591,7 +3592,7 @@ do
             end
         end
     end)
-
+    print("29")
     local Toggle = Tabs.Settings:AddToggle("SetHome", {Title = "Auto Set Home Point", Default = true })
     Toggle:OnChanged(function(value)
         _G.Auto_Set_Spawn = value
