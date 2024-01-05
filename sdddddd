@@ -870,8 +870,8 @@ end
 print("7")
 -- LIBRARY
 local Fluent = loadstring(game:HttpGetAsync("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SaltyHB/Poggers/main/SaveManagerr"))()
-local InterfaceManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Interface"))()
+local SaveManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
+local InterfaceManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
 Fluent:Notify({
     Title = "Raito Hub",
     Content = "The script is loading.",
