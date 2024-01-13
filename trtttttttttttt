@@ -1006,7 +1006,7 @@ do
             ImageLabel.BorderColor3 = Color3.new(0, 0, 0)
             ImageLabel.BackgroundTransparency = 1.000
             ImageLabel.BorderSizePixel = 0
-            ImageLabel.Position = UDim2.new(0.851666677, 0, -1, 0)
+            ImageLabel.Position = UDim2.new(0.851666677, 0, -0.1, 0)
             ImageLabel.Size = UDim2.new(0, 60, 0, 60)
             ImageLabel.Image = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=420&height=420&format=png"
 
