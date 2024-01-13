@@ -138,6 +138,7 @@ do
      Line2323.BackgroundTransparency = 0
      Line2323.BorderSizePixel = 0
      Line2323.Size = UDim2.new(0, 7, 0, 350)
+     Line2323.Position = UDim2.new(0.941, 0,-0, 0)
  
      local NameHub = Instance.new("TextLabel")
      NameHub.Name = "NameHub"
