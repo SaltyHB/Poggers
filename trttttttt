@@ -1,5 +1,5 @@
 do
-   local ui = game.CoreGui:FindFirstChild("VoidLib")
+   local ui = game.CoreGui:FindFirstChild("RaitoLib")
     if ui then
         ui:Destroy()
     end
@@ -73,7 +73,7 @@ function library:AddWindow(text,keybind)
     local currenttab = ""
 
     local DoctorShiba = Instance.new("ScreenGui")
-    DoctorShiba.Name = "VoidLib"
+    DoctorShiba.Name = "RaitoLib"
     DoctorShiba.Parent = game.CoreGui
     DoctorShiba.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 
@@ -92,76 +92,6 @@ function library:AddWindow(text,keybind)
     MainCorner.Name = "MainCorner"
     MainCorner.CornerRadius = UDim.new(0, 9)
     MainCorner.Parent = Main
-
-    local Frame_2 = Instance.new("Frame")
-
-    Frame_2.Parent = Main
-    Frame_2.BackgroundColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
-    Frame_2.BorderColor3 = Color3.new(0, 0, 0)
-    Frame_2.BorderSizePixel = 0
-    Frame_2.Position = UDim2.new(0.911666691, 8, 0.0191428579, 0)
-    Frame_2.Size = UDim2.new(0, 36, 0, 32)
-
-    local MainCorner = Instance.new("UICorner")
-    MainCorner.Name = "MainCorner"
-    MainCorner.CornerRadius = UDim.new(0, 7)
-    MainCorner.Parent = Frame_2
-
-    local DropdownStroke = Instance.new("UIStroke")
-
-    DropdownStroke.Name = "UIStroke"
-    DropdownStroke.Parent = Frame_2
-    DropdownStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    DropdownStroke.Color = Color3.fromRGB(225,225,225)
-    DropdownStroke.LineJoinMode = Enum.LineJoinMode.Round
-    DropdownStroke.Thickness = 0.6
-    DropdownStroke.Transparency = 0.8
-    DropdownStroke.Enabled = true
-    DropdownStroke.Archivable = true
-
-    local ImageButton = Instance.new("ImageButton")
-    ImageButton.Parent = Frame_2
-    ImageButton.BackgroundColor3 = Color3.new(0.67451, 0.67451, 0.67451)
-    ImageButton.BackgroundTransparency = 1
-    ImageButton.BorderColor3 = Color3.new(0, 0, 0)
-    ImageButton.BorderSizePixel = 0
-    ImageButton.Position = UDim2.new(0.18, 0, 0.09375, 1)
-    ImageButton.Size = UDim2.new(0, 23, 0, 23)
-    ImageButton.Image = "rbxassetid://7072725342"
-    ImageButton.ImageColor3 = Color3.new(0.686275, 0.686275, 0.686275)
-
-    ImageButton.MouseEnter:Connect(function()
-        TweenService:Create(
-            ImageButton,
-            TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-            {ImageColor3 = Color3.fromRGB(255,160,122)}
-        ):Play()
-    end)
-    
-    ImageButton.MouseLeave:Connect(function()
-        TweenService:Create(
-            ImageButton,
-            TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-            {ImageColor3 = Color3.new(0.686275, 0.686275, 0.686275)}
-        ):Play()
-    end)
-    
-    ImageButton.MouseButton1Click:Connect(function()
-        do
-            local ui = game.CoreGui:FindFirstChild("VoidLib")
-            if ui then
-                ui:Destroy()
-            end
-        end
-        --
-        do
-            local ui2 = game.Players.LocalPlayer.PlayerGui:FindFirstChild("Visible")
-            if ui2 then
-                ui2:Destroy()
-            end
-        end
-    end)
-
     
     local DropdownStroke = Instance.new("UIStroke")
 
