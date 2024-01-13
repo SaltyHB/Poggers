@@ -130,6 +130,14 @@ do
      PageCorner.Name = "MainCorner"
      PageCorner.CornerRadius = UDim.new(0, 9)
      PageCorner.Parent = Page
+
+     local Line2323 = Instance.new("Frame")
+     Line2323.Name = "Line2323"
+     Line2323.Parent = Page
+     Line2323.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+     Line2323.BackgroundTransparency = 0
+     Line2323.BorderSizePixel = 0
+     Line2323.Size = UDim2.new(0, 7, 0, 350)
  
      local NameHub = Instance.new("TextLabel")
      NameHub.Name = "NameHub"
