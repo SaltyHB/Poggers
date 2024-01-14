@@ -302,8 +302,8 @@ function library:AddWindow(text,keybind)
         MainTab.Parent = TabFolder
         MainTab.BackgroundColor3 = Color3.fromRGB(10,10,10)
         MainTab.BorderSizePixel = 0
-        MainTab.Position = UDim2.new(0.239733328, 0, 0, 44)
-        MainTab.Size = UDim2.new(0, 455, 0, 303)
+        MainTab.Position = UDim2.new(0.21, 0,-0.024, 47)
+        MainTab.Size = UDim2.new(0, 474, 0, 311)
         MainTab.Visible = false  
         
         local MainTabCorner = Instance.new("UICorner")
@@ -317,10 +317,10 @@ function library:AddWindow(text,keybind)
         ScrollTab.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         ScrollTab.BackgroundTransparency = 1.000
         ScrollTab.BorderSizePixel = 0
-        ScrollTab.Position = UDim2.new(0, -19, 0, 0)
-        ScrollTab.Size = UDim2.new(0, 475, 0, 303)
+        ScrollTab.Position = UDim2.new(0, -1, 0, 0)
+        ScrollTab.Size = UDim2.new(0, 475,0, 311)
         ScrollTab.CanvasSize = UDim2.new(0, 0, 0, 0)
-        ScrollTab.ScrollBarThickness = 3
+        ScrollTab.ScrollBarThickness = 0
 
         local TabList = Instance.new("UIListLayout")
         TabList.Name = "TabList"
