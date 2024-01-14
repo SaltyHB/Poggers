@@ -449,7 +449,7 @@ function library:AddWindow(text,keybind)
             local Toggle = Instance.new("TextButton")
             Toggle.Name = "Toggle"
             Toggle.Parent = ScrollTab
-            Toggle.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+            Toggle.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
             Toggle.BackgroundTransparency = 0
             Toggle.BorderSizePixel = 0
             Toggle.AutoButtonColor = false
@@ -552,7 +552,7 @@ function library:AddWindow(text,keybind)
 
             Textboxx.Name = "Textboxx"
             Textboxx.Parent = ScrollTab
-            Textboxx.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+            Textboxx.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
             Textboxx.Size = UDim2.new(0, 455, 0, 30)
 
             TextboxxCorner.CornerRadius = UDim.new(0, 5)
