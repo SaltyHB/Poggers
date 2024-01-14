@@ -182,7 +182,7 @@ function library:AddWindow(text,keybind)
     Frame.BorderColor3 = Color3.new(0, 0, 0)
     Frame.BorderSizePixel = 0
     Frame.Position = UDim2.new(1, 0,0.001, 0)
-    Frame.Size = UDim2.new(0, 1, 0, 311)
+    Frame.Size = UDim2.new(0, 0.7, 0, 311)
 
     local Frame_2 = Instance.new("Frame")
     Frame_2.Parent = Page
@@ -190,7 +190,7 @@ function library:AddWindow(text,keybind)
     Frame_2.BorderColor3 = Color3.new(0, 0, 0)
     Frame_2.BorderSizePixel = 0
     Frame_2.Position = UDim2.new(0, 0,0.322, -101)
-    Frame_2.Size = UDim2.new(0, 600, 0, 1)
+    Frame_2.Size = UDim2.new(0, 600, 0, 0.7)
 
     local NameHub = Instance.new("TextLabel")
     NameHub.Name = "NameHub"
