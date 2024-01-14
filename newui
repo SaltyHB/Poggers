@@ -81,7 +81,7 @@ function library:AddWindow(text,keybind)
     Main.Name = "Main"
     Main.Parent = DoctorShiba
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
-    Main.BackgroundColor3 = Color3.fromRGB(17, 17, 17)
+    Main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
     Main.BackgroundTransparency = 0
     Main.BorderSizePixel = 0
     Main.ClipsDescendants = true
@@ -94,30 +94,13 @@ function library:AddWindow(text,keybind)
     MainCorner.Parent = Main
 
     local Frame_2 = Instance.new("Frame")
-
     Frame_2.Parent = Main
-    Frame_2.BackgroundColor3 = Color3.new(0.0784314, 0.0784314, 0.0784314)
+    Frame_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    Frame_2.BackgroundTransparency = 0
     Frame_2.BorderColor3 = Color3.new(0, 0, 0)
     Frame_2.BorderSizePixel = 0
     Frame_2.Position = UDim2.new(0.911666691, 8, 0.0191428579, 0)
     Frame_2.Size = UDim2.new(0, 36, 0, 32)
-
-    local MainCorner = Instance.new("UICorner")
-    MainCorner.Name = "MainCorner"
-    MainCorner.CornerRadius = UDim.new(0, 7)
-    MainCorner.Parent = Frame_2
-
-    local DropdownStroke = Instance.new("UIStroke")
-
-    DropdownStroke.Name = "UIStroke"
-    DropdownStroke.Parent = Frame_2
-    DropdownStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-    DropdownStroke.Color = Color3.fromRGB(225,225,225)
-    DropdownStroke.LineJoinMode = Enum.LineJoinMode.Round
-    DropdownStroke.Thickness = 0.6
-    DropdownStroke.Transparency = 0.8
-    DropdownStroke.Enabled = true
-    DropdownStroke.Archivable = true
 
     local ImageButton = Instance.new("ImageButton")
     ImageButton.Parent = Frame_2
@@ -125,10 +108,10 @@ function library:AddWindow(text,keybind)
     ImageButton.BackgroundTransparency = 1
     ImageButton.BorderColor3 = Color3.new(0, 0, 0)
     ImageButton.BorderSizePixel = 0
-    ImageButton.Position = UDim2.new(0.18, 0, 0.09375, 1)
-    ImageButton.Size = UDim2.new(0, 23, 0, 23)
-    ImageButton.Image = "rbxassetid://7072725342"
-    ImageButton.ImageColor3 = Color3.new(0.686275, 0.686275, 0.686275)
+    ImageButton.Position = UDim2.new(0.953, 0,0.029, 0)
+    ImageButton.Size = UDim2.new(0, 17, 0, 18)
+    ImageButton.Image = "rbxassetid://9886659671"
+    ImageButton.ImageColor3 = Color3.fromRGB(255, 255, 255)
 
     ImageButton.MouseEnter:Connect(function()
         TweenService:Create(
@@ -142,7 +125,7 @@ function library:AddWindow(text,keybind)
         TweenService:Create(
             ImageButton,
             TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-            {ImageColor3 = Color3.new(0.686275, 0.686275, 0.686275)}
+            {ImageColor3 = Color3.fromRGB(255, 255, 255)}
         ):Play()
     end)
     
@@ -178,10 +161,10 @@ function library:AddWindow(text,keybind)
     local Top = Instance.new("Frame")
     Top.Name = "Top"
     Top.Parent = Main
-    Top.BackgroundColor3 = Color3.fromRGB(10, 10, 10)
+    Top.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
     Top.BackgroundTransparency = 1.000
     Top.BorderSizePixel = 0
-    Top.Size = UDim2.new(0, 600, 0, 45)
+    Top.Size = UDim2.new(0, 600, 0, 38)
     
     local TopCorner = Instance.new("UICorner")
     TopCorner.Name = "MainCorner"
@@ -191,11 +174,11 @@ function library:AddWindow(text,keybind)
     local Page = Instance.new("Frame")
     Page.Name = "Page"
     Page.Parent = Main
-    Page.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+    Page.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
     Page.BackgroundTransparency = 0
     Page.BorderSizePixel = 0
-    Page.Position = UDim2.new(0, 0, 0, 47)
-    Page.Size = UDim2.new(0, 125, 0, 303)
+    Page.Position = UDim2.new(0, 0, 0, 38)
+    Page.Size = UDim2.new(0, 125, 0, 312)
     
     local PageCorner = Instance.new("UICorner")
     PageCorner.Name = "MainCorner"
@@ -204,18 +187,18 @@ function library:AddWindow(text,keybind)
 
     local Frame = Instance.new("Frame")
     Frame.Parent = Page
-    Frame.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+    Frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
     Frame.BorderColor3 = Color3.new(0, 0, 0)
     Frame.BorderSizePixel = 0
-    Frame.Position = UDim2.new(1, 0, 0, 0)
-    Frame.Size = UDim2.new(0, 1, 0, 324)
+    Frame.Position = UDim2.new(1, 0,0.001, 0)
+    Frame.Size = UDim2.new(0, 1, 0, 311)
 
     local Frame_2 = Instance.new("Frame")
     Frame_2.Parent = Page
-    Frame_2.BackgroundColor3 = Color3.new(0.0980392, 0.0980392, 0.0980392)
+    Frame_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
     Frame_2.BorderColor3 = Color3.new(0, 0, 0)
     Frame_2.BorderSizePixel = 0
-    Frame_2.Position = UDim2.new(0.011110679, 0, 0.329177052, -101)
+    Frame_2.Position = UDim2.new(0, 0,0.322, -101)
     Frame_2.Size = UDim2.new(0, 600, 0, 1)
 
     local NameHub = Instance.new("TextLabel")
@@ -223,12 +206,12 @@ function library:AddWindow(text,keybind)
     NameHub.Parent = Page
     NameHub.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     NameHub.BackgroundTransparency = 1.000
-    NameHub.Position = UDim2.new(0.20, 0, 0, -33)
+    NameHub.Position = UDim2.new(0.136, 0,0.018, -33)
     NameHub.Size = UDim2.new(0, 15, 0, 15)
     NameHub.Font = Enum.Font.GothamMedium
     NameHub.Text = text
-    NameHub.TextColor3 = Color3.fromRGB(225, 225,225)
-    NameHub.TextSize = 15.000
+    NameHub.TextColor3 = Color3.fromRGB(240, 240,240)
+    NameHub.TextSize = 12.000
     NameHub.TextXAlignment = Enum.TextXAlignment.Left
 
     local ScrollPage = Instance.new("ScrollingFrame")
@@ -239,7 +222,7 @@ function library:AddWindow(text,keybind)
     ScrollPage.BackgroundTransparency = 1.000
     ScrollPage.BorderSizePixel = 0
     ScrollPage.Position = UDim2.new(0, 0, -0.001, 0)
-    ScrollPage.Size = UDim2.new(0, 125, 0, 303)
+    ScrollPage.Size = UDim2.new(0, 125,0, 314)
     ScrollPage.CanvasSize = UDim2.new(0, 0, 0, 0)
     ScrollPage.ScrollBarThickness = 0
     local PageList = Instance.new("UIListLayout")
