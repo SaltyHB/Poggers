@@ -280,7 +280,7 @@ function library:AddWindow(text,keybind)
         PageButton.BackgroundTransparency = 1
         PageButton.BorderSizePixel = 0
         PageButton.Position = UDim2.new(0.524000007, 0, 0.029787235, 0)
-        PageButton.Size = UDim2.new(0, 97, 0, 17)
+        PageButton.Size = UDim2.new(0, 97, 0, 13)
         PageButton.AutoButtonColor = false
         PageButton.Font = Enum.Font.GothamSemibold
         PageButton.Text = text
@@ -290,7 +290,7 @@ function library:AddWindow(text,keybind)
 
         local PageButtonCorner = Instance.new("UICorner")
         PageButtonCorner.Name = "PageButtonCorner"
-        PageButtonCorner.CornerRadius = UDim.new(0, 6)
+        PageButtonCorner.CornerRadius = UDim.new(0, 5)
         PageButtonCorner.Parent = PageButton
         
         local PageImage = Instance.new("ImageLabel")
@@ -339,6 +339,22 @@ function library:AddWindow(text,keybind)
         TabPadding.PaddingLeft = UDim.new(0, 10)
         TabPadding.PaddingTop = UDim.new(0, 10)
 
+        PageButton.MouseEnter:Connect(function()
+            TweenService:Create(
+                PageButton,
+                TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+                {BackgroundTransparency = 0.9}
+            ):Play()
+        end)
+        
+        PageButton.MouseLeave:Connect(function()
+            TweenService:Create(
+                PageButton,
+                TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+                {BackgroundTransparency = 1}
+            ):Play()
+        end)
+
         PageButton.MouseButton1Click:Connect(function()
             currenttab = MainTab.Name
             for i,v in next, TabFolder:GetChildren() do 
@@ -352,13 +368,13 @@ function library:AddWindow(text,keybind)
                 if v:IsA("TextButton") then
                     TweenService:Create(
                         v,
-                        TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+                        TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
                         {BackgroundTransparency = 1}
                     ):Play()
                 end
                 TweenService:Create(
                     PageButton,
-                    TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+                    TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
                     {BackgroundTransparency = 0.9}
                 ):Play()
             end
