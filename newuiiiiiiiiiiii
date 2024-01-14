@@ -388,7 +388,7 @@ function library:AddWindow(text,keybind)
 
             Button.Name = "Button"
             Button.Parent = ScrollTab
-            Button.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+            Button.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
             Button.BackgroundTransparency = 0
             Button.BorderSizePixel = 0
             Button.Size = UDim2.new(0, 455, 0, 30)
@@ -434,7 +434,7 @@ function library:AddWindow(text,keybind)
             
             Button.MouseButton1Click:Connect(function()
                 callback()
-                Button.TextSize = 5
+                Button.TextSize = 7
                 TweenService:Create(
                     Button,
                     TweenInfo.new(0.4,Enum.EasingStyle.Back,Enum.EasingDirection.Out),
