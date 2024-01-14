@@ -404,18 +404,6 @@ function library:AddWindow(text,keybind)
             ButtonCorner.CornerRadius = UDim.new(0, 5)
             ButtonCorner.Parent = Button
             
-            local ButtonStroke = Instance.new("UIStroke")
-
-            ButtonStroke.Name = "UIStroke"
-            ButtonStroke.Parent = Button
-            ButtonStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
-            ButtonStroke.Color = Color3.fromRGB(100,100,100)
-            ButtonStroke.LineJoinMode = Enum.LineJoinMode.Round
-            ButtonStroke.Thickness = 0.6
-            ButtonStroke.Transparency = 0.8
-            ButtonStroke.Enabled = true
-            ButtonStroke.Archivable = true
-            
             Button.MouseEnter:Connect(function()
                 TweenService:Create(
                     Button,
