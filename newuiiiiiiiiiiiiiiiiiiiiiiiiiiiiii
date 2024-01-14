@@ -277,11 +277,11 @@ function library:AddWindow(text,keybind)
         PageButtonBack.Name = "PageButtonBack"
         PageButtonBack.Parent = ScrollPage
         PageButtonBack.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
-        PageButtonBack.BackgroundTransparency = 0
+        PageButtonBack.BackgroundTransparency = 1
         PageButtonBack.BorderSizePixel = 0
-        PageButtonBack.Position = UDim2.new(0, 0, 0, 0)
+        PageButtonBack.Position = UDim2.new(0.524000007, 0, 0.029787235, 0)
         PageButtonBack.Size = UDim2.new(0, 86, 0, 20)
-        PageButtonBack.Visible = false  
+        PageButtonBack.Visible = true  
 
         local PageButton = Instance.new("TextButton")
         PageButton.Name = "PageButton"
