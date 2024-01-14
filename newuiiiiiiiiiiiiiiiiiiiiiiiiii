@@ -280,7 +280,7 @@ function library:AddWindow(text,keybind)
         PageButton.BackgroundTransparency = 1
         PageButton.BorderSizePixel = 0
         PageButton.Position = UDim2.new(0.524000007, 0, 0.029787235, 0)
-        PageButton.Size = UDim2.new(0, 90, 0, 20)
+        PageButton.Size = UDim2.new(0, 86, 0, 20)
         PageButton.AutoButtonColor = false
         PageButton.Font = Enum.Font.GothamSemibold
         PageButton.Text = text
