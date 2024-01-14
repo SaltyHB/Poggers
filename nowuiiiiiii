@@ -205,7 +205,7 @@ function library:AddWindow(text,keybind)
     NameHub.TextSize = 12.000
     NameHub.TextXAlignment = Enum.TextXAlignment.Left
 
-    local Discord = Instance.new("TextLabel")
+    local Discord = Instance.new("TextButton")
     Discord.Name = "Discord"
     Discord.Parent = Page
     Discord.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
@@ -219,6 +219,29 @@ function library:AddWindow(text,keybind)
     Discord.TextColor3 = Color3.fromRGB(116, 116, 116)
     Discord.TextSize = 12.000
     Discord.TextXAlignment = Enum.TextXAlignment.Left
+
+    Discord.MouseEnter:Connect(function()
+        TweenService:Create(
+            Discord,
+            TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+            {TextColor3 = Color3.fromRGB(0,0,205)}
+        ):Play()
+    end)
+    
+    Discord.MouseLeave:Connect(function()
+        TweenService:Create(
+            Discord,
+            TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+            {TextColor3 = Color3.fromRGB(116, 116, 116)}
+        ):Play()
+    end)
+    
+    Discord.MouseButton1Click:Connect(function()
+    setclipboard("https://discord.gg/raitohub")
+    Discord.Text = "| Copied"
+    wait(2)
+    Discord.Text = "| discord.gg/raitohub"
+    end)
 
     local ScrollPage = Instance.new("ScrollingFrame")
     ScrollPage.Name = "ScrollPage"
