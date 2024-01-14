@@ -3518,7 +3518,7 @@ end
                     loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/ScriptVersion"))()
                     local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/RaitoLibrary"))()
                     --------------------------------------------------------------------
-                    local Raito = library:AddWindow("Raito Hub",Enum.KeyCode.RightControl)
+                    local Raito = library:AddWindow("Raito Hub "..ScriptVersion,Enum.KeyCode.RightControl)
                     --------------------------------------------------------------------
                     local Settings = Raito:AddTab("Settings","10734950309")
                     local Main = Raito:AddTab("Home","10723407389")
@@ -3687,7 +3687,7 @@ end
                     local Second = math.floor(GameTime/(60^0))%60
                     local Ping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
                     local Fps = workspace:GetRealPhysicsFPS()
-                    local Stats = Main:AddNLabel("  Hours : "..Hour.." Minutes : "..Minute.." Seconds : "..Second.." \n  Fps : "..Fps.." Ping : "..Ping.." \n  Exploit : "..identifyexecutor())
+                    local Stats = Settings:AddNLabel("  Hours : "..Hour.." Minutes : "..Minute.." Seconds : "..Second.." \n  Fps : "..Fps.." Ping : "..Ping.." \n  Exploit : "..identifyexecutor())
                     
                     function UpdateStats()
                         local GameTime = math.floor(workspace.DistributedGameTime+0.5)
@@ -3696,7 +3696,7 @@ end
                         local Second = math.floor(GameTime/(60^0))%60
                         local Ping = game:GetService("Stats").Network.ServerStatsItem["Data Ping"]:GetValueString()
                         local Fps = workspace:GetRealPhysicsFPS()
-                        Stats:Set2("  Hours : "..Hour.." Minutes : "..Minute.." Seconds : "..Second.." \n  Fps : "..Fps.." Ping : "..Ping.." \n  Exploit : "..identifyexecutor().." Username : "..game.Players.LocalPlayer.Name)
+                        Stats:Set2("  Hours : "..Hour.." Minutes : "..Minute.." Seconds : "..Second.." \n  Fps : "..Fps.." Ping : "..Ping.." \n  Exploit : "..identifyexecutor())
                     end
                     
                     spawn(function()
@@ -3707,7 +3707,57 @@ end
                         end
                     end)
 
-                    Settings:AddLine()
+                    Settings:AddTextbox("Set Server","Paste your serverid here.",false,function(value)
+                        SelectedServer = value
+                    end)
+
+                    Settings:AddButton("Join Server",function()
+                        if SelectedServer:match("2753915549") then
+                            JoinTo = string.match(SelectedServer, 'RaitoHub_2753915549(.*)')
+                            elseif SelectedServer:match("4442272183") then
+                            JoinTo = string.match(SelectedServer, 'RaitoHub_4442272183(.*)')
+                            elseif SelectedServer:match("7449423635") then
+                            JoinTo = string.match(SelectedServer, 'RaitoHub_7449423635(.*)')
+                            end
+                            wait(.1)
+                            if SelectedServer:match("2753915549") and World2 then
+                            teleportwebhook1 = "wait(5) game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..JoinTo.."')"
+                            local autoexec = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+                            autoexec(teleportwebhook1)
+                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
+                            elseif SelectedServer:match("2753915549") and World3 then
+                            teleportwebhook1 = "wait(5) game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..JoinTo.."')"
+                            local autoexec = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+                            autoexec(teleportwebhook1)
+                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
+                            elseif SelectedServer:match("2753915549") and World1 then
+                            game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport',''..JoinTo)
+                            elseif SelectedServer:match("4442272183") and World1 then
+                            teleportwebhook2 = "wait(5) game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..JoinTo.."')"
+                            local autoexec = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+                            autoexec(teleportwebhook2)
+                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
+                            elseif SelectedServer:match("4442272183") and World3 then
+                            teleportwebhook2 = "wait(5) game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..JoinTo.."')"
+                            local autoexec = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+                            autoexec(teleportwebhook2)
+                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelDressrosa")
+                            elseif SelectedServer:match("4442272183") and World2 then
+                            game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport',''..JoinTo)
+                            elseif SelectedServer:match("7449423635") and World1 then
+                            teleportwebhook3 = "wait(5) game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..JoinTo.."')"
+                            local autoexec = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+                            autoexec(teleportwebhook3)
+                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
+                            elseif SelectedServer:match("7449423635") and World2 then
+                            teleportwebhook3 = "wait(5) game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport','"..JoinTo.."')"
+                            local autoexec = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport
+                            autoexec(teleportwebhook3)
+                            game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelZou")
+                            elseif SelectedServer:match("7449423635") and World3 then
+                            game.ReplicatedStorage['__ServerBrowser']:InvokeServer('teleport',''..JoinTo)
+                        end
+                    end)
 
                     Settings:AddToggle("Bypass AntiCheat: Flag Reset",true,function(value)
                         _G.FlagReset = value
@@ -3722,25 +3772,7 @@ end
                             end
                         end
                     end)
-                    
-                    Settings:AddButton("Reset Settings",function()
-                        _G.SaveSettings = false
-                        _G.Settings.SaveSettings = false
-                        if isfolder("Raito Hub Settings Folder") then
-                            delfolder("Raito Hub Settings Folder")
-                            local Notification = require(game:GetService("ReplicatedStorage").Notification)
-                            Notification.new("Succesfully Deleted Save Folder!"):Display()
-                        else
-                            local Notification = require(game:GetService("ReplicatedStorage").Notification)
-                            Notification.new("You Don't Have Any Saved Settings Already!"):Display()
-                        end
-                        if isfolder("Raito Hub Saving Folder") then
-                            delfolder("Raito Hub Saving Folder")
-                        end
-                    end)
 
-                    Settings:AddSeperator("Farming Settings")
-                     
                     Settings:AddToggle("Auto Set Home Point",true,function(value)
                         _G.Auto_Set_Spawn = value
                     end)
@@ -3757,17 +3789,7 @@ end
                         end
                     end)
 
-                    Settings:AddToggle("Double Quest",_G.Settings.KillExtra,function(value)
-                        _G.KillExtra = value
-                        _G.Settings.KillExtra = value
-                    end)
-            
                     _G.SelectBringMode = "Bring Mob"
-                    Settings:AddDropdown("Select Bring Mob Mode",_G.Settings.SelectBringMode,{"Bring Mob","Bring Mob [All]"},function(value)
-                        _G.SelectBringMode = value    
-                        _G.Settings.SelectBringMode = value
-                    end)
-                    
                     _G.BringMobs = true
                     Settings:AddToggle("Bring Mob",true,function(value)
                         _G.BringMobs = value
@@ -3793,83 +3815,107 @@ end
                         end
                     end)
 
+                        Settings:AddDropdown("Select Attack Delay",_G.Settings.SelectedDelay,{"Slow","Fast","Extreme"},function(value)
+                        _G.SelectedDelay = value
+                        _G.Settings.SelectedDelay = value
+                        end)
+    
+                        spawn(function()
+                            while wait(1) do
+                                pcall(function()
+                                    if _G.SelectedDelay == "Slow" then
+                                        AttackDelay = 0.055
+                                    elseif _G.SelectedDelay == "Fast" then
+                                        AttackDelay = 0.025
+                                    elseif _G.SelectedDelay == "Extreme" then
+                                        AttackDelay = 0
+                                    end
+                                end)
+                            end
+                        end)
+
+                        local Weapon = {
+                            "Melee",
+                            "Sword",
+                            "Fruit",
+                            "Gun"
+                        }
+                        
+                        _G.SelectWeapon = _G.Settings.SelectWeapon
+                        local SelectWeapona = Settings:AddDropdown("Select Weapon",_G.Settings.SelectWeapon,Weapon,function(value)
+                            _G.SelectWeapon = value
+                            _G.Settings.SelectWeapon = value
+                        end)
+                
+                        spawn(function()
+                            while wait() do
+                                pcall(function()
+                                    if _G.SelectWeapon == "Melee" then
+                                        for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                                            if v.ToolTip == "Melee" then
+                                                if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
+                                                    _G.SelectWeapon = v.Name
+                                                end
+                                            end
+                                        end
+                                    elseif _G.SelectWeapon == "Sword" then
+                                        for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                                            if v.ToolTip == "Sword" then
+                                                if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
+                                                    _G.SelectWeapon = v.Name
+                                                end
+                                            end
+                                        end
+                                    elseif _G.SelectWeapon == "Fruit" then
+                                        for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                                            if v.ToolTip == "Blox Fruit" then
+                                                if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
+                                                    _G.SelectWeapon = v.Name
+                                                end
+                                            end
+                                        end
+                                    elseif _G.SelectWeapon == "Gun" then
+                                        for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
+                                            if v.ToolTip == "Gun" then
+                                                if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
+                                                    _G.SelectWeapon = v.Name
+                                                end
+                                            end
+                                        end
+                                    end
+                                end)
+                            end
+                        end)
+                    
+                    Settings:AddSeperator("Others")
+
+                    Settings:AddButton("Reset Settings",function()
+                        _G.SaveSettings = false
+                        _G.Settings.SaveSettings = false
+                        if isfolder("Raito Hub Settings Folder") then
+                            delfolder("Raito Hub Settings Folder")
+                            local Notification = require(game:GetService("ReplicatedStorage").Notification)
+                            Notification.new("Succesfully Deleted Save Folder!"):Display()
+                        else
+                            local Notification = require(game:GetService("ReplicatedStorage").Notification)
+                            Notification.new("You Don't Have Any Saved Settings Already!"):Display()
+                        end
+                        if isfolder("Raito Hub Saving Folder") then
+                            delfolder("Raito Hub Saving Folder")
+                        end
+                    end)
+
+                    Settings:AddToggle("Double Quest",_G.Settings.KillExtra,function(value)
+                        _G.KillExtra = value
+                        _G.Settings.KillExtra = value
+                    end)
+            
                     if isfolder("Raito Hub Settings Folder") then
                     _G.SelectedDelay = _G.Settings.SelectedDelay
                     end
-                    Settings:AddDropdown("Select Attack Delay",_G.Settings.SelectedDelay,{"Slow","Fast","Extreme"},function(value)
-                    _G.SelectedDelay = value
-                    _G.Settings.SelectedDelay = value
-                    end)
-
-                    spawn(function()
-                        while wait(1) do
-                            pcall(function()
-                                if _G.SelectedDelay == "Slow" then
-                                    AttackDelay = 0.055
-                                elseif _G.SelectedDelay == "Fast" then
-                                    AttackDelay = 0.025
-                                elseif _G.SelectedDelay == "Extreme" then
-                                    AttackDelay = 0
-                                end
-                            end)
-                        end
-                    end)
 
                     Settings:AddToggle("Fast Attack",true,function(value)
                     _G.FastAttack = value
-                    end)
-            
-                    local Weapon = {
-                        "Melee",
-                        "Sword",
-                        "Fruit",
-                        "Gun"
-                    }
-                    
-                    _G.SelectWeapon = _G.Settings.SelectWeapon
-                    local SelectWeapona = Settings:AddDropdown("Select Weapon",_G.Settings.SelectWeapon,Weapon,function(value)
-                        _G.SelectWeapon = value
-                        _G.Settings.SelectWeapon = value
-                    end)
-            
-                    spawn(function()
-                        while wait() do
-                            pcall(function()
-                                if _G.SelectWeapon == "Melee" then
-                                    for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-                                        if v.ToolTip == "Melee" then
-                                            if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
-                                                _G.SelectWeapon = v.Name
-                                            end
-                                        end
-                                    end
-                                elseif _G.SelectWeapon == "Sword" then
-                                    for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-                                        if v.ToolTip == "Sword" then
-                                            if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
-                                                _G.SelectWeapon = v.Name
-                                            end
-                                        end
-                                    end
-                                elseif _G.SelectWeapon == "Fruit" then
-                                    for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-                                        if v.ToolTip == "Blox Fruit" then
-                                            if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
-                                                _G.SelectWeapon = v.Name
-                                            end
-                                        end
-                                    end
-                                elseif _G.SelectWeapon == "Gun" then
-                                    for i ,v in pairs(game.Players.LocalPlayer.Backpack:GetChildren()) do
-                                        if v.ToolTip == "Gun" then
-                                            if game.Players.LocalPlayer.Backpack:FindFirstChild(tostring(v.Name)) then
-                                                _G.SelectWeapon = v.Name
-                                            end
-                                        end
-                                    end
-                                end
-                            end)
-                        end
                     end)
                     
                     Settings:AddToggle("Auto Save Settings",_G.Settings.SaveSettings,function(value)
