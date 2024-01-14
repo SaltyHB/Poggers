@@ -637,10 +637,22 @@ function library:AddWindow(text,keybind)
             UICorner.CornerRadius = UDim.new(0, 5)
             UICorner.Parent = Dropdown
             
+            local DropdownStroke = Instance.new("UIStroke")
+
+            DropdownStroke.Name = "UIStroke"
+            DropdownStroke.Parent = Dropdown
+            DropdownStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+            DropdownStroke.Color = Color3.fromRGB(225,225,225)
+            DropdownStroke.LineJoinMode = Enum.LineJoinMode.Round
+            DropdownStroke.Thickness = 0.6
+            DropdownStroke.Transparency = 0.8
+            DropdownStroke.Enabled = true
+            DropdownStroke.Archivable = true
+            
             DropButton.Name = "DropButton"
             DropButton.Parent = Dropdown
-            DropButton.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-            DropButton.BackgroundTransparency = 0
+            DropButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+            DropButton.BackgroundTransparency = 1.000
             DropButton.Size = UDim2.new(0, 455, 0, 30)
             DropButton.Font = Enum.Font.SourceSans
             DropButton.Text = ""
