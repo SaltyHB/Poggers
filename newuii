@@ -81,7 +81,7 @@ function library:AddWindow(text,keybind)
     Main.Name = "Main"
     Main.Parent = DoctorShiba
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
-    Main.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    Main.BackgroundColor3 = Color3.fromRGB(10,10,10)
     Main.BackgroundTransparency = 0
     Main.BorderSizePixel = 0
     Main.ClipsDescendants = true
@@ -93,17 +93,8 @@ function library:AddWindow(text,keybind)
     MainCorner.CornerRadius = UDim.new(0, 9)
     MainCorner.Parent = Main
 
-    local Frame_2 = Instance.new("Frame")
-    Frame_2.Parent = Main
-    Frame_2.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
-    Frame_2.BackgroundTransparency = 0
-    Frame_2.BorderColor3 = Color3.new(0, 0, 0)
-    Frame_2.BorderSizePixel = 0
-    Frame_2.Position = UDim2.new(0.911666691, 8, 0.0191428579, 0)
-    Frame_2.Size = UDim2.new(0, 36, 0, 32)
-
     local ImageButton = Instance.new("ImageButton")
-    ImageButton.Parent = Frame_2
+    ImageButton.Parent = Main
     ImageButton.BackgroundColor3 = Color3.new(0.67451, 0.67451, 0.67451)
     ImageButton.BackgroundTransparency = 1
     ImageButton.BorderColor3 = Color3.new(0, 0, 0)
@@ -161,7 +152,7 @@ function library:AddWindow(text,keybind)
     local Top = Instance.new("Frame")
     Top.Name = "Top"
     Top.Parent = Main
-    Top.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    Top.BackgroundColor3 = Color3.fromRGB(10,10,10)
     Top.BackgroundTransparency = 1.000
     Top.BorderSizePixel = 0
     Top.Size = UDim2.new(0, 600, 0, 38)
@@ -174,7 +165,7 @@ function library:AddWindow(text,keybind)
     local Page = Instance.new("Frame")
     Page.Name = "Page"
     Page.Parent = Main
-    Page.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+    Page.BackgroundColor3 = Color3.fromRGB(10,10,10)
     Page.BackgroundTransparency = 0
     Page.BorderSizePixel = 0
     Page.Position = UDim2.new(0, 0, 0, 38)
@@ -187,7 +178,7 @@ function library:AddWindow(text,keybind)
 
     local Frame = Instance.new("Frame")
     Frame.Parent = Page
-    Frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+    Frame.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     Frame.BorderColor3 = Color3.new(0, 0, 0)
     Frame.BorderSizePixel = 0
     Frame.Position = UDim2.new(1, 0,0.001, 0)
@@ -195,7 +186,7 @@ function library:AddWindow(text,keybind)
 
     local Frame_2 = Instance.new("Frame")
     Frame_2.Parent = Page
-    Frame_2.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+    Frame_2.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     Frame_2.BorderColor3 = Color3.new(0, 0, 0)
     Frame_2.BorderSizePixel = 0
     Frame_2.Position = UDim2.new(0, 0,0.322, -101)
@@ -213,6 +204,21 @@ function library:AddWindow(text,keybind)
     NameHub.TextColor3 = Color3.fromRGB(240, 240,240)
     NameHub.TextSize = 12.000
     NameHub.TextXAlignment = Enum.TextXAlignment.Left
+
+    local Discord = Instance.new("TextLabel")
+    Discord.Name = "Discord"
+    Discord.Parent = Page
+    Discord.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+    Discord.BackgroundTransparency = 1.000
+    Discord.BorderColor3 = Color3.fromRGB(0, 0, 0)
+    Discord.BorderSizePixel = 0
+    Discord.Position = UDim2.new(0.879999995, 0, 0.0184615701, -33)
+    Discord.Size = UDim2.new(0, 15, 0, 15)
+    Discord.Font = Enum.Font.Gotham
+    Discord.Text = "| discord.gg/raitohub"
+    Discord.TextColor3 = Color3.fromRGB(116, 116, 116)
+    Discord.TextSize = 12.000
+    Discord.TextXAlignment = Enum.TextXAlignment.Left
 
     local ScrollPage = Instance.new("ScrollingFrame")
     ScrollPage.Name = "ScrollPage"
