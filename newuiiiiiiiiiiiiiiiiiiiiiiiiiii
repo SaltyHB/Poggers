@@ -288,6 +288,16 @@ function library:AddWindow(text,keybind)
         PageButton.TextSize = 12.000
         PageButton.TextXAlignment = Enum.TextXAlignment.Left
 
+        local PageButtonBack = Instance.new("Frame")
+        PageButtonBack.Name = "PageButtonBack"
+        PageButtonBack.Parent = ScrollPage
+        PageButtonBack.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
+        PageButtonBack.BackgroundTransparency = 1
+        PageButtonBack.BorderSizePixel = 0
+        PageButtonBack.Position = UDim2.new(0.524000007, 0, 0.029787235, 0)
+        PageButtonBack.Size = UDim2.new(0, 86, 0, 20)
+        PageButtonBack.Visible = false  
+
         local PageButtonCorner = Instance.new("UICorner")
         PageButtonCorner.Name = "PageButtonCorner"
         PageButtonCorner.CornerRadius = UDim.new(0, 5)
@@ -351,13 +361,13 @@ function library:AddWindow(text,keybind)
             for i,v in next, ScrollPage:GetChildren() do 
                 if v:IsA("TextButton") then
                     TweenService:Create(
-                        v,
+                        PageButtonBack,
                         TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
                         {BackgroundTransparency = 1}
                     ):Play()
                 end
                 TweenService:Create(
-                    PageButton,
+                    PageButtonBack,
                     TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
                     {BackgroundTransparency = 0.9}
                 ):Play()
@@ -366,7 +376,7 @@ function library:AddWindow(text,keybind)
 
         if ff == false then
             TweenService:Create(
-                PageButton,
+                PageButtonBack,
                 TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
                 {BackgroundTransparency = 0.9}
             ):Play()
