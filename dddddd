@@ -3834,6 +3834,10 @@ end
                             end
                         end)
 
+                        Settings:AddToggle("Fast Attack",true,function(value)
+                            _G.FastAttack = value
+                        end)
+
                         local Weapon = {
                             "Melee",
                             "Sword",
@@ -3904,19 +3908,10 @@ end
                             delfolder("Raito Hub Saving Folder")
                         end
                     end)
-
-                    Settings:AddToggle("Double Quest",_G.Settings.KillExtra,function(value)
-                        _G.KillExtra = value
-                        _G.Settings.KillExtra = value
-                    end)
             
                     if isfolder("Raito Hub Settings Folder") then
                     _G.SelectedDelay = _G.Settings.SelectedDelay
                     end
-
-                    Settings:AddToggle("Fast Attack",true,function(value)
-                    _G.FastAttack = value
-                    end)
                     
                     Settings:AddToggle("Auto Save Settings",_G.Settings.SaveSettings,function(value)
                         _G.SaveSettings = value
@@ -3940,8 +3935,8 @@ end
                     end)
         
                     Settings:AddToggle("Double Quest",_G.Settings.DoubleQuest,function(value)
-                        _G.DoubleQuest = value
-                        _G.Settings.DoubleQuest = value
+                        _G.KillExtra = value
+                        _G.Settings.KillExtra = value
                     end)
 
                     Settings:AddToggle("Player Hitbox",_G.Settings.Hitbox,function(value)
