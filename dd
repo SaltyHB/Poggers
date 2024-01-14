@@ -10780,17 +10780,6 @@ end)
                     end
                 end)
             end)
-
-            -------------------------NOFICATION---------------------------------
-            local Notification = require(game:GetService("ReplicatedStorage").Notification)
-            Notification.new("Raito Hub Fully Loaded!"  .." Welcome, ".."<Color=Blue>"..game.Players.LocalPlayer.DisplayName.."<Color=/>"):Display()
-            if isfolder("Raito Hub Settings Folder") and _G.SaveSettings == true then
-                local Notification = require(game:GetService("ReplicatedStorage").Notification)
-                Notification.new("Succesfully Loaded Your Settings!"):Display()
-            else
-                local Notification = require(game:GetService("ReplicatedStorage").Notification)
-                Notification.new("You Don't Have Any Saved Settings!"):Display()
-            end
             -------------------------FINISH-------------------------------------
             end
             end
