@@ -302,7 +302,7 @@ function library:AddWindow(text,keybind)
         MainTab.Parent = TabFolder
         MainTab.BackgroundColor3 = Color3.fromRGB(10,10,10)
         MainTab.BorderSizePixel = 0
-        MainTab.Position = UDim2.new(0.239733328, 0, 0, 47)
+        MainTab.Position = UDim2.new(0.239733328, 0, 0, 44)
         MainTab.Size = UDim2.new(0, 455, 0, 303)
         MainTab.Visible = false  
         
