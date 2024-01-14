@@ -276,22 +276,17 @@ function library:AddWindow(text,keybind)
         local PageButton = Instance.new("TextButton")
         PageButton.Name = "PageButton"
         PageButton.Parent = ScrollPage
-        PageButton.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
-        PageButton.BackgroundTransparency = 1
+        PageButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        PageButton.BackgroundTransparency = 1.000
         PageButton.BorderSizePixel = 0
         PageButton.Position = UDim2.new(0.524000007, 0, 0.029787235, 0)
-        PageButton.Size = UDim2.new(0, 86, 0, 20)
+        PageButton.Size = UDim2.new(0, 97, 0, 20)
         PageButton.AutoButtonColor = false
         PageButton.Font = Enum.Font.GothamSemibold
-        PageButton.Text = "  "..text
+        PageButton.Text = text
         PageButton.TextColor3 = Color3.fromRGB(225, 225, 225)
         PageButton.TextSize = 12.000
         PageButton.TextXAlignment = Enum.TextXAlignment.Left
-
-        local PageButtonCorner = Instance.new("UICorner")
-        PageButtonCorner.Name = "PageButtonCorner"
-        PageButtonCorner.CornerRadius = UDim.new(0, 5)
-        PageButtonCorner.Parent = PageButton
         
         local PageImage = Instance.new("ImageLabel")
         PageImage.Name = "PageImage"
@@ -352,14 +347,14 @@ function library:AddWindow(text,keybind)
                 if v:IsA("TextButton") then
                     TweenService:Create(
                         v,
-                        TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-                        {BackgroundTransparency = 1}
+                        TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+                        {TextColor3 = Color3.fromRGB(225, 225, 225)}
                     ):Play()
                 end
                 TweenService:Create(
                     PageButton,
-                    TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-                    {BackgroundTransparency = 0.9}
+                    TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
+                    {TextColor3 = Color3.fromRGB(125, 125, 125)}
                 ):Play()
             end
         end)
@@ -368,7 +363,7 @@ function library:AddWindow(text,keybind)
             TweenService:Create(
                 PageButton,
                 TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-                {BackgroundTransparency = 0.9}
+                {TextColor3 = Color3.fromRGB(125, 125, 125)}
             ):Play()
             for i,v in next, TabFolder:GetChildren() do 
                 if v.Name == "MainTab" then
@@ -811,7 +806,7 @@ function library:AddWindow(text,keybind)
                     TweenService:Create(
                         DropButton2,
                         TweenInfo.new(0.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
-                        {TextColor3 = Color3.fromRGB(125,125,125)}
+                        {TextColor3 = Color3.fromRGB(225, 225,225)}
                     ):Play()
                 end)
                 DropButton2.MouseLeave:Connect(function()
