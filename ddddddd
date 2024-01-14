@@ -834,12 +834,12 @@ if not game:GetService("UserInputService").TouchEnabled and not game:GetService(
     Button.MouseButton1Click:Connect(function()
     toggle = not toggle
     if toggle then
-    game:GetService("VirtualInputManager"):SendKeyEvent(true,127,false,game)
-    game:GetService("VirtualInputManager"):SendKeyEvent(false,127,false,game)
+    game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
+    game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
     Button.Image = "http://www.roblox.com/asset/?id=15757188966"
     else
-    game:GetService("VirtualInputManager"):SendKeyEvent(true,127,false,game)
-    game:GetService("VirtualInputManager"):SendKeyEvent(false,127,false,game)
+    game:GetService("VirtualInputManager"):SendKeyEvent(true,305,false,game)
+    game:GetService("VirtualInputManager"):SendKeyEvent(false,305,false,game)
     Button.Image = "http://www.roblox.com/asset/?id=15757220056"
     end
     end)
@@ -862,15 +862,6 @@ if not game:GetService("UserInputService").TouchEnabled and not game:GetService(
     UICorner.Name = "Looks like"
     UICorner.Parent = Frame
 end
--- LIBRARY
-local Fluent = loadstring(game:HttpGetAsync("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
-local SaveManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SaltyHB/Poggers/main/SaveManagerr"))()
-local InterfaceManager = loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Interface"))()
-Fluent:Notify({
-    Title = "Raito Hub",
-    Content = "The script is loading.",
-    Duration = 7
-})
 -- SELECT TEAM
 if _G.Team == nil then
 	_G.Team = "Pirates"
@@ -3934,7 +3925,7 @@ end
                         _G.Settings.BypassTP = value
                     end)
         
-                    Settings:AddToggle("Double Quest",_G.Settings.DoubleQuest,function(value)
+                    Settings:AddToggle("Double Quest",_G.Settings.KillExtra,function(value)
                         _G.KillExtra = value
                         _G.Settings.KillExtra = value
                     end)
@@ -4068,10 +4059,28 @@ end
                     end)
                 end
         
-                Main:AddSeperator("Mirage & Full Moon")
+                Main:AddSeperator("Finder")
             
+                local KitsuneStats = Main:AddLabel("Kitsune Status")
                 local MirageStats = Main:AddLabel("Mirage Status")
                 local MoonStats = Main:AddLabel("Full Moon Status")
+            
+                function KitsuneCheck()
+                    if game.Workspace._WorldOrigin.Locations:FindFirstChild('Kitsune Island') then
+                    KitsuneStats:Set("🦊 Kitsune Has Spawned!")
+                    else
+                    KitsuneStats:Set("🦊 Kitsune Has Not Spawned!")
+                    end
+                end
+            
+                spawn(function()
+                    while task.wait(5) do
+                    pcall(function()
+                    KitsuneCheck()
+                    end)
+                end
+                end)
+                KitsuneCheck()
             
                 function MirageCheck()
                     if game:GetService("Workspace").Map:FindFirstChild("MysticIsland") then
@@ -4079,18 +4088,18 @@ end
                     else
                     MirageStats:Set("🏝️  Mirage Has Not Spawned!")
                     end
-                    end
-                            
-                    spawn(function()
-                     while task.wait(25) do
-                        pcall(function()
-                        MirageCheck()
-                    end)
-                    end
-                    end)
+                end
+            
+                spawn(function()
+                    while task.wait(5) do
+                    pcall(function()
                     MirageCheck()
-                    
-                    function FullMoon()
+                    end)
+                end
+                end)
+                MirageCheck()
+            
+                function FullMoon()
                     local Moon = {
                     ['8'] = "http://www.roblox.com/asset/?id=9709149431", -- 🌕
                     ['7'] = "http://www.roblox.com/asset/?id=9709149052", -- 🌖
@@ -4118,51 +4127,69 @@ end
                     if World3 then
                         if game:GetService("Lighting").Sky.MoonTextureId == Moon['1'] then
                             MoonIcon = '🌔'
+                            MoonMinute = '( 84 ~ 96 )'
                         elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['2'] then
                             MoonIcon = '🌓'
+                            MoonMinute = '( 72 ~ 84 )'
                         elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['3'] then
                             MoonIcon = '🌒'
+                            MoonMinute = '( 60 ~ 72 )'
                         elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['4'] then
                             MoonIcon = '🌑'
+                            MoonMinute = '( 48 ~ 60 )'
                         elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['5'] then
                             MoonIcon = '🌘'
+                            MoonMinute = '( 36 ~ 48 )'
                         elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['6'] then
                             MoonIcon = '🌗'
+                            MoonMinute = '( 24 ~ 36 )'
                         elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['7'] then
                             MoonIcon = '🌖'
+                            MoonMinute = '( 12 ~ 24 )'
                         elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['8'] and not game.Workspace._WorldOrigin.Locations:FindFirstChild('Mirage Island') then
                             MoonIcon = '🌕'
+                            MoonMinute = '( 0 ~ 12 )'
                         elseif game:GetService("Lighting").Sky.MoonTextureId == Moon['8'] and game.Workspace._WorldOrigin.Locations:FindFirstChild('Mirage Island') then
                             MoonIcon = '🌕'
+                            MoonMinute = ''
                         end
                     elseif World2 or World1 then
                         if game:GetService("Lighting").FantasySky.MoonTextureId == Moon['1'] then
                             MoonIcon = '🌔'
+                            MoonMinute = '( 84 ~ 96 )'
                         elseif game:GetService("Lighting").FantasySky.MoonTextureId == Moon['2'] then
                             MoonIcon = '🌓'
+                            MoonMinute = '( 72 ~ 84 )'
                         elseif game:GetService("Lighting").FantasySky.MoonTextureId == Moon['3'] then
                             MoonIcon = '🌒'
+                            MoonMinute = '( 60 ~ 72 )'
                         elseif game:GetService("Lighting").FantasySky.MoonTextureId == Moon['4'] then
                             MoonIcon = '🌑'
+                            MoonMinute = '( 48 ~ 60 )'
                         elseif game:GetService("Lighting").FantasySky.MoonTextureId == Moon['5'] then
                             MoonIcon = '🌘'
+                            MoonMinute = '( 36 ~ 48 )'
                         elseif game:GetService("Lighting").FantasySky.MoonTextureId == Moon['6'] then
                             MoonIcon = '🌗'
+                            MoonMinute = '( 24 ~ 36 )'
                         elseif game:GetService("Lighting").FantasySky.MoonTextureId == Moon['7'] then
                             MoonIcon = '🌖'
+                            MoonMinute = '( 12 ~ 24 )'
                         elseif game:GetService("Lighting").FantasySky.MoonTextureId == Moon['8'] and not game.Workspace._WorldOrigin.Locations:FindFirstChild('Mirage Island') then
                             MoonIcon = '🌕'
+                            MoonMinute = '( 0 ~ 12 )'
                         elseif game:GetService("Lighting").FantasySky.MoonTextureId == Moon['8'] and game.Workspace._WorldOrigin.Locations:FindFirstChild('Mirage Island') then
                             MoonIcon = '🌕'
+                            MoonMinute = ''
                         end
                     end
-                    MoonMessage = tostring(MoonIcon..'  Full Moon Has '..'%'..MoonPercent)
+                    MoonMessage = tostring(MoonIcon..'  Full Moon '..'%'..MoonPercent..' '..MoonMinute)
                     wait(0.5)
                     MoonStats:Set(MoonMessage)
                     end
                             
                     spawn(function()
-                     while task.wait(25) do
+                     while task.wait(5) do
                         pcall(function()
                         FullMoon()
                     end)
