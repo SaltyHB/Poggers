@@ -213,7 +213,7 @@ function library:AddWindow(text,keybind)
     Discord.BorderColor3 = Color3.fromRGB(0, 0, 0)
     Discord.BorderSizePixel = 0
     Discord.Position = UDim2.new(0.879999995, 0, 0.0184615701, -33)
-    Discord.Size = UDim2.new(0, 15, 0, 15)
+    Discord.Size = UDim2.new(0, 40, 0, 40)
     Discord.Font = Enum.Font.Gotham
     Discord.Text = "| discord.gg/raitohub"
     Discord.TextColor3 = Color3.fromRGB(116, 116, 116)
@@ -224,7 +224,7 @@ function library:AddWindow(text,keybind)
         TweenService:Create(
             Discord,
             TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-            {TextColor3 = Color3.fromRGB(0,0,205)}
+            {TextColor3 = Color3.fromRGB(0,0,255)}
         ):Play()
     end)
     
