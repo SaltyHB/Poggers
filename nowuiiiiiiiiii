@@ -224,7 +224,7 @@ function library:AddWindow(text,keybind)
         TweenService:Create(
             Discord,
             TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-            {TextColor3 = Color3.fromRGB(0,0,255)}
+            {TextColor3 = Color3.fromRGB(72,118,255)}
         ):Play()
     end)
     
