@@ -339,14 +339,6 @@ function library:AddWindow(text,keybind)
         TabPadding.PaddingLeft = UDim.new(0, 10)
         TabPadding.PaddingTop = UDim.new(0, 10)
 
-        PageButton.MouseEnter:Connect(function()
-            TweenService:Create(
-                PageButton,
-                TweenInfo.new(0.4,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-                {BackgroundTransparency = 0.9}
-            ):Play()
-        end)
-
         PageButton.MouseButton1Click:Connect(function()
             currenttab = MainTab.Name
             for i,v in next, TabFolder:GetChildren() do 
