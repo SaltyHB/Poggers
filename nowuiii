@@ -355,7 +355,7 @@ function library:AddWindow(text,keybind)
                 TweenService:Create(
                     PageButton,
                     TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-                    {TextColor3 = Color3.fromRGB(125, 125, 125)}
+                    {TextColor3 = Color3.fromRGB(160, 160, 160)}
                 ):Play()
             end
         end)
@@ -364,7 +364,7 @@ function library:AddWindow(text,keybind)
             TweenService:Create(
                 PageButton,
                 TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
-                {TextColor3 = Color3.fromRGB(125, 125, 125)}
+                {TextColor3 = Color3.fromRGB(160, 160, 160)}
             ):Play()
             for i,v in next, TabFolder:GetChildren() do 
                 if v.Name == "MainTab" then
