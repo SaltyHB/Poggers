@@ -280,13 +280,18 @@ function library:AddWindow(text,keybind)
         PageButton.BackgroundTransparency = 1
         PageButton.BorderSizePixel = 0
         PageButton.Position = UDim2.new(0.524000007, 0, 0.029787235, 0)
-        PageButton.Size = UDim2.new(0, 97, 0, 20)
+        PageButton.Size = UDim2.new(0, 97, 0, 17)
         PageButton.AutoButtonColor = false
         PageButton.Font = Enum.Font.GothamSemibold
         PageButton.Text = text
         PageButton.TextColor3 = Color3.fromRGB(225, 225, 225)
         PageButton.TextSize = 12.000
         PageButton.TextXAlignment = Enum.TextXAlignment.Left
+
+        local PageButtonCorner = Instance.new("UICorner")
+        PageButtonCorner.Name = "PageButtonCorner"
+        PageButtonCorner.CornerRadius = UDim.new(0, 6)
+        PageButtonCorner.Parent = PageButton
         
         local PageImage = Instance.new("ImageLabel")
         PageImage.Name = "PageImage"
