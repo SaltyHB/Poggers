@@ -294,7 +294,7 @@ function library:AddWindow(text,keybind)
         PageButtonBack.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
         PageButtonBack.BackgroundTransparency = 1
         PageButtonBack.BorderSizePixel = 0
-        PageButtonBack.Position = UDim2.new(0.594000007, 0, 0.029787235, 0)
+        PageButtonBack.Position = UDim2.new(0.8, 0, 0.029787235, 0)
         PageButtonBack.Size = UDim2.new(0, 86, 0, 20)
         PageButtonBack.Visible = true  
 
