@@ -81,7 +81,7 @@ function library:AddWindow(text,keybind)
     Main.Name = "Main"
     Main.Parent = DoctorShiba
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
-    Main.BackgroundColor3 = Color3.fromRGB(10,10,10)
+    Main.BackgroundColor3 = Color3.fromRGB(20,20,20)
     Main.BackgroundTransparency = 0
     Main.BorderSizePixel = 0
     Main.ClipsDescendants = true
@@ -165,7 +165,7 @@ function library:AddWindow(text,keybind)
     local Page = Instance.new("Frame")
     Page.Name = "Page"
     Page.Parent = Main
-    Page.BackgroundColor3 = Color3.fromRGB(10,10,10)
+    Page.BackgroundColor3 = Color3.fromRGB(20,20,20)
     Page.BackgroundTransparency = 0
     Page.BorderSizePixel = 0
     Page.Position = UDim2.new(0, 0, 0, 38)
@@ -300,7 +300,7 @@ function library:AddWindow(text,keybind)
         local MainTab = Instance.new("Frame")
         MainTab.Name = "MainTab"
         MainTab.Parent = TabFolder
-        MainTab.BackgroundColor3 = Color3.fromRGB(10,10,10)
+        MainTab.BackgroundColor3 = Color3.fromRGB(20,20,20)
         MainTab.BorderSizePixel = 0
         MainTab.Position = UDim2.new(0.21, 0,-0.024, 47)
         MainTab.Size = UDim2.new(0, 474, 0, 311)
