@@ -388,7 +388,7 @@ function library:AddWindow(text,keybind)
 
             Button.Name = "Button"
             Button.Parent = ScrollTab
-            Button.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            Button.BackgroundColor3 = Color3.fromRGB(23, 23, 23)
             Button.BackgroundTransparency = 0
             Button.BorderSizePixel = 0
             Button.Size = UDim2.new(0, 455, 0, 30)
@@ -449,7 +449,7 @@ function library:AddWindow(text,keybind)
             local Toggle = Instance.new("TextButton")
             Toggle.Name = "Toggle"
             Toggle.Parent = ScrollTab
-            Toggle.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            Toggle.BackgroundColor3 = Color3.fromRGB(23, 23, 23)
             Toggle.BackgroundTransparency = 0
             Toggle.BorderSizePixel = 0
             Toggle.AutoButtonColor = false
@@ -564,7 +564,7 @@ function library:AddWindow(text,keybind)
 
             Textboxx.Name = "Textboxx"
             Textboxx.Parent = ScrollTab
-            Textboxx.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            Textboxx.BackgroundColor3 = Color3.fromRGB(23, 23, 23)
             Textboxx.Size = UDim2.new(0, 455, 0, 30)
 
             TextboxxCorner.CornerRadius = UDim.new(0, 5)
@@ -630,7 +630,7 @@ function library:AddWindow(text,keybind)
             Dropdown.Name = "Dropdown"
             Dropdown.Parent = ScrollTab
             Dropdown.Active = true
-            Dropdown.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            Dropdown.BackgroundColor3 = Color3.fromRGB(23, 23, 23)
             Dropdown.ClipsDescendants = true
             Dropdown.Size = UDim2.new(0, 455, 0, 30)
             
@@ -854,7 +854,7 @@ function library:AddWindow(text,keybind)
 
             Slider.Name = "Slider"
             Slider.Parent = ScrollTab
-            Slider.BackgroundColor3 = Color3.fromRGB(25, 25, 25)
+            Slider.BackgroundColor3 = Color3.fromRGB(23, 23, 23)
             Slider.Size = UDim2.new(0, 455, 0, 40)
 
             UICorner.CornerRadius = UDim.new(0, 5)
@@ -1040,8 +1040,8 @@ function library:AddWindow(text,keybind)
     
             Label2.Name = "Label"
             Label2.Parent = ScrollTab
-            Label2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-            Label2.BackgroundTransparency = 1.000
+            Label2.BackgroundColor3 = Color3.fromRGB(23, 23, 23)
+            Label2.BackgroundTransparency = 0
             Label2.Size = UDim2.new(0, 455, 0, 57)
             Label2.Font = Enum.Font.GothamSemibold
             Label2.TextColor3 = Color3.fromRGB(225, 225, 225)
@@ -1093,8 +1093,8 @@ function library:AddWindow(text,keybind)
     
             Label.Name = "Label"
             Label.Parent = ScrollTab
-            Label.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-            Label.BackgroundTransparency = 1.000
+            Label.BackgroundColor3 = Color3.fromRGB(23, 23, 23)
+            Label.BackgroundTransparency = 0
             Label.Size = UDim2.new(0, 455, 0, 20)
             Label.Font = Enum.Font.Gotham
             Label.TextColor3 = Color3.fromRGB(225, 225, 225)
