@@ -283,25 +283,15 @@ function library:AddWindow(text,keybind)
         PageButton.Size = UDim2.new(0, 86, 0, 20)
         PageButton.AutoButtonColor = false
         PageButton.Font = Enum.Font.GothamSemibold
-        PageButton.Text = text
+        PageButton.Text = "  "..text
         PageButton.TextColor3 = Color3.fromRGB(225, 225, 225)
         PageButton.TextSize = 12.000
         PageButton.TextXAlignment = Enum.TextXAlignment.Left
 
-        local PageButtonBack = Instance.new("Frame")
-        PageButtonBack.Name = "PageButtonBack"
-        PageButtonBack.Parent = PageButton
-        PageButtonBack.BackgroundColor3 = Color3.fromRGB(100, 100, 100)
-        PageButtonBack.BackgroundTransparency = 1
-        PageButtonBack.BorderSizePixel = 0
-        PageButtonBack.Position = UDim2.new(0.8, 0, 0.029787235, 0)
-        PageButtonBack.Size = UDim2.new(0, 86, 0, 20)
-        PageButtonBack.Visible = true  
-
         local PageButtonCorner = Instance.new("UICorner")
         PageButtonCorner.Name = "PageButtonCorner"
         PageButtonCorner.CornerRadius = UDim.new(0, 5)
-        PageButtonCorner.Parent = PageButtonBack
+        PageButtonCorner.Parent = PageButton
         
         local PageImage = Instance.new("ImageLabel")
         PageImage.Name = "PageImage"
@@ -361,13 +351,13 @@ function library:AddWindow(text,keybind)
             for i,v in next, ScrollPage:GetChildren() do 
                 if v:IsA("TextButton") then
                     TweenService:Create(
-                        PageButtonBack,
+                        v,
                         TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
                         {BackgroundTransparency = 1}
                     ):Play()
                 end
                 TweenService:Create(
-                    PageButtonBack,
+                    PageButton,
                     TweenInfo.new(0.5,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
                     {BackgroundTransparency = 0.9}
                 ):Play()
@@ -376,7 +366,7 @@ function library:AddWindow(text,keybind)
 
         if ff == false then
             TweenService:Create(
-                PageButtonBack,
+                PageButton,
                 TweenInfo.new(0.3,Enum.EasingStyle.Quad,Enum.EasingDirection.Out),
                 {BackgroundTransparency = 0.9}
             ):Play()
