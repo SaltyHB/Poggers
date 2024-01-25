@@ -479,6 +479,7 @@ if ScriptVersion == "2.0.0" then
             end
             
             function main:AddToggle(text,config,callback)
+                local toggle = {}
                 local ToggleImage = Instance.new("Frame")
                 
                 local Toggle = Instance.new("TextButton")
@@ -524,7 +525,7 @@ if ScriptVersion == "2.0.0" then
                 ToggleLabel.TextSize = 11.000
                 ToggleLabel.TextXAlignment = Enum.TextXAlignment.Left
     
-                function main:SetToggle(newtext)
+                function toggle:SetToggle(newtext)
                     ToggleLabel.Text = newtext
                 end
     
@@ -592,9 +593,11 @@ if ScriptVersion == "2.0.0" then
                     toggled = true
                     callback(toggled)
                 end
+                return toggle
             end
     
             function main:AddTextbox(text,holder,disappear,callback)
+                local Textbox = {}
                 local Textboxx = Instance.new("Frame")
                 local TextboxxCorner = Instance.new("UICorner")
                 local TextboxTitle = Instance.new("TextLabel")
@@ -634,7 +637,7 @@ if ScriptVersion == "2.0.0" then
                 TextboxTitle.TextSize = 11.000
                 TextboxTitle.TextXAlignment = Enum.TextXAlignment.Left
     
-                function main:SetTextbox(newtext)
+                function Textbox:SetTextbox(newtext)
                     TextboxTitle.Text = newtext
                 end
     
@@ -658,6 +661,7 @@ if ScriptVersion == "2.0.0" then
                 TextboxCorner.Name = "TextboxCorner"
                 TextboxCorner.CornerRadius = UDim.new(0, 5)
                 TextboxCorner.Parent = Textbox
+                return Textbox
             end
     
             function main:AddDropdown(text,current,table,callback)
@@ -713,10 +717,6 @@ if ScriptVersion == "2.0.0" then
                 Droptitle.TextColor3 = Color3.fromRGB(225, 225, 225)
                 Droptitle.TextSize = 11.000
                 Droptitle.TextXAlignment = Enum.TextXAlignment.Left
-    
-                function main:SetDropdown(newtext)
-                    Droptitle.Text = newtext.." : "..current
-                end
     
                 DropImage.Name = "DropImage"
                 DropImage.Parent = Dropdown
@@ -836,6 +836,9 @@ if ScriptVersion == "2.0.0" then
                         end
                     end
                 end
+                function drop:SetDropdown(newtext)
+                    Droptitle.Text = newtext.." : "..current
+                end
                 function drop:Add(t)
                     local DropButton2 = Instance.new("TextButton")
     
@@ -884,6 +887,7 @@ if ScriptVersion == "2.0.0" then
             end
     
             function main:AddSlider(text,min,max,set,callback)
+                local Slider = {}
                 set = (math.clamp(set,min,max))
                 if set > max then set = max end
     
@@ -931,7 +935,7 @@ if ScriptVersion == "2.0.0" then
                 SliderTitle.TextSize = 11.000
                 SliderTitle.TextXAlignment = Enum.TextXAlignment.Left
     
-                function main:SetSlider(newtext)
+                function Slider:SetSlider(newtext)
                     SliderTitle.Text = newtext
                 end
     
@@ -1032,8 +1036,10 @@ if ScriptVersion == "2.0.0" then
                         SliderValue.Text = Value
                     end
                 end)
+                return Slider
             end
             function main:AddSeperator(text)
+                local Sep = {}
                 local Seperator = Instance.new("Frame")
                 local SepLabel = Instance.new("TextLabel")
     
@@ -1066,9 +1072,10 @@ if ScriptVersion == "2.0.0" then
                 SepLabel.TextXAlignment = Enum.TextXAlignment.Left
                 SepLabel.TextSize = 12.000
     
-                function main:SetSep(newtext)
+                function Sep:SetSep(newtext)
                     SepLabel.Text = newtext
                 end
+                return Sep
             end
             function main:AddLine()
                 local Line = Instance.new("Frame")
