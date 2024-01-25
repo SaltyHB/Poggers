@@ -597,7 +597,7 @@ if ScriptVersion == "2.0.0" then
             end
     
             function main:AddTextbox(text,holder,disappear,callback)
-                local Textbox = {}
+                local Textbox13 = {}
                 local Textboxx = Instance.new("Frame")
                 local TextboxxCorner = Instance.new("UICorner")
                 local TextboxTitle = Instance.new("TextLabel")
@@ -637,7 +637,7 @@ if ScriptVersion == "2.0.0" then
                 TextboxTitle.TextSize = 11.000
                 TextboxTitle.TextXAlignment = Enum.TextXAlignment.Left
     
-                function Textbox:SetTextbox(newtext)
+                function Textbox13:SetTextbox(newtext)
                     TextboxTitle.Text = newtext
                 end
     
@@ -661,7 +661,7 @@ if ScriptVersion == "2.0.0" then
                 TextboxCorner.Name = "TextboxCorner"
                 TextboxCorner.CornerRadius = UDim.new(0, 5)
                 TextboxCorner.Parent = Textbox
-                return Textbox
+                return Textbox13
             end
     
             function main:AddDropdown(text,current,table,callback)
