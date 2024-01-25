@@ -887,7 +887,7 @@ if ScriptVersion == "2.0.0" then
             end
     
             function main:AddSlider(text,min,max,set,callback)
-                local Slider = {}
+                local Slider2323 = {}
                 set = (math.clamp(set,min,max))
                 if set > max then set = max end
     
@@ -935,7 +935,7 @@ if ScriptVersion == "2.0.0" then
                 SliderTitle.TextSize = 11.000
                 SliderTitle.TextXAlignment = Enum.TextXAlignment.Left
     
-                function Slider:SetSlider(newtext)
+                function Slider2323:SetSlider(newtext)
                     SliderTitle.Text = newtext
                 end
     
@@ -1036,7 +1036,7 @@ if ScriptVersion == "2.0.0" then
                         SliderValue.Text = Value
                     end
                 end)
-                return Slider
+                return Slider2323
             end
             function main:AddSeperator(text)
                 local Sep = {}
