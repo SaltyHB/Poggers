@@ -1,4 +1,6 @@
 -- TABS
+SelectLanguage = "اختار اللغة"
+SetLanguagee = "مجموعة اللغة"
 SettingsTABB = "إعدادات"
 HomeTABB = "بيت"
 CombatTABB = "قتال"
