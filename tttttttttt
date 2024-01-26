@@ -1,8 +1,16 @@
-if _G.Language == "English" then
+local foldername = "Raito Hub V2 Settings Folder"
+local filename = "BloxFruit "..game.Players.LocalPlayer.Name.." Config.json"
+
+local HttpService = game:GetService("HttpService")
+if isfile(foldername.."\\"..filename) then
+    _G.Settings = HttpService:JSONDecode(readfile(foldername.."\\"..filename))
+end
+
+if _G.Language == "English" or _G.Settings.Language == "English" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Translate/English"))()
-elseif _G.Language == "Turkish" then
+elseif _G.Language == "Turkish" or _G.Settings.Language == "Turkish" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Translate/Turkish"))()
-elseif _G.Language == "Arabic" then
+elseif _G.Language == "Arabic" or _G.Settings.Language == "Arabic" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Translate/Arabic"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Translate/English"))()
@@ -3450,6 +3458,7 @@ else
 end
                     -------------------------SAVE SETTINGS----------------------------
                     _G.Settings = {
+                        Language = "English";
                         AutoFarm = false;
                         SelectBringMode = "Bring Mob";
                         AutoBuyEnchancementColour_Hop = false;
@@ -3483,7 +3492,7 @@ end
                         SaveSettings = false;
                     }
                     
-                    local foldername = "Raito Hub Settings Folder"
+                    local foldername = "Raito Hub V2 Settings Folder"
                     local filename = "BloxFruit "..game.Players.LocalPlayer.Name.." Config.json"
                      
                     function saveSettings()
@@ -3517,7 +3526,7 @@ end
                     end
                     --------------------------------------------------------------------
                     loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/ScriptVersion"))()
-                    local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/RaitoTestingLibraryyy"))()
+                    local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/RaitoLibrary"))()
                     --------------------------------------------------------------------
                     local Raito = library:AddWindow("Raito Hub "..ScriptVersion,Enum.KeyCode.RightControl)
                     --------------------------------------------------------------------
@@ -3710,10 +3719,12 @@ end
 
                     selecllele = Settings:AddDropdown(SelectLanguage,"English",{"English","Turkish","Arabic"},function(value)
                         _G.Language = value
+                        _G.Settings.Language = value
+                        saveSettings()
                     end)
 
                     dasdafhhnvvc = Settings:AddButton(SetLanguagee,function()
-                        RefreshUi()
+                        loadstring(game:HttpGet("https://raw.githubusercontent.com/Efe0626/RaitoHub/main/Script"))()
                     end)
 
                     Settings:AddTextbox(SETSERVER,"Paste your serverid here.",false,function(value)
@@ -9588,98 +9599,4 @@ if isfile("Raito Key.txt") then
 LoadKey()
 wait(.1)
 Check()
-end
-
-function RefreshUi()
-    if _G.Language == "English" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Translate/English"))()
-    elseif _G.Language == "Turkish" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Translate/Turkish"))()
-    elseif _G.Language == "Arabic" then
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Translate/Arabic"))()
-    else
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Translate/English"))()
-    end
-    wait(1)
-    -- TABS
-    selecllele:SetDropdown(SelectLanguage)
-    dasdafhhnvvc:SetButton(SetLanguagee)
-    Settings:SetPage(SettingsTABB)
-    Main:SetPage(HomeTABB)
-    Combat:SetPage(CombatTABB)
-    Stats:SetPage(StatsTABB)
-    Teleport:SetPage(TeleportTABB)
-    Dungeon:SetPage(DungeonTABB)
-    Fruit:SetPage(FruitTABB)
-    Shop:SetPage(ShopTABB)
-    Misc:SetPage(OthersTABB)
-
-    -- BUTTONS
-    JSB:SetButton(JoinServer123)
-    RSTS:SetButton(ResetSettings)
-    ffc:SetButton(FruitFarmScript)
-    bbbb:SetButton(BringBoat)
-    tpreal:SetButton(Teleportiisssll)
-    bychip:SetButton(BuyChip)
-    startdun:SetButton(StartDungeon)
-    nextisland:SetButton(NextIsland)
-    tplab:SetButton(TeleportLab)
-    awkrom:SetButton(AwakeningRoom)
-    randomfru:SetButton(RandomFruit)
-    cyborg:SetButton(BuyCyborg)
-    ghoul:SetButton(BuyGhoul)
-    resetstats:SetButton(BuyResetStats)
-    randomrace:SetButton(RandomRace)
-    geppo:SetButton(BuyGeppo)
-    buso:SetButton(BuyBuso)
-    soru:SetButton(BuySoru)
-    ken:SetButton(BuyKen)
-    blackleg:SetButton(BuyBlackLeg)
-    electro:SetButton(BuyElectro)
-    fishman:SetButton(BuyFishman)
-    dragonclaw:SetButton(BuyDragonClaw)
-    superhuman:SetButton(BuySuperhuman)
-    deathstep:SetButton(BuyDeathStep)
-    sharkman:SetButton(BuySharkman)
-    electricclaw:SetButton(BuyElectricClaw)
-    dragontalon:SetButton(BuyDragonTalon)
-    godhuman:SetButton(BuyGodhuman)
-    tomoe:SetButton(Tomoe)
-    blackcape:SetButton(BlackCape)
-    swordshat:SetButton(SwordsmanHat)
-    ironmace:SetButton(IronMace)
-    dualkat:SetButton(DualKatana)
-    tripkat:SetButton(TripleKatana)
-    dualhed:SetButton(DualHeaded)
-    soulcane:SetButton(SoulCane)
-    suprise:SetButton(Buysuprise)
-    refund:SetButton(BuyRefund)
-    raceroll:SetButton(RaceReroll)
-    reckckc:SetButton(Rejoin)
-    sevrhh:SetButton(ServerHop)
-    bababa:SetButton(HopLow)
-    testwebhkk:SetButton(TestWebhook)
-    remvanm:SetButton(RemoveAnimation)
-    remvmawe:SetButton(RemoveEffects)
-    sadsad:SetButton(DevilShop)
-    dsad:SetButton(Inventory)
-    ghghgh:SetButton(InventoryFruit)
-    prrr:SetButton(PiratesTeam)
-    mrrr:SetButton(MarinesTeam)
-    urprppr:SetButton(UnlockPortal)
-    allclcc:SetButton(AllCodes)
-    rdmdmdm:SetButton(SelectedCodes)
-    tggtgtg:SetButton(RedeemCode)
-    totopfpf:SetButton(TeleportGear)
-    tmpmppmp:SetButton(TopOfGreat)
-    tppp:SetButton(TempleOfTime)
-    dislslsls:SetButton(TempleOfTime)
-    sllclclc:SetButton(TpLever)
-    tptptpf:SetButton(TpSafe)
-    tptptpt2:SetButton(TpSafe2)
-    ptpvpvppv:SetButton(TpPvp)
-    mimimim:SetButton(Minktr)
-    skykkyky:SetButton(Skytr)
-    cybbbb:SetButton(Cyborgtr)
-    trkrkrkrkr:SetButton(Transform)
 end
