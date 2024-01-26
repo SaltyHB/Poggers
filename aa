@@ -1,6 +1,3 @@
-if isfile("Raito-Hub-Language") then
-    _G.Language = readfile("Raito-Hub-Language")
-end
 if _G.Language == "English" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Translate/English"))()
 elseif _G.Language == "Turkish" then
@@ -3723,11 +3720,10 @@ end
 
                     selecllele = Settings:AddDropdown(SelectLanguage,"English",{"English","Turkish","Arabic","Vietnamse","Urdu","French","Spanish","Kurdish"},function(value)
                         _G.Language = value
-                        writefile("Raito-Hub-Language", _G.Language)
                     end)
 
                     dasdafhhnvvc = Settings:AddButton(SetLanguagee,function()
-                        loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/a"))()
+                        loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/aa"))()
                     end)
 
                     Settings:AddTextbox(SETSERVER,"Paste your serverid here.",false,function(value)
