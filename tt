@@ -3938,7 +3938,7 @@ end
                         end
                     end)
         
-                    Settings:AddToggle(BTP,_G.Settings.BypassTP,function(value)
+                    Settings:AddToggle(BTPww,_G.Settings.BypassTP,function(value)
                         BypassTP = value
                         _G.Settings.BypassTP = value
                     end)
