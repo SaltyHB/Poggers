@@ -1,18 +1,11 @@
-local foldername = "Raito Hub V2 Settings Folder"
-local filename = "BloxFruit "..game.Players.LocalPlayer.Name.." Config.json"
-
-local HttpService = game:GetService("HttpService")
-if isfile(foldername.."\\"..filename) then
-    _G.Settings = HttpService:JSONDecode(readfile(foldername.."\\"..filename))
-else
-    _G.Settings.Language = "English"
+if isfile("Raito-Hub-Language") then
+    _G.Language = readfile("Raito-Hub-Language")
 end
-
-if _G.Language == "English" or _G.Settings.Language == "English" then
+if _G.Language == "English" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Translate/English"))()
-elseif _G.Language == "Turkish" or _G.Settings.Language == "Turkish" then
+elseif _G.Language == "Turkish" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Translate/Turkish"))()
-elseif _G.Language == "Arabic" or _G.Settings.Language == "Arabic" then
+elseif _G.Language == "Arabic" then
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Translate/Arabic"))()
 else
     loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Translate/English"))()
@@ -3460,7 +3453,6 @@ else
 end
                     -------------------------SAVE SETTINGS----------------------------
                     _G.Settings = {
-                        Language = "English";
                         AutoFarm = false;
                         SelectBringMode = "Bring Mob";
                         AutoBuyEnchancementColour_Hop = false;
@@ -3532,11 +3524,11 @@ end
                     --------------------------------------------------------------------
                     local Raito = library:AddWindow("Raito Hub "..ScriptVersion,Enum.KeyCode.RightControl)
                     --------------------------------------------------------------------
-                    local Settings = Raito:AddTab("Settings",SettingsTABB,"10734950309")
-                    local Main = Raito:AddTab("Main",HomeTABB,"10723407389")
-                    local Combat = Raito:AddTab("Combat",CombatTABB,"10734975692")
+                    local Settings = Raito:AddTab(SettingsTABB,"10734950309")
+                    local Main = Raito:AddTab(HomeTABB,"10723407389")
+                    local Combat = Raito:AddTab(CombatTABB,"10734975692")
                     ---Stats
-                    local Stats = Raito:AddTab("Stats",StatsTABB,"10709773755")
+                    local Stats = Raito:AddTab(StatsTABB,"10709773755")
 
                     Stats:AddSeperator(STATSS)
 
@@ -3687,11 +3679,11 @@ end
                         end
                     end)
                     -- Finish Of Stats
-                    local Teleport = Raito:AddTab("Teleport",TeleportTABB,"10734886004")
-                    local Dungeon = Raito:AddTab("Dungeon",DungeonTABB,"10734962068")
-                    local Fruit = Raito:AddTab("Fruit",FruitTABB,"10709761889")
-                    local Shop = Raito:AddTab("Shop",ShopTABB,"10734952479")
-                    local Misc = Raito:AddTab("Misc",OthersTABB,"10723425615")
+                    local Teleport = Raito:AddTab(TeleportTABB,"10734886004")
+                    local Dungeon = Raito:AddTab(DungeonTABB,"10734962068")
+                    local Fruit = Raito:AddTab(FruitTABB,"10709761889")
+                    local Shop = Raito:AddTab(ShopTABB,"10734952479")
+                    local Misc = Raito:AddTab(OthersTABB,"10723425615")
                     --------------------------------------------------------------------
                     local GameTime = math.floor(workspace.DistributedGameTime+0.5)
                     local Hour = math.floor(GameTime/(60^2))%24
@@ -3721,8 +3713,7 @@ end
 
                     selecllele = Settings:AddDropdown(SelectLanguage,"English",{"English","Turkish","Arabic"},function(value)
                         _G.Language = value
-                        _G.Settings.Language = value
-                        saveSettings()
+                        writefile("Raito-Hub-Language", _G.Language)
                     end)
 
                     dasdafhhnvvc = Settings:AddButton(SetLanguagee,function()
