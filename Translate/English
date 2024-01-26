@@ -1,4 +1,6 @@
 -- TABS
+SelectLanguage = "Select Language"
+SetLanguagee = "Set Language"
 SettingsTABB = "Settings"
 HomeTABB = "Home"
 CombatTABB = "Combat"
