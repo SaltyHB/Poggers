@@ -6441,7 +6441,7 @@ end)
                 end)
             end
             
-            tpreal = Teleport:AddButton(Teleport,function()
+            tpreal = Teleport:AddButton(Teleportiisssll,function()
                 if _G.TPSea == "Sea 1" then
                     game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("TravelMain")
                 elseif _G.TPSea == "Sea 2" then
@@ -9606,7 +9606,7 @@ function RefreshUi()
     RSTS:SetButton(ResetSettings)
     ffc:SetButton(FruitFarmScript)
     bbbb:SetButton(BringBoat)
-    tpreal:SetButton(Teleport)
+    tpreal:SetButton(Teleportiisssll)
     bychip:SetButton(BuyChip)
     startdun:SetButton(StartDungeon)
     nextisland:SetButton(NextIsland)
