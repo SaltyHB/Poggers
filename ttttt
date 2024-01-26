@@ -9601,6 +9601,17 @@ function RefreshUi()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Translate/English"))()
     end
     wait(1)
+    -- TABS
+    Settings:SetPage(SettingsTABB)
+    Main:SetPage(HomeTABB)
+    Combat:SetPage(CombatTABB)
+    Stats:SetPage(StatsTABB)
+    Teleport:SetPage(TeleportTABB)
+    Dungeon:SetPage(DungeonTABB)
+    Fruit:SetPage(FruitTABB)
+    Shop:SetPage(ShopTABB)
+    Misc:SetPage(OthersTABB)
+    
     -- BUTTONS
     JSB:SetButton(JoinServer123)
     RSTS:SetButton(ResetSettings)
