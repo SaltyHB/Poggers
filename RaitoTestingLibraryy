@@ -295,7 +295,7 @@ if ScriptVersion == "2.0.0" then
         local uitab = {}
     
         function uitab:AddTab(text,image)
-            local uitab232323 = {}
+            local uititi = {}
             local Image = image or 6023426915
     
             local PageButton = Instance.new("TextButton")
@@ -313,7 +313,7 @@ if ScriptVersion == "2.0.0" then
             PageButton.TextSize = 12.000
             PageButton.TextXAlignment = Enum.TextXAlignment.Left
     
-            function uitab232323:SetPage(newtext)
+            function uitab:SetPage(newtext)
                 PageButton.Text = newtext
             end
             
@@ -363,6 +363,7 @@ if ScriptVersion == "2.0.0" then
             TabPadding.Parent = ScrollTab
             TabPadding.PaddingLeft = UDim.new(0, 10)
             TabPadding.PaddingTop = UDim.new(0, 10)
+            return uititi
     
             PageButton.MouseButton1Click:Connect(function()
                 currenttab = MainTab.Name
@@ -410,8 +411,6 @@ if ScriptVersion == "2.0.0" then
                     ScrollTab.CanvasSize = UDim2.new(0,0,0,TabList.AbsoluteContentSize.Y + 30)
                 end)
             end)
-            return uitab232323
-        end
             
             local main = {}
             
@@ -1196,6 +1195,7 @@ if ScriptVersion == "2.0.0" then
             end
             
             return main
+        end
         return uitab
     end
     return library
