@@ -3517,15 +3517,15 @@ end
                     end
                     --------------------------------------------------------------------
                     loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/ScriptVersion"))()
-                    local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/RaitoTestingLibraryy"))()
+                    local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/RaitoTestingLibraryyy"))()
                     --------------------------------------------------------------------
                     local Raito = library:AddWindow("Raito Hub "..ScriptVersion,Enum.KeyCode.RightControl)
                     --------------------------------------------------------------------
-                    local Settings = Raito:AddTab(SettingsTABB,"10734950309")
-                    local Main = Raito:AddTab(HomeTABB,"10723407389")
-                    local Combat = Raito:AddTab(CombatTABB,"10734975692")
+                    local Settings = Raito:AddTab("Settings",SettingsTABB,"10734950309")
+                    local Main = Raito:AddTab("Main",HomeTABB,"10723407389")
+                    local Combat = Raito:AddTab("Combat",CombatTABB,"10734975692")
                     ---Stats
-                    local Stats = Raito:AddTab(StatsTABB,"10709773755")
+                    local Stats = Raito:AddTab("Stats",StatsTABB,"10709773755")
 
                     Stats:AddSeperator(STATSS)
 
@@ -3676,11 +3676,11 @@ end
                         end
                     end)
                     -- Finish Of Stats
-                    local Teleport = Raito:AddTab(TeleportTABB,"10734886004")
-                    local Dungeon = Raito:AddTab(DungeonTABB,"10734962068")
-                    local Fruit = Raito:AddTab(FruitTABB,"10709761889")
-                    local Shop = Raito:AddTab(ShopTABB,"10734952479")
-                    local Misc = Raito:AddTab(OthersTABB,"10723425615")
+                    local Teleport = Raito:AddTab("Teleport",TeleportTABB,"10734886004")
+                    local Dungeon = Raito:AddTab("Dungeon",DungeonTABB,"10734962068")
+                    local Fruit = Raito:AddTab("Fruit",FruitTABB,"10709761889")
+                    local Shop = Raito:AddTab("Shop",ShopTABB,"10734952479")
+                    local Misc = Raito:AddTab("Misc",OthersTABB,"10723425615")
                     --------------------------------------------------------------------
                     local GameTime = math.floor(workspace.DistributedGameTime+0.5)
                     local Hour = math.floor(GameTime/(60^2))%24
