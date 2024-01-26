@@ -1,3 +1,14 @@
+-- TABS
+SettingsTABB = "Settings"
+HomeTABB = "Home"
+CombatTABB = "Combat"
+StatsTABB = "Stats"
+TeleportTABB = "Teleport"
+DungeonTABB = "Dungeon"
+FruitTABB = "Devil Fruit"
+ShopTABB = "Shop"
+OthersTABB = "Others"
+
 -- BUTTONS
 JoinServer123 = "Join Server"
 ResetSettings = "Reset Settings"
