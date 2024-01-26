@@ -4,6 +4,8 @@ local filename = "BloxFruit "..game.Players.LocalPlayer.Name.." Config.json"
 local HttpService = game:GetService("HttpService")
 if isfile(foldername.."\\"..filename) then
     _G.Settings = HttpService:JSONDecode(readfile(foldername.."\\"..filename))
+else
+    _G.Settings.Language = "English"
 end
 
 if _G.Language == "English" or _G.Settings.Language == "English" then
