@@ -1,3 +1,14 @@
+-- TABS
+SettingsTABB = "إعدادات"
+HomeTABB = "بيت"
+CombatTABB = "قتال"
+StatsTABB = "احصائيات"
+TeleportTABB = "النقل الفضائي"
+DungeonTABB = "زنزانة"
+FruitTABB = "فاكهة شريرة"
+ShopTABB = "محل"
+OthersTABB = "آحرون"
+
 -- BUTTONS
 JoinServer123 = "انضم للخادم"
 ResetSettings = "اعادة الضبط"
