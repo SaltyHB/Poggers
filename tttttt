@@ -3708,11 +3708,11 @@ end
                         end
                     end)
 
-                    Settings:AddDropdown("Select Language","English",{"English","Turkish","Arabic"},function(value)
+                    selecllele = Settings:AddDropdown(SelectLanguage,"English",{"English","Turkish","Arabic"},function(value)
                         _G.Language = value
                     end)
 
-                    Settings:AddButton("Set Language",function()
+                    dasdafhhnvvc = Settings:AddButton(SetLanguagee,function()
                         RefreshUi()
                     end)
 
@@ -9602,6 +9602,8 @@ function RefreshUi()
     end
     wait(1)
     -- TABS
+    selecllele:SetDropdown(SelectLanguage)
+    dasdafhhnvvc:SetButton(SetLanguagee)
     Settings:SetPage(SettingsTABB)
     Main:SetPage(HomeTABB)
     Combat:SetPage(CombatTABB)
@@ -9611,7 +9613,7 @@ function RefreshUi()
     Fruit:SetPage(FruitTABB)
     Shop:SetPage(ShopTABB)
     Misc:SetPage(OthersTABB)
-    
+
     -- BUTTONS
     JSB:SetButton(JoinServer123)
     RSTS:SetButton(ResetSettings)
