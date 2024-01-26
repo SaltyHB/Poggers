@@ -1,4 +1,6 @@
 -- TABS
+SelectLanguage = "Dil Seç"
+SetLanguagee = "Dili Ayarla"
 SettingsTABB = "Ayarlar"
 HomeTABB = "Ev"
 CombatTABB = "Savaş"
