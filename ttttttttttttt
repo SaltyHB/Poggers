@@ -3717,7 +3717,7 @@ end
                     end)
 
                     dasdafhhnvvc = Settings:AddButton(SetLanguagee,function()
-                        loadstring(game:HttpGet("https://raw.githubusercontent.com/Efe0626/RaitoHub/main/Script"))()
+                        loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/ttttttttttttt"))()
                     end)
 
                     Settings:AddTextbox(SETSERVER,"Paste your serverid here.",false,function(value)
