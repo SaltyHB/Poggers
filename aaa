@@ -932,7 +932,7 @@ if game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7
             World3 = true
         end
         
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Variabless"))()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/Variablesss"))()
 
 function CheckNotifyComplete()
 for i, v in pairs(game:GetService("Players")["LocalPlayer"].PlayerGui:FindFirstChild("Notifications"):GetChildren()) do
