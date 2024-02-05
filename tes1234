@@ -6763,6 +6763,7 @@ end)
             end)
         end
 
+        executeagain = false
         if not KeySystem:verifyKey(KeyInput.Text) then
         local executor = identifyexecutor()
         if executor == "Arceus X" or "Codex" then 
@@ -6780,7 +6781,7 @@ end)
                 if executeagain then
                 writefile("Raito Key.txt", ""..KeyInput.Text)
                 premiummember = true
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/tes123"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/tes1234"))()
                 else
                 premiummember = true
                 Submit.TextColor3 = Color3.fromRGB(61, 237, 151)
@@ -6800,7 +6801,7 @@ end)
                     if executeagain then
                     writefile("Raito Key.txt", ""..KeyInput.Text)
                     premiummember = false
-                    loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/tes123"))()
+                    loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/tes1234"))()
                     else
                     premiummember = false
                     Submit.TextColor3 = Color3.fromRGB(61, 237, 151)
