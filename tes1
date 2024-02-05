@@ -6762,13 +6762,6 @@ end)
                 return string.format('%x', v)
             end)
         end
-
-        if not KeySystem:verifyKey(KeyInput.Text) then
-        local executor = identifyexecutor()
-        if executor == "Arceus X" or "Codex" then 
-        executeagain = true
-        end
-        end
         
         function Check()
                 pcall(function()
@@ -6777,10 +6770,6 @@ end)
                 if KeySystem:verifyKey(generateUUID()) then
                 print("Retard LOL")
                 elseif KeySystem:verifyPremiumKey(KeyInput.Text) then
-                if executeagain then
-                premiummember = true
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/tes"))()
-                else
                 premiummember = true
                 Submit.TextColor3 = Color3.fromRGB(61, 237, 151)
                 Submit.Text = "Valid Key ✔️"
@@ -6794,12 +6783,7 @@ end)
                 end
                 _G.Authenicated = string.reverse(game.Players.LocalPlayer.UserId)
                 Script()
-                end
                 elseif KeySystem:verifyDefaultKey(KeyInput.Text) then
-                    if executeagain then
-                    premiummember = false
-                    loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/tes"))()
-                    else
                     premiummember = false
                     Submit.TextColor3 = Color3.fromRGB(61, 237, 151)
                     Submit.Text = "Valid Key ✔️"
@@ -6813,7 +6797,6 @@ end)
                     end
                     _G.Authenicated = string.reverse(game.Players.LocalPlayer.UserId)
                     Script()
-                    end
                     else
                     _G.Authenicated = false
                     Submit.TextColor3 = Color3.fromRGB(235, 64, 59)
