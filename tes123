@@ -6778,8 +6778,9 @@ end)
                 print("Retard LOL")
                 elseif KeySystem:verifyPremiumKey(KeyInput.Text) then
                 if executeagain then
+                writefile("Raito Key.txt", ""..KeyInput.Text)
                 premiummember = true
-                loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/tes12"))()
+                loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/tes123"))()
                 else
                 premiummember = true
                 Submit.TextColor3 = Color3.fromRGB(61, 237, 151)
@@ -6797,8 +6798,9 @@ end)
                 end
                 elseif KeySystem:verifyDefaultKey(KeyInput.Text) then
                     if executeagain then
+                    writefile("Raito Key.txt", ""..KeyInput.Text)
                     premiummember = false
-                    loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/tes12"))()
+                    loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/main/tes123"))()
                     else
                     premiummember = false
                     Submit.TextColor3 = Color3.fromRGB(61, 237, 151)
