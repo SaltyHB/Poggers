@@ -394,7 +394,7 @@ function d:AddWindow(d, e)
         ce.Size = UDim2.new(0, 20, 0, 22)
         ce.AutoButtonColor = false
         ce.Font = Enum.Font.GothamSemibold
-        ce.Text = "   " .. a
+        ce.Text = ""
         ce.TextColor3 = Color3.fromRGB(175, 175, 175)
         ce.TextSize = 12.000
         ce.TextXAlignment = Enum.TextXAlignment.Left
