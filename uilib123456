@@ -386,7 +386,7 @@ function d:AddWindow(d, e)
         a.Parent = c
         local ce = Instance.new("TextButton")
         ce.Name = "PageButton"
-        ce.Parent = c
+        ce.Parent = d
         ce.BackgroundColor3 = Color3.fromRGB(90, 90, 90)
         ce.BackgroundTransparency = 1
         ce.BorderSizePixel = 0
