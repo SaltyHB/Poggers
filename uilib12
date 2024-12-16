@@ -382,7 +382,7 @@ function d:AddWindow(d, e)
         c.TextXAlignment = Enum.TextXAlignment.Left
         local a = Instance.new("UICorner")
         a.Name = "ButtonCorner"
-        a.CornerRadius = UDim.new(0, 2)
+        a.CornerRadius = UDim.new(0, 3)
         a.Parent = c
         local a = Instance.new("Frame")
         a.Name = "MainTab"
