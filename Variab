@@ -1,3 +1,4 @@
+do
 local l_fish_0 = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("animations"):WaitForChild("fish");
 local FischData = {
     ["Corsair Grouper"] = {
@@ -6244,5 +6245,4 @@ local FischData = {
         HoldAnimation = l_fish_0:WaitForChild("heavy")
     },
 };
-
-return FischData;
+end
