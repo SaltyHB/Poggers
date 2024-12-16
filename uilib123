@@ -369,7 +369,7 @@ function d:AddWindow(d, e)
         local c = Instance.new("TextButton")
         c.Name = "PageButton"
         c.Parent = d
-        c.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+        c.BackgroundColor3 = Color3.fromRGB(15, 15, 14)
         c.BackgroundTransparency = 1
         c.BorderSizePixel = 0
         c.Position = UDim2.new(0, 0, 1, 0)
@@ -384,6 +384,18 @@ function d:AddWindow(d, e)
         a.Name = "ButtonCorner"
         a.CornerRadius = UDim.new(0, 3)
         a.Parent = c
+        local er = Instance.new("Frame")
+        er.Name = "MainTab"
+        er.Parent = d
+        er.BackgroundColor3 = Color3.fromRGB(55, 45, 84)
+        er.BorderSizePixel = 0
+        er.Position = UDim2.new(0, 0, 1, 0)
+        er.Size = UDim2.new(0, 2, 0, 22)
+        er.Visible = false
+        local ew = Instance.new("UICorner")
+        ew.Name = "MainTabCorner23"
+        ew.CornerRadius = UDim.new(0, 1)
+        ew.Parent = er
         local a = Instance.new("Frame")
         a.Name = "MainTab"
         a.Parent = l
