@@ -1,5 +1,5 @@
 do
-	local fish = game:GetService("ReplicatedStorage"):WaitForChild("resources"):WaitForChild("animations"):WaitForChild("fish")
+	local fish = game:GetService("ReplicatedStorage").Link:WaitForChild("resources"):WaitForChild("animations"):WaitForChild("fish")
 	FISHDATA = {
 		Tire = {
 			WeightPool = {110, 110};
