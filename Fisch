@@ -1,6 +1,6 @@
 spawn(function()
 pcall(function()
-    RunService.Heartbeat:Connect(function()
+    game:GetService("RunService").Heartbeat:Connect(function()
         local coreGui = game:GetService("CoreGui")
         local closePanel = coreGui:FindFirstChild("ClosePanel", true)
         
