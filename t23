@@ -308,7 +308,7 @@ spawn(function()
     end
 end)
 else
-    local ui4 = game.CoreGui:FindFirstChild("ScreenGui1")
+local ui4 = game.CoreGui:FindFirstChild("ScreenGui1")
 if ui4 then
     ui4:Destroy()
 end
@@ -325,6 +325,7 @@ local UICorner_2 = Instance.new("UICorner")
 local Top_1 = Instance.new("Frame")
 ScreenGui1.Name = "ScreenGui1"
 ScreenGui1.Parent = game.CoreGui
+ScreenGui1.Enabled = false
 
 Frame_1.Parent = ScreenGui1
 Frame_1.BackgroundColor3 = Color3.fromRGB(9,8,8)
@@ -364,7 +365,7 @@ Top_1.Size = UDim2.new(0, 60,0, 60)
 Button_1.MouseButton1Click:Connect(function()
     _G.Closing = false
     CloseUIFR()
-    Frame31.Visible = false
+    ScreenGui1.Enabled = false
 end)
 Button_1.MouseEnter:Connect(function()
     TweenService:Create(
@@ -420,7 +421,10 @@ end
             Frame31.Position = game:GetService("CoreGui").ScreenGui.Main.Position
             Frame31.Visible = true
             else
-            Frame_1.Visible = true
+            local ui4 = game.CoreGui:FindFirstChild("ScreenGui1")
+            if ui4 then
+                ui4.Enabled = true
+            end
             end
         end
     )
