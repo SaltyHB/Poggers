@@ -1,6 +1,6 @@
 local AllEvents = { 
 "Orcas Pool", "The Kraken Pool", "Isonade", "Great Hammerhead Shark", "Great White Shark", 
-"Whale Shark", "The Depths - Serpent", "Megalodon Default", "Megalodon Ancient",
+"Whale Shark", "Whale Migration", "The Depths - Serpent", "Megalodon Default", "Megalodon Ancient",
 "Lovestorm Eel", "Lovestorm Eel Supercharged", "Forsaken Veil - Scylla"
 }
 return AllEvents
