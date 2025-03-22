@@ -100,6 +100,417 @@ local v2 = {
     }
 };
 local v5 = {
+    ["Wretched Guppy"] = {
+        Icon = "rbxassetid://REPLACEHERE", 
+        WeightPool = {
+            80, 
+            180
+        }, 
+        Chance = 35, 
+        Rarity = "Limited", 
+        Resilience = 110, 
+        ProgressEfficiency = 1.1, 
+        Description = "In the shadowed shallows, the Wretched Guppy festers, with scales peeling like forgotten curses.", 
+        Hint = "Can only be caught in the Cursed Pool.", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 1300, 
+        XP = 100, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Wretched Guppy!", 
+            "Tiny terror!", 
+            "Sorrowful..."
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "Cults Curse", 
+        IsLimitedBestiary = true
+    }, 
+    ["Hollow Gazer"] = {
+        Icon = "rbxassetid://REPLACEHERE", 
+        WeightPool = {
+            300, 
+            780
+        }, 
+        Chance = 25, 
+        Rarity = "Limited", 
+        Resilience = 45, 
+        ProgressEfficiency = 0.85, 
+        Description = "From darkest depths, the Hollow Gazer stares, with empty eyes inviting the coldest embrace.", 
+        Hint = "Can only be caught in the Cursed Pool.", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 2200, 
+        XP = 800, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Hollow Gazer!", 
+            "Hypnotic gaze...", 
+            "Doesn't seem hollow to me!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "Cults Curse", 
+        IsLimitedBestiary = true
+    }, 
+    ["Eldritch Spineback"] = {
+        Icon = "rbxassetid://REPLACEHERE", 
+        WeightPool = {
+            700, 
+            1800
+        }, 
+        Chance = 20, 
+        Rarity = "Limited", 
+        Resilience = 40, 
+        ProgressEfficiency = 0.65, 
+        Description = "Ancient and wrecked, the Eldritch Spineback lurks, with jagged spines whispering secrets of the forgotten age.", 
+        Hint = "Can only be caught in the Cursed Pool.", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 2500, 
+        XP = 900, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "An Eldritch Spineback!", 
+            "Older than time itself!", 
+            "A fossil with teeth..."
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "Cults Curse", 
+        IsLimitedBestiary = true
+    }, 
+    ["Abyssal Maw"] = {
+        Icon = "rbxassetid://REPLACEHERE", 
+        WeightPool = {
+            6000, 
+            17000
+        }, 
+        Chance = 18, 
+        Rarity = "Limited", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.45, 
+        Description = "A gaping jagged maw rises from the abyss, with devastating hunger for more than what is imaginable.", 
+        Hint = "Can only be caught in the Cursed Pool.", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 2900, 
+        XP = 1100, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "An Abyssal Maw!", 
+            "It ate a bit more than my bait...", 
+            "Molar strength of the abyss!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "Cults Curse", 
+        IsLimitedBestiary = true
+    }, 
+    ["Bloodscript Eel"] = {
+        Icon = "rbxassetid://REPLACEHERE", 
+        WeightPool = {
+            180, 
+            450
+        }, 
+        Chance = 3, 
+        Rarity = "Limited", 
+        Resilience = 5, 
+        ProgressEfficiency = 0.3, 
+        Description = "Slithering through scarlet currents, the Bloodscript Eel etches itself within the veins of the unwary.", 
+        Hint = "Can only be caught in the Cursed Pool.", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 6800, 
+        XP = 2400, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Bloodscript Eel!?", 
+            "Slippery and sinister!", 
+            "It almost caught me!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "Cults Curse", 
+        IsLimitedBestiary = true
+    }, 
+    ["Veilborn Parasite"] = {
+        Icon = "rbxassetid://REPLACEHERE", 
+        WeightPool = {
+            85, 
+            230
+        }, 
+        Chance = 2, 
+        Rarity = "Limited", 
+        Resilience = 5, 
+        ProgressEfficiency = 0.25, 
+        Description = "From an unknown origin, the Veilborn Parasite clings, with tendrils threading through its target.", 
+        Hint = "Can only be caught in the Cursed Pool.", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 7000, 
+        XP = 2600, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Veilborn Parasite!?", 
+            "Not quite appetizing...", 
+            "Parasitic!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "Cults Curse", 
+        IsLimitedBestiary = true
+    }, 
+    ["Profane Ray"] = {
+        Icon = "rbxassetid://REPLACEHERE", 
+        WeightPool = {
+            1200, 
+            2800
+        }, 
+        Chance = 15, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.3, 
+        Description = "Displaying an unholy glow, the Profane Ray glides, with wings casting silhouettes that profane the silence.", 
+        Hint = "Can only be caught in the Cursed Pool.", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 4500, 
+        XP = 1550, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "A Profane Ray!", 
+            "Cursed!", 
+            "A sin with fins!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "Cults Curse", 
+        IsLimitedBestiary = true
+    }, 
+    ["The Whispering One"] = {
+        Icon = "rbxassetid://REPLACEHERE", 
+        WeightPool = {
+            5000, 
+            14000
+        }, 
+        Chance = 1, 
+        Rarity = "Limited", 
+        Resilience = 1, 
+        ProgressEfficiency = 0.05, 
+        Description = "In the stillness, The Whispering One mutters, with a voice exhibiting a choir of dread from beyond the unknown.", 
+        Hint = "Can only be caught in the Cursed Pool.", 
+        FavouriteBait = "None", 
+        FavouriteTime = nil, 
+        Price = 15000, 
+        XP = 6500, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "THE WHISPERING ONE!?!?", 
+            "DEADLY TRANQUILITY!", 
+            "DEAFENING SILENCE!"
+        }, 
+        SparkleColor = Color3.fromRGB(255, 255, 255), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        FromLimited = "Cults Curse", 
+        IsLimitedBestiary = true
+    }, 
+    ["Sunny O'Coin"] = {
+        Icon = "rbxassetid://119725034311950", 
+        WeightPool = {
+            900, 
+            2100
+        }, 
+        Chance = 2, 
+        Rarity = "Limited", 
+        Resilience = 15, 
+        ProgressEfficiency = 0.25, 
+        Description = "A bright yellow fish with a fitting eyepatch, it basks where gold is prevalent. A sunny St. Patrick's treasure!", 
+        Hint = "Appears randomly in Lucky Event pools, lured by a rainbow glow.", 
+        FavouriteBait = "Lucky", 
+        FavouriteTime = nil, 
+        Price = 6500, 
+        XP = 2500, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "SUNNY O'COIN!", 
+            "GOLDEN GLIMMER!", 
+            "LEPRECHAUN'S SHINY CATCH!"
+        }, 
+        SparkleColor = Color3.fromRGB(38, 252, 95), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lucky Event"
+    }, 
+    ["Rowdy McCharm"] = {
+        Icon = "rbxassetid://119725034311950", 
+        WeightPool = {
+            600, 
+            1500
+        }, 
+        Chance = 1, 
+        Rarity = "Limited", 
+        Resilience = 5, 
+        ProgressEfficiency = 0.15, 
+        Description = "A lively red fish with eyes that glow like embers, it darts through waters with St. Patrick's playful charm!", 
+        Hint = "Appears randomly in Lucky Event pools, lured by a rainbow glow.", 
+        FavouriteBait = "Lucky", 
+        FavouriteTime = nil, 
+        Price = 10000, 
+        XP = 5000, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "ROWDY MCCHARM!", 
+            "LUCKY LITTLE DANCER!", 
+            "CHARMED AND READY!"
+        }, 
+        SparkleColor = Color3.fromRGB(38, 252, 95), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lucky Event"
+    }, 
+    ["Plumrick O'Luck"] = {
+        Icon = "rbxassetid://119725034311950", 
+        WeightPool = {
+            1200, 
+            3000
+        }, 
+        Chance = 4, 
+        Rarity = "Limited", 
+        Resilience = 20, 
+        ProgressEfficiency = 0.45, 
+        Description = "A hefty purple fish with stylish shades, it glides through pools where St. Patrick's luck runs deep!", 
+        Hint = "Appears randomly in Lucky Event pools, lured by a rainbow glow.", 
+        FavouriteBait = "Lucky", 
+        FavouriteTime = nil, 
+        Price = 5000, 
+        XP = 1900, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "PLUMRICK O'LUCK!", 
+            "PURPLE CHASER!", 
+            "LUCKY DISGUISE!"
+        }, 
+        SparkleColor = Color3.fromRGB(38, 252, 95), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lucky Event"
+    }, 
+    ["O'Mango Goldgrin"] = {
+        Icon = "rbxassetid://119725034311950", 
+        WeightPool = {
+            800, 
+            2400
+        }, 
+        Chance = 5, 
+        Rarity = "Limited", 
+        Resilience = 25, 
+        ProgressEfficiency = 0.5, 
+        Description = "An orange fish sporting circular glasses, it grins through warm waters with a St. Patrick's golden glow!", 
+        Hint = "Appears randomly in Lucky Event pools, lured by a rainbow glow.", 
+        FavouriteBait = "Lucky", 
+        FavouriteTime = nil, 
+        Price = 4500, 
+        XP = 1700, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "O'MANGO GOLDGRIN!", 
+            "DOES IT TASTE LIKE A MANGO?", 
+            "GOLDEN GIGGLER!"
+        }, 
+        SparkleColor = Color3.fromRGB(38, 252, 95), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lucky Event"
+    }, 
+    ["Blarney McBreeze"] = {
+        Icon = "rbxassetid://119725034311950", 
+        WeightPool = {
+            650, 
+            1600
+        }, 
+        Chance = 3, 
+        Rarity = "Limited", 
+        Resilience = 10, 
+        ProgressEfficiency = 0.35, 
+        Description = "A sleek blue fish that rides warm currents, its scales sparkle like shamrocks. A St. Patrick's breezy delight!", 
+        Hint = "Appears randomly in Lucky Event pools, lured by a rainbow glow.", 
+        FavouriteBait = "Lucky", 
+        FavouriteTime = nil, 
+        Price = 5500, 
+        XP = 2200, 
+        Seasons = {
+            "Spring"
+        }, 
+        Weather = {
+            "Rain"
+        }, 
+        Quips = {
+            "BLARNEY MCBREEZE!", 
+            "SHAMROCK SWIMMER!", 
+            "BREEZY LUCK BRINGER!"
+        }, 
+        SparkleColor = Color3.fromRGB(38, 252, 95), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Lucky Event"
+    }, 
     ["Magma Leviathan"] = {
         BlockPassiveCapture = true, 
         Icon = "rbxassetid://119725034311950", 
@@ -108,7 +519,7 @@ local v5 = {
             140000
         }, 
         Chance = 0.1, 
-        Rarity = "Secret", 
+        Rarity = "Exotic", 
         Resilience = 3, 
         ProgressEfficiency = 0.1, 
         Description = "A behemoth of the volcanic depths, its scales radiate intense heat, turning the water around it into steam. Some say it sleeps for centuries, only waking during great eruptions.", 
@@ -171,7 +582,7 @@ local v5 = {
             180000
         }, 
         Chance = 0.1, 
-        Rarity = "Secret", 
+        Rarity = "Exotic", 
         Resilience = 3, 
         ProgressEfficiency = 0.05, 
         Description = "A monstrous kraken-like anglerfish, with a crown shaped lure and teeth as sharper than excalibur. It is said to be the ruler of the abyss.", 
@@ -202,7 +613,7 @@ local v5 = {
             1200000
         }, 
         Chance = 0.1, 
-        Rarity = "Secret", 
+        Rarity = "Exotic", 
         Resilience = 1, 
         ProgressEfficiency = 0.05, 
         Description = "A majestic, dragon-like creature with crystal scales that shimmer in the light. It is said to be the guardian of the Calm Zone.", 
@@ -551,6 +962,270 @@ local v5 = {
         HoldAnimation = l_fish_0:WaitForChild("heavy"), 
         FromLimited = "Ashfall", 
         IsLimitedBestiary = true
+    }, 
+    ["Slain Maw"] = {
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            10, 
+            50
+        }, 
+        Chance = 60, 
+        Rarity = "Limited", 
+        Resilience = 70, 
+        Description = "\240\159\142\182", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 110, 
+        XP = 80, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "\240\159\142\181", 
+            "\240\159\142\188", 
+            "\240\159\142\185", 
+            "\240\159\142\186", 
+            "\240\159\142\184", 
+            "\240\159\142\183"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 155, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "Crypt"
+    }, 
+    ["Black Veil Ray"] = {
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            10, 
+            50
+        }, 
+        Chance = 60, 
+        Rarity = "Limited", 
+        Resilience = 70, 
+        Description = "\240\159\142\182", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 110, 
+        XP = 80, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "\240\159\142\181", 
+            "\240\159\142\188", 
+            "\240\159\142\185", 
+            "\240\159\142\186", 
+            "\240\159\142\184", 
+            "\240\159\142\183"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 155, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("tiny"), 
+        From = "Crypt"
+    }, 
+    ["Bone Lanternfish"] = {
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            10, 
+            50
+        }, 
+        Chance = 60, 
+        Rarity = "Limited", 
+        Resilience = 70, 
+        Description = "\240\159\142\182", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 110, 
+        XP = 80, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "\240\159\142\181", 
+            "\240\159\142\188", 
+            "\240\159\142\185", 
+            "\240\159\142\186", 
+            "\240\159\142\184", 
+            "\240\159\142\183"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 155, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Crypt"
+    }, 
+    ["Harbinger Koi"] = {
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            10, 
+            50
+        }, 
+        Chance = 60, 
+        Rarity = "Limited", 
+        Resilience = 70, 
+        Description = "\240\159\142\182", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 110, 
+        XP = 80, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "\240\159\142\181", 
+            "\240\159\142\188", 
+            "\240\159\142\185", 
+            "\240\159\142\186", 
+            "\240\159\142\184", 
+            "\240\159\142\183"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 155, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Crypt"
+    }, 
+    ["Hexeye Snapper"] = {
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            10, 
+            50
+        }, 
+        Chance = 60, 
+        Rarity = "Limited", 
+        Resilience = 70, 
+        Description = "\240\159\142\182", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 110, 
+        XP = 80, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "\240\159\142\181", 
+            "\240\159\142\188", 
+            "\240\159\142\185", 
+            "\240\159\142\186", 
+            "\240\159\142\184", 
+            "\240\159\142\183"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 155, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "Crypt"
+    }, 
+    ["Rotfin Eel"] = {
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            10, 
+            50
+        }, 
+        Chance = 60, 
+        Rarity = "Limited", 
+        Resilience = 70, 
+        Description = "\240\159\142\182", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 110, 
+        XP = 80, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "\240\159\142\181", 
+            "\240\159\142\188", 
+            "\240\159\142\185", 
+            "\240\159\142\186", 
+            "\240\159\142\184", 
+            "\240\159\142\183"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 155, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Crypt"
+    }, 
+    ["Siren\226\128\153s Guppy"] = {
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            10, 
+            50
+        }, 
+        Chance = 60, 
+        Rarity = "Limited", 
+        Resilience = 70, 
+        Description = "\240\159\142\182", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 110, 
+        XP = 80, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "\240\159\142\181", 
+            "\240\159\142\188", 
+            "\240\159\142\185", 
+            "\240\159\142\186", 
+            "\240\159\142\184", 
+            "\240\159\142\183"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 155, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("small"), 
+        From = "Crypt"
+    }, 
+    Wraithfin = {
+        BlockPassiveCapture = true, 
+        WeightPool = {
+            10, 
+            50
+        }, 
+        Chance = 60, 
+        Rarity = "Limited", 
+        Resilience = 70, 
+        Description = "\240\159\142\182", 
+        Hint = "???", 
+        FavouriteBait = nil, 
+        FavouriteTime = nil, 
+        Price = 110, 
+        XP = 80, 
+        Seasons = {
+            "None"
+        }, 
+        Weather = {
+            "None"
+        }, 
+        Quips = {
+            "\240\159\142\181", 
+            "\240\159\142\188", 
+            "\240\159\142\185", 
+            "\240\159\142\186", 
+            "\240\159\142\184", 
+            "\240\159\142\183"
+        }, 
+        SparkleColor = Color3.fromRGB(0, 155, 0), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
+        From = "Crypt"
     }, 
     ["Lovestorm Eel"] = {
         BlockPassiveCapture = true, 
@@ -3506,7 +4181,7 @@ local v5 = {
             13
         }, 
         Chance = 0.05, 
-        Rarity = "Secret", 
+        Rarity = "Exotic", 
         Resilience = 100, 
         ProgressEfficiency = 0.8, 
         Description = "Boots", 
@@ -3535,7 +4210,7 @@ local v5 = {
             13
         }, 
         Chance = 0.05, 
-        Rarity = "Secret", 
+        Rarity = "Exotic", 
         Resilience = 100, 
         ProgressEfficiency = 0.8, 
         Description = "RocketFuel", 
@@ -3564,7 +4239,7 @@ local v5 = {
             13
         }, 
         Chance = 0.05, 
-        Rarity = "Secret", 
+        Rarity = "Exotic", 
         Resilience = 100, 
         ProgressEfficiency = 0.8, 
         Description = "Speed Core", 
@@ -5557,12 +6232,13 @@ local v5 = {
         }, 
         Quips = {
             "I feel it's power..", 
-            "Woah.. An Exalted Relic??", 
-            "An Exalted Relic!!", 
-            "I caught an Exalted Relic!"
+            "Woah.. An Song of the Deep??", 
+            "An Song of the Deep!!", 
+            "I caught an Song of the Deep!"
         }, 
         SparkleColor = Color3.fromRGB(228, 160, 255), 
         HoldAnimation = l_fish_0:WaitForChild("small"), 
+        HideInBestiary = true, 
         From = "None"
     }, 
     Bone = {
@@ -8508,7 +9184,7 @@ local v5 = {
         }, 
         Weather = {
             "Clear", 
-            "Cloudy"
+            "Foggy"
         }, 
         Quips = {
             "A SEA PICKLE!!", 
@@ -11978,7 +12654,7 @@ local v5 = {
         Rarity = "Common", 
         Resilience = 100, 
         ProgressEfficiency = 0.8, 
-        Description = "Cyroskin... Used to craft something?", 
+        Description = "Cryoskin... Used to craft something?", 
         Hint = "Its pretty", 
         FavouriteBait = "None", 
         FavouriteTime = "None", 
@@ -12222,7 +12898,7 @@ local v5 = {
             "CHILLING!"
         }, 
         SparkleColor = Color3.fromRGB(102, 178, 255), 
-        HoldAnimation = l_fish_0:WaitForChild("heavybasic"), 
+        HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         From = "Challenger's Deep"
     }, 
     ["Frozen Leviathan"] = {
@@ -12233,7 +12909,7 @@ local v5 = {
             140000
         }, 
         Chance = 0.1, 
-        Rarity = "Secret", 
+        Rarity = "Exotic", 
         Resilience = 3, 
         ProgressEfficiency = 0.1, 
         Description = "A chilling creature with icy tentacles that can freeze anything it touches. Legends say it guards the deepest parts of the ocean.", 
@@ -13602,7 +14278,7 @@ local v5 = {
             "Weaver of the void!"
         }, 
         SparkleColor = Color3.fromRGB(148, 0, 211), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("bigbasic"), 
         From = "Atlantis"
     }, 
     ["Mage Marlin"] = {
@@ -13903,7 +14579,7 @@ local v5 = {
             "ALL LIGHT DIES!"
         }, 
         SparkleColor = Color3.fromRGB(178, 144, 200), 
-        HoldAnimation = l_fish_0:WaitForChild("heavy"), 
+        HoldAnimation = l_fish_0:WaitForChild("basic"), 
         From = "Atlantis"
     }, 
     ["Abyssal Devourer"] = {
@@ -15122,7 +15798,7 @@ local v5 = {
             20
         }, 
         Chance = 0.5, 
-        Rarity = "Secret", 
+        Rarity = "Exotic", 
         Resilience = 10, 
         ProgressEfficiency = 0.2, 
         Description = "It's a mini Pond Emperor!", 
@@ -15177,6 +15853,6 @@ local v5 = {
         Relic = Color3.fromRGB(120, 255, 183), 
         Fragment = Color3.fromRGB(255, 63, 5), 
         Gemstone = Color3.fromRGB(172, 57, 255)
-    }, 
+    },
 };
 return v5;
