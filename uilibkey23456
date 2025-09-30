@@ -1,6 +1,10 @@
 local a = loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/refs/heads/main/ids2"))()
 local b = 7381705
 local c = "Fischer"
+local function SafeGetService(serviceName)
+    local service = game[serviceName] or game:FindFirstChild(serviceName)
+    return cloneref(service)
+end
 _G.StartFrameAlready = false
 local function d(e)
     local f, g =
