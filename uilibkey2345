@@ -1,10 +1,6 @@
 local a = loadstring(game:HttpGet("https://raw.githubusercontent.com/SaltyHB/Poggers/refs/heads/main/ids2"))()
 local b = 7381705
 local c = "Fischer"
-local function SafeGetService(serviceName)
-    local service = game[serviceName] or game:FindFirstChild(serviceName)
-    return cloneref(service)
-end
 _G.StartFrameAlready = false
 local function d(e)
     local f, g =
@@ -2278,13 +2274,14 @@ Alltexts.BorderSizePixel = 0
 Alltexts.Position = UDim2.new(0.291346163, 0, 0.0870369822, 0)
 Alltexts.Size = UDim2.new(0, 305, 0, 125)
 
-if _G.LRM_SecondsLeft == nil then
+if LRM_SecondsLeft == nil then
 _G.Testingit = true
 end
 if _G.Testingit then
-_G.LRM_SecondsLeft = "0"
-_G.LRM_LinkedDiscordID = "1"
-_G.LRM_TotalExecutions = "1"
+LRM_SecondsLeft = "0"
+LRM_LinkedDiscordID = "1"
+LRM_TotalExecutions = "1"
+LRM_IsUserPremium = true
 end
 
 accessendin.Name = "accessendin"
@@ -2296,7 +2293,7 @@ accessendin.BorderSizePixel = 0
 accessendin.Position = UDim2.new(0.0336241627, 0, 0.39362964, 0)
 accessendin.Size = UDim2.new(0, 193, 0, 50)
 accessendin.Font = Enum.Font.Gotham
-local hours = math.floor(_G.LRM_SecondsLeft / 3600)
+local hours = math.floor(LRM_SecondsLeft / 3600)
 accessendin.Text = "⏳ Access ends in: " .. hours .. "h"
 accessendin.TextColor3 = Color3.fromRGB(226, 226, 226)
 accessendin.TextSize = 14.000
@@ -2311,7 +2308,7 @@ linkeddc.BorderSizePixel = 0
 linkeddc.Position = UDim2.new(0.0336241627, 0, -0.00977783184, 0)
 linkeddc.Size = UDim2.new(0, 200, 0, 50)
 linkeddc.Font = Enum.Font.Gotham
-linkeddc.Text = "🔗 Linked Discord ID: " .. _G.LRM_LinkedDiscordID
+linkeddc.Text = "🔗 Linked Discord ID: " .. LRM_LinkedDiscordID
 linkeddc.TextColor3 = Color3.fromRGB(226, 226, 226)
 linkeddc.TextSize = 14.000
 linkeddc.TextXAlignment = Enum.TextXAlignment.Left
@@ -2325,7 +2322,7 @@ totalexecutedscript.BorderSizePixel = 0
 totalexecutedscript.Position = UDim2.new(0.0336241627, 0, 0.195851803, 0)
 totalexecutedscript.Size = UDim2.new(0, 200, 0, 50)
 totalexecutedscript.Font = Enum.Font.Gotham
-totalexecutedscript.Text = "📜 Script executed: " .. _G.LRM_TotalExecutions .. " times"
+totalexecutedscript.Text = "📜 Script executed: " .. LRM_TotalExecutions .. " times"
 totalexecutedscript.TextColor3 = Color3.fromRGB(226, 226, 226)
 totalexecutedscript.TextSize = 14.000
 totalexecutedscript.TextXAlignment = Enum.TextXAlignment.Left
@@ -2378,15 +2375,6 @@ UICorner_4.Parent = Alltexts
                 ):Play()
             end
         )
-
-local function UpdateSwitchedINFO(secondsleftfr, LinkedDiscordIDfr, TotalExecutionsfr)
-    local hours = math.floor(secondsleftfr / 3600)
-    accessendin.Text = "⏳ Access ends in: " .. hours .. "h"
-    linkeddc.Text = "🔗 Linked Discord ID: " .. LinkedDiscordIDfr
-    totalexecutedscript.Text = "📜 Script executed: " .. TotalExecutionsfr .. " times"
-    freepremiumversion.Text = "💎 Version: Freemium" 
-end
-
 local toggled = false 
 _G.Switchedinformation = false
 B.MouseButton1Click:Connect(function()
@@ -2400,10 +2388,11 @@ B.MouseButton1Click:Connect(function()
         wait(.1)
         B.Text = "Switch"
         print("Switched information mode!")
-        if _G.LRM_SecondsLeft == nil then
-        else
-        UpdateSwitchedINFO(_G.LRM_SecondsLeft, _G.LRM_LinkedDiscordID, _G.LRM_TotalExecutions)
-        end
+        local hours = math.floor(LRM_SecondsLeft / 3600)
+        accessendin.Text = "⏳ Access ends in: " .. hours .. "h"
+        linkeddc.Text = "🔗 Linked Discord ID: " .. LRM_LinkedDiscordID
+        totalexecutedscript.Text = "📜 Script executed: " .. LRM_TotalExecutions .. " times"
+        freepremiumversion.Text = "💎 Version: Freemium"
     end
 end)
 
