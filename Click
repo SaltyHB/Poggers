@@ -81,7 +81,7 @@ end
 
 local screenGui = Instance.new("ScreenGui")
 screenGui.Parent = player:WaitForChild("PlayerGui")
-screenGui.Name = "UltraClickerGUI"
+screenGui.Name = "ClickerGUI"
 
 local frame = Instance.new("Frame")
 frame.Parent = screenGui
