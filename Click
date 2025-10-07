@@ -1,0 +1,116 @@
+local Players = cloneref(game:GetService("Players"))
+local RunService = cloneref(game:GetService("RunService"))
+local UserInputService = cloneref(game:GetService("UserInputService"))
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local rootPart = character:WaitForChild("HumanoidRootPart")
+local RANGE = 6
+local UPDATE_CACHE_SEC = 3
+local BURST_PER_PROMPT = 300
+local MAX_PROMPTS_PER_TICK = 300
+local cachedPrompts = {}
+local lastCacheUpdate = 0
+local running = false
+local connection
+
+local function rebuildCache()
+    cachedPrompts = {}
+    for _, v in pairs(workspace:GetDescendants()) do
+        if v:IsA("ProximityPrompt") then
+            table.insert(cachedPrompts, v)
+        end
+    end
+    lastCacheUpdate = tick()
+end
+
+local function getParentPosition(parent)
+    if parent == nil then return nil end
+    if parent:IsA("BasePart") then
+        return parent.Position
+    elseif parent:IsA("Model") then
+        if parent.PrimaryPart then
+            return parent.PrimaryPart.Position
+        else
+            for _, c in ipairs(parent:GetChildren()) do
+                if c:IsA("BasePart") then
+                    return c.Position
+                end
+            end
+        end
+    end
+    return nil
+end
+
+local function startClicking()
+    if connection then connection:Disconnect() end
+    connection = RunService.Heartbeat:Connect(function()
+        if not running then return end
+        if tick() - lastCacheUpdate > UPDATE_CACHE_SEC then
+            rebuildCache()
+        end
+
+        local inRange = {}
+        local rpPos = rootPart.Position
+
+        for _, prompt in ipairs(cachedPrompts) do
+            if prompt and prompt.Parent then
+                local pPos = getParentPosition(prompt.Parent)
+                if pPos and (rpPos - pPos).Magnitude <= RANGE then
+                    table.insert(inRange, prompt)
+                    if #inRange >= MAX_PROMPTS_PER_TICK then break end
+                end
+            end
+        end
+
+        for _, prompt in ipairs(inRange) do
+            if prompt and prompt.Parent and prompt.Enabled ~= false then
+                for i = 1, BURST_PER_PROMPT do
+                    if not running then break end
+                    task.spawn(function()
+                        if running then
+                            pcall(function()
+                                fireproximityprompt(prompt)
+                            end)
+                        end
+                    end)
+                end
+            end
+        end
+    end)
+end
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = player:WaitForChild("PlayerGui")
+screenGui.Name = "UltraClickerGUI"
+
+local frame = Instance.new("Frame")
+frame.Parent = screenGui
+frame.Size = UDim2.new(0, 180, 0, 60)
+frame.Position = UDim2.new(1, -200, 0, 50)
+frame.BackgroundColor3 = Color3.fromRGB(20,20,20)
+frame.BorderSizePixel = 0
+frame.AnchorPoint = Vector2.new(0,0)
+
+frame.Active = true
+frame.Draggable = true
+
+local button = Instance.new("TextButton")
+button.Parent = frame
+button.Size = UDim2.new(1, -10, 1, -10)
+button.Position = UDim2.new(0,5,0,5)
+button.Text = "Start Clicking"
+button.BackgroundColor3 = Color3.fromRGB(0, 170, 255)
+button.TextColor3 = Color3.fromRGB(255,255,255)
+button.Font = Enum.Font.SourceSansBold
+button.TextScaled = true
+button.BorderSizePixel = 0
+
+button.MouseButton1Click:Connect(function()
+    running = not running
+    if running then
+        button.Text = "Stop Clicking"
+        startClicking()
+    else
+        button.Text = "Start Clicking"
+    end
+end)
