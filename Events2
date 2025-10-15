@@ -1,4 +1,0 @@
-local AllEvents = { 
-"Sunny O'Coin", "Rowdy McCharm", "Plumrick O'Luck", "O'Mango Goldgrin", "Blarney McBreeze"
-}
-return AllEvents
