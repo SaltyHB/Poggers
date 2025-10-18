@@ -34,4 +34,5 @@ local function ParentUI(UI: Instance, SkipHiddenUI: boolean?)
     pcall(protectgui, UI)
     SafeParentUI(UI, gethui)
 end
+Zenith.ParentUI = ParentUI
 return Zenith
