@@ -1,3 +1,4 @@
+local Zenith = {}
 local protectgui = protectgui or (syn and syn.protect_gui) or function() end
 local gethui = gethui or function()
     return CoreGui
@@ -24,7 +25,7 @@ local function SafeParentUI(Instance: Instance, Parent: Instance | () -> Instanc
     end
 end
 
-local function ParentUI(UI: Instance, SkipHiddenUI: boolean?)
+local function Zenith.ParentUI(UI: Instance, SkipHiddenUI: boolean?)
     if SkipHiddenUI then
         SafeParentUI(UI, CoreGui)
         return
@@ -33,3 +34,4 @@ local function ParentUI(UI: Instance, SkipHiddenUI: boolean?)
     pcall(protectgui, UI)
     SafeParentUI(UI, gethui)
 end
+return Zenith
