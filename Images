@@ -1,0 +1,37 @@
+local Zenith = {}
+
+if writefile and isfolder and makefolder and getcustomasset then
+	if not isfolder("zenith-icons") then
+		makefolder("zenith-icons")
+	end
+
+	if not isfile("zenith-icons/version.txt") then
+		writefile("zenith-icons/version.txt", "2025-10-18")
+	end
+
+	local ShouldUpdate = readfile("zenith-icons/version.txt") ~= "2025-10-18"
+	if ShouldUpdate then
+		writefile("zenith-icons/version.txt", "2025-10-18")
+	end
+
+	for i = 1, 10 do
+		local filePath = "zenith-icons/"..i..".png"
+		if not isfile(filePath) or ShouldUpdate then
+			local url = "https://raw.githubusercontent.com/SaltyHB/Images/main/"..i..".png"
+			writefile(filePath, game:HttpGet(url))
+		end
+	end
+end
+
+local icons = {"1","2","3","4","5","6","7","8","9","10"}
+
+function Zenith.GetAsset(name)
+	local index = table.find(icons, name)
+	if not index then return nil end
+	return {
+		IconName = name,
+		FilePath = "zenith-icons/"..index..".png"
+	}
+end
+
+return Zenith
