@@ -25,7 +25,7 @@ local function SafeParentUI(Instance: Instance, Parent: Instance | () -> Instanc
     end
 end
 
-local function Zenith.ParentUI(UI: Instance, SkipHiddenUI: boolean?)
+local function ParentUI(UI: Instance, SkipHiddenUI: boolean?)
     if SkipHiddenUI then
         SafeParentUI(UI, CoreGui)
         return
