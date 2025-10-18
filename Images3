@@ -14,7 +14,7 @@ if writefile and isfolder and makefolder and getcustomasset then
 		writefile("zenith-icons/version.txt", "2025-10-18")
 	end
 
-	for i = 1, 10 do
+	for i = 1, 15 do
 		local filePath = "zenith-icons/"..i..".png"
 		if not isfile(filePath) or ShouldUpdate then
 			local url = "https://raw.githubusercontent.com/SaltyHB/Images/main/"..i..".png"
