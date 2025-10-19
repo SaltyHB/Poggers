@@ -1,6 +1,6 @@
 local AllEvents = { 
 "Orcas Pool", "The Kraken Pool", "Isonade", "Great Hammerhead Shark", "Great White Shark", 
 "Whale Shark", "Whales Pool", "The Depths - Serpent", "Megalodon Default", "Megalodon Ancient", "Forsaken Veil - Scylla",
-"Colossal Ancient Dragon", "Colossal Dragon", "Colossal Blue Dragon", "Colossal Ethereal Dragon", "Birthday Megalodon", "Elder Mossjaw", "Mossjaw", "Whales Pool Hunt", "Scylla", "Elder", "Ashclaw", "Frightful Pool"
+"Colossal Ancient Dragon", "Colossal Dragon", "Colossal Blue Dragon", "Colossal Ethereal Dragon", "Birthday Megalodon", "Elder Mossjaw", "Mossjaw", "Whales Pool Hunt", "Scylla", "Elder", "Ashclaw", "Fright"
 }
 return AllEvents
